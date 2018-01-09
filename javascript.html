@@ -210,15 +210,94 @@ console.log(ages.reduce(getSum));
 
 		<div class="col-sm-8 text-left">
 
-			<h1>Array Operations</h1>
+			<h1>ES6 Javascript Classes</h1>
 
-    </div>
+            <h3>Introduction</h3>
 
-    <div class="col-sm-2 sidenav">
+            <p>
+                It is important to note that JavaScript's 'Class' syntax in ES6 is little more than syntactic 'sugar over' the existing prototype based behaviour.
+            </p>
 
-    </div>
+            <p>
+                ES6's 'Class' keyword doesn't bring us "true classes". Rather it simply provides a more convenient syntax for creating objects related via prototype linkage.
+                Under the hood, there's nothing new here.
+            </p>
+
+            <p>
+                JavaScript's "classes" aren't like classes in languages like Java pr Python. In these class based languages you create classes whcih are templates for objects.
+                When you want a new object, you instantiate the class, which tells the language engine to copy the methods and properties of the class into a new entity, called an instance.
+                The instance is your object, and, after instantiation, has absolutely no active relation with the parent class.
+            </p>
+
+            <p>
+                "Instantiating" a class in JavaScript does create a new object, but not one that is independent of its parent class.
+                Rather, it creates an object that is linked to a prototype. Changes to that prototype propagate to the new object, even after instantiation.
+            </p>
+
+            <h3>Example Of Using Class Syntax</h3>
+            <pre>
+
+    "use strict";
+
+    // Food is a base class
+    class Food {
+
+        constructor (name, protein, carbs, fat) {
+            this.name = name;
+            this.protein = protein;
+            this.carbs = carbs;
+            this.fat = fat;
+        }
+
+        toString () {
+            return `${this.name} | ${this.protein}g P :: ${this.carbs}g C :: ${this.fat}g F`
+        }
+
+        print () {
+          console.log( this.toString() );
+        }
+    }
+
+    const chicken_breast = new Food('Chicken Breast', 26, 0, 3.5);
+
+    chicken_breast.print(); // 'Chicken Breast | 26g P :: 0g C :: 3.5g F'
+            </pre>
+
+            <h3>Same thing using Constructor Function</h3>
+
+            <pre>
+function Food(name, protein, carbs, fat) {
+        this.name = name;
+        this.protein = protein;
+        this.carbs = carbs;
+        this.fat = fat;
+}
+
+Food.prototype.toString = function toString () {
+        return `${this.name} | ${this.protein}g P :: ${this.carbs}g C :: ${this.fat}g F`
+}
+
+Food.prototype.print = function print() {
+      console.log( this.toString() );
+}
 
 
+const chicken_breast = new Food('Chicken Breast', 26, 0, 3.5);
+
+chicken_breast.print(); // 'Chicken Breast | 26g P :: 0g C :: 3.5g F'
+
+
+
+
+            </pre>
+
+
+
+        </div>
+
+        <div class="col-sm-2 sidenav">
+
+        </div>
   </div>
 </div>
 
