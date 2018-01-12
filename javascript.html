@@ -215,16 +215,13 @@ console.log(ages.reduce(getSum));
             <h3>Introduction</h3>
 
             <p>
-                It is important to note that JavaScript's 'Class' syntax in ES6 is little more than syntactic 'sugar over' the existing prototype based behaviour.
+                It is important to note that JavaScript's 'Class' syntax in ES6 is little more than syntactic 'sugar over' for the existing prototype based behaviour.
+                It simply provides a more convenient syntax for creating objects related via prototype linkage.
             </p>
 
             <p>
-                ES6's 'Class' keyword doesn't bring us "true classes". Rather it simply provides a more convenient syntax for creating objects related via prototype linkage.
-                Under the hood, there's nothing new here.
-            </p>
-
-            <p>
-                JavaScript's "classes" aren't like classes in languages like Java pr Python. In these class based languages you create classes whcih are templates for objects.
+                JavaScript's "classes" aren't like classes in languages like Java pr Python. In these class based languages you create classes which are templates for objects.
+                <br /><br />
                 When you want a new object, you instantiate the class, which tells the language engine to copy the methods and properties of the class into a new entity, called an instance.
                 The instance is your object, and, after instantiation, has absolutely no active relation with the parent class.
             </p>
@@ -235,42 +232,42 @@ console.log(ages.reduce(getSum));
             </p>
 
             <h3>Example Of Using Class Syntax</h3>
+
             <pre>
+"use strict";
 
-    "use strict";
+// Food is a base class
+class Food {
+  constructor (name, protein, carbs, fat) {
+    this.name = name;
+    this.protein = protein;
+    this.carbs = carbs;
+    this.fat = fat;
+  }
 
-    // Food is a base class
-    class Food {
+  toString () {
+    return `${this.name} | ${this.protein}g P :: ${this.carbs}g C :: ${this.fat}g F`
+  }
 
-        constructor (name, protein, carbs, fat) {
-            this.name = name;
-            this.protein = protein;
-            this.carbs = carbs;
-            this.fat = fat;
-        }
+  print () {
+    console.log( this.toString() );
+  }
+}
 
-        toString () {
-            return `${this.name} | ${this.protein}g P :: ${this.carbs}g C :: ${this.fat}g F`
-        }
+const chicken_breast = new Food('Chicken Breast', 26, 0, 3.5);
 
-        print () {
-          console.log( this.toString() );
-        }
-    }
+chicken_breast.print(); // 'Chicken Breast | 26g P :: 0g C :: 3.5g F'
 
-    const chicken_breast = new Food('Chicken Breast', 26, 0, 3.5);
-
-    chicken_breast.print(); // 'Chicken Breast | 26g P :: 0g C :: 3.5g F'
             </pre>
 
             <h3>Same thing using Constructor Function</h3>
 
             <pre>
 function Food(name, protein, carbs, fat) {
-        this.name = name;
-        this.protein = protein;
-        this.carbs = carbs;
-        this.fat = fat;
+  this.name = name;
+  this.protein = protein;
+  this.carbs = carbs;
+  this.fat = fat;
 }
 
 Food.prototype.toString = function toString () {
@@ -286,14 +283,92 @@ const chicken_breast = new Food('Chicken Breast', 26, 0, 3.5);
 
 chicken_breast.print(); // 'Chicken Breast | 26g P :: 0g C :: 3.5g F'
 
+          </pre>
 
+          <h3>Inheritance Using New ES6 Syntax</h3>
 
+          <p>
+            With the new syntax, subclasses are created with 'extend' and calling with 'super'
+          </p>
 
-            </pre>
+          <pre>
+"use strict";
 
+// Food is a base class
+class Food {
+    constructor (name, protein, carbs, fat) {
+        this.name = name;
+        this.protein = protein;
+        this.carbs = carbs;
+        this.fat = fat;
+    }
 
+    toString () {
+        return `${this.name} | ${this.protein}g P :: ${this.carbs}g C :: ${this.fat}g F`
+    }
+
+    print () {
+      console.log( this.toString() );
+    }
+}
+
+// FatFreeFood is a derived class
+class FatFreeFood extends Food {
+    constructor (name, protein, carbs) {
+        super(name, protein, carbs, 0);
+    }
+
+    print () {
+        super.print();
+        console.log(`Would you look at that -- ${this.name} has no fat!`);
+    }
+}
+
+const fat_free_yogurt = new FatFreeFood('Greek Yogurt', 16, 12);
+fat_free_yogurt.print(); // 'Greek Yogurt | 26g P :: 16g C :: 0g F
+                        //  Would you look at that -- Greek Yogurt has no fat!'
+
+          </pre>
+
+          <h3>The same thing pre ES6</h3>
+
+          <pre>
+function Food(name, protein, carbs, fat) {
+        this.name = name;
+        this.protein = protein;
+        this.carbs = carbs;
+        this.fat = fat;
+}
+
+Food.prototype.toString = function toString () {
+        return `${this.name} | ${this.protein}g P :: ${this.carbs}g C :: ${this.fat}g F`
+}
+
+Food.prototype.print = function print() {
+      console.log( this.toString() );
+
+}
+
+function FatFreeFood (name, protein, carbs, fat) {
+	Food.call(this, name, protein, carbs, fat);
+}
+
+FatFreeFood.prototype = Object.create(Food.prototype);
+
+FatFreeFood.prototype.print_message = function print_message() {
+	console.log(`Would you look at that -- ${this.name} has no fat!`);
+}
+
+const fat_free_yogurt = new FatFreeFood('Greek Yogurt', 16, 12);
+fat_free_yogurt.print();
+fat_free_yogurt.print_message(); // 'Greek Yogurt | 26g P :: 16g C :: 0g F
+                                //  Would you look at that -- Greek Yogurt has no fat!'
+
+          </pre>
 
         </div>
+
+
 
         <div class="col-sm-2 sidenav">
 
