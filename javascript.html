@@ -201,7 +201,8 @@ console.log(ages.reduce(getSum));
 	</div>
 </div>
 
-<div id="javascript_array_operations" class="container-fluid text-center">
+<!--
+<div id="javascript_es6_classes" class="container-fluid text-center">
 
 	<div class="row content">
 		<div class="col-sm-2 sidenav">
@@ -210,7 +211,183 @@ console.log(ages.reduce(getSum));
 
 		<div class="col-sm-8 text-left">
 
-			<h1>ES6 Javascript Classes</h1>
+
+        </div>
+
+
+
+    <div class="col-sm-2 sidenav">
+
+    </div>
+</div>
+
+-->
+
+<div id="javascript_es6_arrow_function" class="container-fluid text-center">
+
+	<div class="row content">
+		<div class="col-sm-2 sidenav">
+
+		</div>
+
+		<div class="col-sm-8 text-left">
+
+            <h1>ES6 Arrow Functions</h1>
+
+            <h3>Introduction</h3>
+            <p>
+                Two factors influenced the introduction of arrow functions: shorter function syntax and non-binding of this. It is important to note that
+                arrow functions cannot be used as constructors as other functions can.
+            </P>
+
+            <h3>Shorter Function Syntax</h3>
+
+            <p>Consider the following function</p>
+            <pre>
+function funcName(param1, param2) {
+   return param1 + param2;
+ }
+
+funcName(2, 2);
+// returns 4
+
+            </pre>
+            <p>Using the new arrow function syntax, it can now be written in the following way:</p>
+
+            <pre>
+var funcName = (param1, param2) => { param1 + param2 };
+
+funcName(2, 2);
+// returns 4
+            </pre>
+
+            <p>If a function has only one parameter, the parenthesis are optional:</p>
+
+            <pre>
+function funcName(param1) {
+   return param1 + 2;
+ }
+
+funcName(2);
+// returns 4
+
+// With arrow function:
+var funcName = param1 => { param1 + 2 };
+
+funcName(2);
+// returns 4
+
+// It can also be written like the following as we are returning an expression:
+var funcName = param1 => param1 + 2 ;
+
+funcName(2);
+//returns 4
+
+            </pre>
+
+            <p>The paramter list for a function with no parameters shouldbe written with a pair of parenthesis:</p>
+
+            <pre>
+() => { statements };
+            </pre>
+
+            <P>The body of the function should be parenthesized if it is returning an object literal expression</p>
+            <pre>
+params => ({foo: bar});
+            </pre>
+
+
+            <h3>No Binding Of This</h3>
+
+            <p>
+                An arrow function does not bind 'this'. Arrows instead bind `this` to the immediate enclosing lexical scope
+                Therefore, you don’t need bind() or that = this, anymore.
+                <br /><br />
+                Consider the following, in non-strict mode, the growUp() function defines `this` as the global object, which is different from the `this` defined by the Person() constructor.
+                In strict mode, this is undefined.
+            </p>
+
+            <pre>
+function Person() {
+  // The Person() constructor defines `this` as an instance of itself.
+  this.age = 0;
+
+  setInterval(function growUp() {
+    this.age++;
+    console.log(this.age)
+  }, 1000);
+}
+
+var p = new Person();
+// The above will return NaN every 1000 milliseconds because
+// the growUp() function defines `this` as the global object
+
+            </pre>
+
+            <p>In ECMAScript 3/5, the this issue was fixable by assigning the value in this to a variable that could be closed over.</p>
+
+            <pre>
+function Person() {
+  var that = this;
+  that.age = 0;
+
+  setInterval(function growUp() {
+    // The callback refers to the `that` variable of which
+    // the value is the expected object.
+    that.age++;
+    console.log(that.age);
+  }, 1000);
+}
+
+var p = new Person();
+// The above will return a number incremented by 1 every second.
+
+            </pre>
+
+            <p>
+                An arrow function does not have its own this; the this value of the enclosing execution context is used.
+                Thus, in the following code, the this within the function that is passed to setInterval has the same value as this in the enclosing function:
+            </p>
+
+            <pre>
+function Person(){
+  this.age = 0;
+
+  setInterval(() => {
+    this.age++; // |this| properly refers to the person object
+    console.log(this.age);
+  }, 1000);
+}
+
+var p = new Person();
+// The above will return a number incremented by 1 every second.
+
+            </pre>
+
+
+
+        </div>
+
+    </div>
+
+    <div class="col-sm-2 sidenav">
+
+    </div>
+</div>
+
+
+
+
+<div id="javascript_es6_classes" class="container-fluid text-center">
+
+	<div class="row content">
+		<div class="col-sm-2 sidenav">
+
+		</div>
+
+		<div class="col-sm-8 text-left">
+
+			<h1>ES6 Classes</h1>
 
             <h3>Introduction</h3>
 
