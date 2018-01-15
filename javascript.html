@@ -236,7 +236,7 @@ console.log(ages.reduce(getSum));
 
             <h3>Introduction</h3>
             <p>
-                Two factors influenced the introduction of arrow functions: shorter function syntax and non-binding of this. It is important to note that
+                Two factors influenced the introduction of arrow functions: shorter function syntax and non-binding of <b>'this'</b>. It is important to note that
                 arrow functions cannot be used as constructors as other functions can.
             </P>
 
@@ -297,14 +297,14 @@ params => ({foo: bar});
             </pre>
 
 
-            <h3>No Binding Of This</h3>
+            <h3>No Binding Of <b>'This'</b></h3>
 
             <p>
-                An arrow function does not bind 'this'. Arrows instead bind `this` to the immediate enclosing lexical scope
-                Therefore, you don’t need bind() or that = this, anymore.
+                An arrow function does not bind <b>'this'</b>. Arrows instead bind <b>'this'</b> to the immediate enclosing lexical scope.
+                Therefore, you don’t need <b>bind()</b> or <b>that = this</b>, anymore.
                 <br /><br />
-                Consider the following, in non-strict mode, the growUp() function defines `this` as the global object, which is different from the `this` defined by the Person() constructor.
-                In strict mode, this is undefined.
+                Consider the following, in non-strict mode, the growUp() function defines <b>'this'</b> as the global object,
+                which is different from the <b>'this'</b> defined by the Person() constructor. In strict mode, this is undefined.
             </p>
 
             <pre>
@@ -324,7 +324,7 @@ var p = new Person();
 
             </pre>
 
-            <p>In ECMAScript 3/5, the this issue was fixable by assigning the value in this to a variable that could be closed over.</p>
+            <p>In ECMAScript 3/5, the <b>'this'</b> issue was fixable by assigning the value in <b>'this'</b> to a variable that could be closed over.</p>
 
             <pre>
 function Person() {
@@ -345,8 +345,8 @@ var p = new Person();
             </pre>
 
             <p>
-                An arrow function does not have its own this; the this value of the enclosing execution context is used.
-                Thus, in the following code, the this within the function that is passed to setInterval has the same value as this in the enclosing function:
+                An arrow function does not have its own <b>'this'</b>; the <b>'this'</b> value of the enclosing execution context is used.
+                Thus, in the following code, the this within the function that is passed to setInterval has the same value as <b>'this'</b> in the enclosing function:
             </p>
 
             <pre>
