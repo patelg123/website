@@ -1,0 +1,16 @@
+CSS:
+
+- CSS box
+	https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
+
+- CSS Grid
+	https://medium.freecodecamp.org/learn-css-grid-in-5-minutes-f582e87b1228
+	https://medium.freecodecamp.org/how-to-make-your-html-responsive-by-adding-a-single-line-of-css-2a62de81e431
+	https://medium.freecodecamp.org/heres-my-free-css-grid-course-merry-christmas-3826dd24f098?source=emailShare-91bfcdd30742-1514495891
+	https://medium.freecodecamp.org/learning-css-grid-through-recreating-airbnb-youtube-and-more-399c71377eaa?source=emailShare-91bfcdd30742-1514046069
+
+- Bootstrap
+	https://startbootstrap.com/
+	https://hackernoon.com/how-css-grid-beats-bootstrap-85d5881cf163
+	https://getbootstrap.com/docs/3.3/components/#navbar	
+	

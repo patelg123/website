@@ -1,0 +1,4 @@
+https://blog.pragmatists.com/top-10-es6-features-by-example-80ac878794bb
+https://codeburst.io/why-i-am-in-love-with-es6-13f8aa64005d
+http://es6-features.org
+https://scotch.io/tutorials/better-node-with-es6-pt-i

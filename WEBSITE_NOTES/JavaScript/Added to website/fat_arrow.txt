@@ -1,0 +1,221 @@
+
+
+
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+https://codeburst.io/javascript-arrow-functions-for-beginners-926947fc0cdc
+
+
+
+ES6 Arrow Functions
+
+Two factors influenced the introduction of arrow functions: shorter function syntax and non-binding of this.
+
+<h3>Shorter Function Syntax</h3>
+
+
+
+
+Examples:
+
+
+<pre>
+function funcName(param1, param2) {
+   return param1 + param2;
+ }
+
+funcName(2, 2);
+// 4
+
+
+var funcName = (param1, param2) => { param1 + param2 };
+
+funcName(2, 2);
+// 4
+</pre>
+
+If there is only one parameter, the parenthesis are optional:
+
+<pre>
+function funcName(param1) {
+   return param1 + 2;
+ }
+
+funcName(2);
+// 4
+
+
+var funcName = param1 => { param1 + 2 };
+
+funcName(2);
+// 4
+
+
+// It can also be written like the following as we are returning an expression:
+
+
+var funcName = param1 => param1 + 2 ;
+
+funcName(2);
+// 4
+
+
+</pre>
+
+
+// The parameter list for a function with no parameters should be written with a pair of parentheses.
+() => { statements }
+
+// Parenthesize the body of function to return an object literal expression:
+params => ({foo: bar})
+
+
+Another example:
+
+<pre>
+
+var materials = [
+  'Hydrogen',
+  'Helium',
+  'Lithium',
+  'Beryllium'
+];
+
+materials.map(function(material) { 
+  return material.length; 
+}); // [8, 6, 7, 9]
+
+materials.map((material) => {
+  return material.length;
+}); // [8, 6, 7, 9]
+
+materials.map(({length}) => length); // [8, 6, 7, 9]
+
+</pre>
+
+
+<h3>No Binding Of This</h3>
+
+An arrow function dones not bind 'this'. Instead 'this' keeps it meaning from its original context.
+Their this is picked up from surroundings (lexical). Therefore, you don’t need bind() or that = this, anymore.
+
+
+Before arrow functions, every new function defined its own 'this' value.
+
+Consider the following, in non-strict mode, the growUp() function defines `this` as the global object, which is different from the `this` defined by the Person() constructor. In strict mode, this is undefined.
+
+
+
+
+
+
+<pre>
+function Person() {
+  // The Person() constructor defines `this` as an instance of itself.
+  this.age = 0;
+
+  setInterval(function growUp() {
+    this.age++;
+    console.log(this.age)	
+  }, 1000);
+}
+
+var p = new Person();
+
+ 
+// The above will return NaN every 1000 milliseconds
+
+
+
+</pre>
+
+
+
+In ECMAScript 3/5, the this issue was fixable by assigning the value in this to a variable that could be closed over.
+
+
+function Person() {
+  var that = this;
+  that.age = 0;
+
+  setInterval(function growUp() {
+    // The callback refers to the `that` variable of which
+    // the value is the expected object.
+    that.age++;
+    console.log(that.age);
+  }, 1000);
+}
+
+var p = new Person();
+
+// The above will return a number incremented by 1 every second.
+
+
+An arrow function does not have its own this; the this value of the enclosing execution context is used. Thus, in the following code, the this within the function that is passed to setInterval has the same value as this in the enclosing function:
+
+
+<pre>
+
+function Person(){
+  this.age = 0;
+
+  setInterval(() => {
+    this.age++; // |this| properly refers to the person object
+    console.log(this.age);
+  }, 1000);
+}
+
+var p = new Person();
+// The above will return a number incremented by 1 every second.
+
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

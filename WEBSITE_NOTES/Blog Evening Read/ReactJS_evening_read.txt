@@ -1,0 +1,23 @@
+https://facebook.github.io/jest/
+
+https://hackernoon.com/simple-react-development-in-2017-113bd563691f
+
+https://engineering.opsgenie.com/you-learned-the-basics-of-react-now-what-389e69be3c5a
+
+https://www.tutorialspoint.com/reactjs/index.htm
+
+https://codeburst.io/how-i-built-an-interactive-30-day-bitcoin-price-graph-with-react-and-an-api-6fe551c2ab1d
+
+https://burkeknowswords.com/introducing-react-food-truck-b23ea1e2cf79
+
+https://hackernoon.com/getting-started-with-react-16-5ebd823d6990
+
+https://www.undefinednull.com/2015/05/03/react-tdd-example-unit-testing-and-building-a-react-component-with-jest-gulp-and-react-test-utils/
+
+https://codeburst.io/how-to-connect-your-react-app-to-a-rest-api-6c648fb4b0f2?source=emailShare-91bfcdd30742-1513204759
+
+https://medium.freecodecamp.org/how-to-make-create-react-app-work-with-a-node-backend-api-7c5c48acb1b0?source=emailShare-91bfcdd30742-1513854508
+
+Redux:
+	https://medium.com/dailyjs/when-do-i-know-im-ready-for-redux-f34da253c85f
+	https://hackernoon.com/writing-shorter-react-redux-containers-9852a43d457?source=emailShare-91bfcdd30742-1513894289	

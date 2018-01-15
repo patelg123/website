@@ -1,0 +1,85 @@
+
+
+
+
+Projects
+https://medium.com/makesideproject/making-a-side-project-part-1-ideas-9a1b24dbfae6
+
+
+
+
+
+JS Classes, Complexity, and Functional Programming
+https://blog.kentcdodds.com/classes-complexity-and-functional-programming-a8dd86903747
+
+
+
+Testing:
+https://medium.freecodecamp.org/the-front-end-test-pyramid-rethink-your-testing-3b343c2bca51
+
+
+
+JS Interviews:
+
+https://codeburst.io/things-you-need-to-know-to-become-an-ace-javascript-developer-aa703397268d
+
+https://codeburst.io/10-javascript-concepts-you-need-to-know-for-interviews-136df65ecce
+
+https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e
+
+https://medium.freecodecamp.org/the-definitive-javascript-handbook-for-a-developer-interview-44ffc6aeb54e
+
+Things to do before putting website live:
+https://codeburst.io/the-front-end-checklist-8b2292fdda44
+
+
+https://medium.freecodecamp.org/a-look-back-at-the-state-of-javascript-in-2017-a5b7f562e977
+
+
+
+
+How to get job as front end developer:
+
+
+https://medium.freecodecamp.org/how-i-set-myself-up-to-land-my-first-job-as-a-self-taught-developer-43d326ea6b67
+
+https://medium.com/@restlessbit/how-to-get-a-job-in-front-end-web-development-b3e7f95a2ba9
+https://medium.freecodecamp.org/how-to-get-a-developer-job-in-less-than-a-year-c27bbfe71645
+https://medium.freecodecamp.org/want-to-boost-your-job-prospects-become-an-authority-on-something-heres-how-473a62183fa9
+https://codeburst.io/the-front-end-checklist-8b2292fdda44
+
+
+What is full stack developer:
+https://medium.com/coderbyte/a-guide-to-becoming-a-full-stack-developer-in-2017-5c3c08a1600c?source=linkShare-91bfcdd30742-1509920563
+https://medium.com/coderbyte/a-guide-to-becoming-a-full-stack-developer-in-2017-5c3c08a1600c
+https://hackernoon.com/full-stack-web-development-the-complete-roadmap-9fe43ec0ba32
+
+https://blog.logrocket.com/frontend-in-2017-the-important-parts-4548d085977f
+
+
+
+
+
+Grunt VS Gulp:
+https://www.keycdn.com/blog/gulp-vs-grunt/
+
+
+Tutorials point:
+
+https://www.tutorialspoint.com/index.htm
+
+
+CHROME DEV TOOLS:
+
+https://codeburst.io/learn-how-to-debug-javascript-with-chrome-devtools-9514c58479db
+
+
+AGILE:
+
+https://medium.com/@elbincodes/agile-scrum-kanban-are-these-pokemon-de8f32b64817
+https://mediatechmgmt.wordpress.com/2015/07/10/scrumban/
+
+
+Web APIs
+https://hackernoon.com/what-are-web-apis-c74053fa4072
+

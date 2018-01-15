@@ -1,0 +1,43 @@
+https://medium.freecodecamp.org/all-you-need-to-know-about-parcel-dbe151b70082
+
+
+GraphQL:
+	https://medium.freecodecamp.org/all-you-need-to-know-about-parcel-dbe151b70082
+
+
+Formating Code:
+	https://medium.com/blackode/code-formatter-the-big-feature-in-elixir-v1-6-0-f6572061a4ba
+
+
+GIT:
+	Which Git workflow is right for you?
+	https://datasift.github.io/gitflow/IntroducingGitFlow.html
+	https://bitbucket.org/?utm_source=newsletter&utm_medium=email&utm_campaign=bitbucket_product-digest-nine&jobid=102814461&subid=1362093901
+	https://hackernoon.com/12-cool-things-you-can-do-with-github-f3e0424cf2f0
+	https://codeburst.io/trunk-based-development-vs-git-flow-a0212a6cae64
+	https://medium.freecodecamp.org/how-to-find-trending-github-projects-using-githunt-in-chrome-cb2d2a8f2468
+	https://www.atlassian.com/git/tutorialshttps://try.github.io/levels/1/challenges/1
+
+NodeJS:
+	https://codeburst.io/learn-node-js-the-3-best-online-node-js-courses-87e5841f4c47
+	https://nodeschool.io/
+
+
+npm:
+	https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b
+
+
+WebPack:
+
+	https://blog.andrewray.me/webpack-when-to-use-and-why/
+
+
+Grunt VS Gulp:
+	https://www.keycdn.com/blog/gulp-vs-grunt/
+	https://scotch.io/tutorials/automate-your-tasks-easily-with-gulp-js
+	https://scotch.io/tutorials/a-simple-guide-to-getting-started-with-grunt
+
+
+Agile:
+	https://medium.com/@elbincodes/agile-scrum-kanban-are-these-pokemon-de8f32b64817
+	https://mediatechmgmt.wordpress.com/2015/07/10/scrumban/	

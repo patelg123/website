@@ -1,0 +1,93 @@
+TOPICS (learn them put on website):
+
+==== JAVASCRIPT====
+
+https://medium.freecodecamp.org/the-definitive-javascript-handbook-for-a-developer-interview-44ffc6aeb54e
+
+- Prototype and Inheritance
+
+- `new` keyword
+
+- == vs. ===
+
+- Scope
+
+- Hoisting
+
+- Function Expression vs. Function Declaration
+
+- Variables: var, let and const
+
+- Closure
+	https://codeburst.io/understand-closures-in-javascript-d07852fa51e7
+
+
+- Function calls: call, apply and bind
+
+- 'this' keyword
+https://codeburst.io/javascript-the-keyword-this-for-beginners-fb5238d99f85
+
+
+- Strict Mode
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+
+- Asynchronous JavaScript
+
+-- rest parameters
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
+--------------
+
+
+ES6/ Ecma 2015:
+
+Resources:
+
+https://blog.pragmatists.com/top-10-es6-features-by-example-80ac878794bb
+https://codeburst.io/why-i-am-in-love-with-es6-13f8aa64005d
+http://es6-features.org
+https://scotch.io/tutorials/better-node-with-es6-pt-i
+
+
+- What is ECMA?
+
+
+- Classes
+	https://scotch.io/tutorials/better-javascript-with-es6-pt-ii-a-deep-dive-into-classes
+
+- const and let
+
+- FAT arrow operator
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+	https://codeburst.io/javascript-arrow-functions-for-beginners-926947fc0cdc
+
+
+- Default function arguments
+	https://medium.freecodecamp.org/default-parameters-in-javascript-4302958331f7
+
+- this
+https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/ch2.md
+
+- Promises
+
+- Rest/Spread Operators
+
+- Object Deconstruction
+
+- import & export keywords
+
+--------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
