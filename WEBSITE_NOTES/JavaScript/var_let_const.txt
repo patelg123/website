@@ -2,3 +2,16 @@ https://blog.pragmatists.com/top-10-es6-features-by-example-80ac878794bb
 https://codeburst.io/why-i-am-in-love-with-es6-13f8aa64005d
 http://es6-features.org
 https://scotch.io/tutorials/better-node-with-es6-pt-i
+
+
+
+Const And Let Variables
+
+
+Let Variables and and Constants have block scope  (surrounded by {}) and can't be used before declarations.
+
+Var variables have function scope and are hosted to the top which means can be used befrow it has been declared.
+
+
+
+
