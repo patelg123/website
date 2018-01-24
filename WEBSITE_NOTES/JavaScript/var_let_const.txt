@@ -1,17 +1,59 @@
-https://blog.pragmatists.com/top-10-es6-features-by-example-80ac878794bb
-https://codeburst.io/why-i-am-in-love-with-es6-13f8aa64005d
-http://es6-features.org
-https://scotch.io/tutorials/better-node-with-es6-pt-i
 
+https://codeburst.io/why-i-am-in-love-with-es6-13f8aa64005d
+
+
+
+https://scotch.io/tutorials/better-node-with-es6-pt-i
+https://blog.pragmatists.com/top-10-es6-features-by-example-80ac878794bb
+http://es6-features.org
 
 
 Const And Let Variables
 
 
-Let Variables and and Constants have block scope  (surrounded by {}) and can't be used before declarations.
+Scope refers to where in your program your variables are visible.
 
-Var variables have function scope and are hosted to the top which means can be used befrow it has been declared.
+Let Variables and Const have block scope  (surrounded by {}) and can't be used before declarations.
+
+Var variables have function scope and are hoisted to the top which means can be used before it has been declared.
 
 
 
 
+function f() {
+  var x = 1
+  let y = 2
+  const z = 3
+  {
+    var x = 100
+    let y = 200
+    const z = 300
+    console.log('x in block scope is', x) // x in block scope is 100  
+    console.log('y in block scope is', y) // y in block scope is 200 
+    console.log('z in block scope is', z) // z in block scope is 300
+  }
+  console.log('x outside of block scope is', x) // x outside of block scope is 100 
+  console.log('y outside of block scope is', y) // y outside of block scope is 2 
+  console.log('z outside of block scope is', z) // z outside of block scope is 3 
+}
+
+f()
+
+
+
+
+
+const variable need to be declared using an initializer, or it will generate an error. cannot be reassigned entirely to a different value. 
+
+const i = 0;
+i = 1; // TypeError: Assignment to constant variable.
+
+
+
+However, if the value of a const is an object or array, the object’s properties themselves are still mutable, able to be modified.
+
+const obj = {
+  i: 0
+};
+obj.i = 1;
+obj.i; // 1
