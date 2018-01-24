@@ -20,6 +20,7 @@ https://medium.freecodecamp.org/the-definitive-javascript-handbook-for-a-develop
 
 - Closure
 	https://codeburst.io/understand-closures-in-javascript-d07852fa51e7
+	https://codeburst.io/understanding-javascript-closures-da6aab330302?source=emailShare-91bfcdd30742-1516313493
 
 
 - Function calls: call, apply and bind
@@ -36,6 +37,13 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
 -- rest parameters
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
+
+
+Arrays:
+
+https://codeburst.io/javascript-arrays-finding-the-minimum-maximum-sum-average-values-f02f1b0ce332?source=emailShare-91bfcdd30742-1515167580
+
+
 --------------
 
 

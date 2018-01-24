@@ -15,6 +15,10 @@ Fullstack React: 30 Days of React PDF
 
 https://reactjs.org/tutorial/tutorial.html
 
+https://medium.freecodecamp.org/10-points-to-remember-thatll-help-you-master-coding-in-reactjs-library-d0520d8c73d8
+
+
+
 
 https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-1-a12e1833fdc
 

@@ -1,8 +1,11 @@
 https://medium.freecodecamp.org/all-you-need-to-know-about-parcel-dbe151b70082
 
+https://medium.freecodecamp.org/the-life-changing-wonder-of-continuous-integration-and-deployment-97f833505eea
+
 
 GraphQL:
 	https://medium.freecodecamp.org/all-you-need-to-know-about-parcel-dbe151b70082
+	https://dev-blog.apollodata.com/2017-the-year-in-graphql-124a050d04c6
 
 
 Formating Code:
@@ -21,7 +24,8 @@ GIT:
 NodeJS:
 	https://codeburst.io/learn-node-js-the-3-best-online-node-js-courses-87e5841f4c47
 	https://nodeschool.io/
-
+	https://codeburst.io/node-js-best-of-2017-6f81f4ccfea
+	https://codeburst.io/using-mongoose-validation-with-async-await-c3a9255459e1
 
 npm:
 	https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b
@@ -40,4 +44,13 @@ Grunt VS Gulp:
 
 Agile:
 	https://medium.com/@elbincodes/agile-scrum-kanban-are-these-pokemon-de8f32b64817
-	https://mediatechmgmt.wordpress.com/2015/07/10/scrumban/	
+	https://mediatechmgmt.wordpress.com/2015/07/10/scrumban/
+
+
+Web bundle:
+
+https://hackernoon.com/webpack-bundle-analysis-a-necessary-step-for-all-react-angular-vue-application-developers-fe6564fa62ca
+
+CLOUD:
+
+https://medium.freecodecamp.org/https-explained-with-carrier-pigeons-7029d2193351

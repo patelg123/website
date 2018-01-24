@@ -1,3 +1,9 @@
+https://hackernoon.com/the-top-66-developer-resources-from-2017-e82531365e6d
+https://medium.com/coderbyte/the-10-best-coding-challenge-websites-for-2018-12b57645b654
+https://medium.freecodecamp.org/https-explained-with-carrier-pigeons-7029d2193351
+https://medium.freecodecamp.org/how-uber-was-made-da3c631066d0
+
+
 - How to get job as a front end developer
 	https://medium.freecodecamp.org/inspirational-success-stories-from-self-taught-web-developers-4f6f375cf17d
 	https://medium.freecodecamp.org/how-i-set-myself-up-to-land-my-first-job-as-a-self-taught-developer-43d326ea6b67
@@ -8,6 +14,7 @@
 	https://medium.com/coderbyte/a-guide-to-becoming-a-full-stack-developer-in-2017-5c3c08a1600c
 	https://hackernoon.com/full-stack-web-development-the-complete-roadmap-9fe43ec0ba32	
 	https://medium.freecodecamp.org/https-medium-com-samwcoding-how-to-get-your-first-developer-job-in-4-months-ec86da6e5d9a?source=emailShare-91bfcdd30742-1514932913
+	https://medium.freecodecamp.org/stories-from-300-developers-who-got-their-first-tech-job-in-their-30s-40s-and-50s-64306eb6bb27
 
 
 - JS General
@@ -17,6 +24,9 @@
 	https://blog.logrocket.com/frontend-in-2017-the-important-parts-4548d085977f
 	https://codeburst.io/the-front-end-checklist-8b2292fdda44	
 	https://medium.com/dailyjs/the-most-popular-javascript-links-of-2017-e4616e8b48c7?source=emailShare-91bfcdd30742-1514834459
+	https://levelup.gitconnected.com/5-front-end-technologies-im-keeping-my-eye-on-in-2018-a9d7b75babff
+	https://levelup.gitconnected.com/building-a-tic-tac-toe-game-app-with-javascript-5916e58071fb
+
 
 - JS Practice:
 	http://eloquentjavascript.net/15_game.html
@@ -41,6 +51,8 @@
 
 - Creating Projects:
 	https://medium.com/makesideproject/making-a-side-project-part-1-ideas-9a1b24dbfae6
+
+
 
 
 
