@@ -67,6 +67,9 @@ TESTING:
 
 ** This is good: https://javascriptplayground.com/introduction-to-react-tests-enzyme/
 
+** Good also: https://camjackson.net/post/9-things-every-reactjs-beginner-should-know#use-shallow-rendering
+
+
 https://medium.com/@skidding/testing-react-components-30516bc6a1b3
 
 https://medium.com/netscape/testing-a-react-redux-app-using-jest-and-enzyme-b349324803a9
