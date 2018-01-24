@@ -4,6 +4,10 @@ READ: https://hackernoon.com/how-css-grid-beats-bootstrap-85d5881cf163
 
 https://medium.freecodecamp.org/css-naming-conventions-that-will-save-you-hours-of-debugging-35cea737d849
 
+http://blog.froont.com/9-basic-principles-of-responsive-web-design/
+
+https://eu.udacity.com/course/responsive-web-design-fundamentals--ud893
+
 
 - CSS box
 	https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model

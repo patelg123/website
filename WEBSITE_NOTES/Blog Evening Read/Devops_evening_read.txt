@@ -19,13 +19,17 @@ GIT:
 	https://hackernoon.com/12-cool-things-you-can-do-with-github-f3e0424cf2f0
 	https://codeburst.io/trunk-based-development-vs-git-flow-a0212a6cae64
 	https://medium.freecodecamp.org/how-to-find-trending-github-projects-using-githunt-in-chrome-cb2d2a8f2468
-	https://www.atlassian.com/git/tutorialshttps://try.github.io/levels/1/challenges/1
+	https://www.atlassian.com/git/tutorials
+	https://try.github.io/levels/1/challenges/1
+	https://www.codeschool.com/learn/git
+
 
 NodeJS:
 	https://codeburst.io/learn-node-js-the-3-best-online-node-js-courses-87e5841f4c47
 	https://nodeschool.io/
 	https://codeburst.io/node-js-best-of-2017-6f81f4ccfea
 	https://codeburst.io/using-mongoose-validation-with-async-await-c3a9255459e1
+
 
 npm:
 	https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b
@@ -54,3 +58,7 @@ https://hackernoon.com/webpack-bundle-analysis-a-necessary-step-for-all-react-an
 CLOUD:
 
 https://medium.freecodecamp.org/https-explained-with-carrier-pigeons-7029d2193351
+
+REST
+How I Explained REST to My Wife
+http://www.looah.com/source/view/2284
