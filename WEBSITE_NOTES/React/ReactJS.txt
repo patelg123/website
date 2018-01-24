@@ -1,13 +1,17 @@
 TO DO:
 
+https://camjackson.net/post/9-things-every-reactjs-beginner-should-know
+
 
 https://developer.telerik.com/featured/5-steps-for-learning-react-application-development/
 
+https://codeburst.io/setting-up-a-react-project-from-scratch-d62f38ab6d97?source=emailShare-91bfcdd30742-1515452552
 
+https://hackernoon.com/understanding-the-react-source-code-initial-rendering-simple-component-i-80263fe46cf1
 
 https://reactjs.org/docs/introducing-jsx.html
 
-
+Fullstack React: 30 Days of React PDF 
 
 https://reactjs.org/tutorial/tutorial.html
 
@@ -18,12 +22,17 @@ https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-1-a12e
 
 https://medium.freecodecamp.org/everything-you-need-to-know-about-react-eaedf53238c4
 
+https://hackernoon.com/do-more-with-less-using-render-props-de5bcdfbe74c
 
-
-
+https://medium.com/js-360/setting-up-react-app-with-webpack-39d489643192
 
 
 https://medium.freecodecamp.org/react-interview-question-what-gets-rendered-in-the-browser-a-component-or-an-element-1b3eac777c85
+
+
+
+
+
 
 
 REACT TUTORIALS:
@@ -38,8 +47,30 @@ https://hackernoon.com/using-a-react-16-portal-to-do-something-cool-2a2d627b0202
 
 https://codeburst.io/how-to-implement-material-design-motion-with-react-js-8bc561c9a94f
 
+https://medium.mybridge.co/learn-react-js-from-top-45-tutorials-for-the-past-year-v-2018-28b7f4d4b2c4
 
 
-Testing:
+
+REDUX:
+
+https://medium.freecodecamp.org/whats-so-great-about-redux-ac16f1cc0f8b
+https://medium.com/@nicotsou/tltr-redux-e4fc30f87e4a
+https://codeburst.io/how-redux-would-run-a-donut-shop-52af6dbd59b0
+
+
+TESTING:
+
+
+** This is good: https://javascriptplayground.com/introduction-to-react-tests-enzyme/
 
 https://medium.com/@skidding/testing-react-components-30516bc6a1b3
+
+https://medium.com/netscape/testing-a-react-redux-app-using-jest-and-enzyme-b349324803a9
+
+https://medium.com/wehkamp-techblog/unit-testing-your-react-application-with-jest-and-enzyme-81c5545cee45
+
+
+REACT NATIVE:
+
+https://codeburst.io/react-react-native-best-of-2017-5d7c43df4b3e
+https://hackernoon.com/how-to-become-a-react-native-developer-in-2018-d9bc85e1d91f
