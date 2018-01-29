@@ -24,5 +24,9 @@ https://eu.udacity.com/course/responsive-web-design-fundamentals--ud893
 - Bootstrap
 	https://startbootstrap.com/
 	https://hackernoon.com/how-css-grid-beats-bootstrap-85d5881cf163
-	https://getbootstrap.com/docs/3.3/components/#navbar	
-	
+	https://getbootstrap.com/docs/3.3/components/#navbar
+
+
+- pre processors
+
+https://htmlmag.com/article/an-introduction-to-css-preprocessors-sass-less-stylus

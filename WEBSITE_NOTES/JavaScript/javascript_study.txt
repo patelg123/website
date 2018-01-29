@@ -33,6 +33,7 @@ https://codeburst.io/javascript-the-keyword-this-for-beginners-fb5238d99f85
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
 
 - Asynchronous JavaScript
+https://kaye.us/javascript-async-control-flow/
 
 -- rest parameters
 
@@ -55,7 +56,7 @@ https://blog.pragmatists.com/top-10-es6-features-by-example-80ac878794bb
 https://codeburst.io/why-i-am-in-love-with-es6-13f8aa64005d
 http://es6-features.org
 https://scotch.io/tutorials/better-node-with-es6-pt-i
-
+https://github.com/lukehoban/es6features
 
 - What is ECMA?
 
@@ -77,6 +78,7 @@ https://scotch.io/tutorials/better-node-with-es6-pt-i
 https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/ch2.md
 
 - Promises
+http://www.datchley.name/es6-promises/
 
 - Rest/Spread Operators
 
@@ -84,18 +86,7 @@ https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20proto
 
 - import & export keywords
 
+- call backs
+http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/
+
 --------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-

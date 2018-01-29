@@ -7,26 +7,22 @@ http://discover-devtools.codeschool.com/
 
 http://eloquentjavascript.net/11_language.html
 
+https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
 
 - How to get job as a front end developer
-	
-	https://medium.freecodecamp.org/how-i-set-myself-up-to-land-my-first-job-as-a-self-taught-developer-43d326ea6b67
-	https://medium.com/@restlessbit/how-to-get-a-job-in-front-end-web-development-b3e7f95a2ba9
-	https://medium.freecodecamp.org/how-to-get-a-developer-job-in-less-than-a-year-c27bbfe71645
-	https://medium.freecodecamp.org/want-to-boost-your-job-prospects-become-an-authority-on-something-heres-how-473a62183fa9
-	https://medium.com/coderbyte/a-guide-to-becoming-a-full-stack-developer-in-2017-5c3c08a1600c?source=linkShare-91bfcdd30742-1509920563
-	https://medium.com/coderbyte/a-guide-to-becoming-a-full-stack-developer-in-2017-5c3c08a1600c
-	https://hackernoon.com/full-stack-web-development-the-complete-roadmap-9fe43ec0ba32	
-	https://medium.freecodecamp.org/https-medium-com-samwcoding-how-to-get-your-first-developer-job-in-4-months-ec86da6e5d9a?source=emailShare-91bfcdd30742-1514932913
-	https://medium.freecodecamp.org/stories-from-300-developers-who-got-their-first-tech-job-in-their-30s-40s-and-50s-64306eb6bb27
+
+
+
+
 
 
 - JS General
-	https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e
+
 	https://medium.freecodecamp.org/the-definitive-javascript-handbook-for-a-developer-interview-44ffc6aeb54e
 	https://medium.freecodecamp.org/a-look-back-at-the-state-of-javascript-in-2017-a5b7f562e977
 	https://blog.logrocket.com/frontend-in-2017-the-important-parts-4548d085977f
-	https://codeburst.io/the-front-end-checklist-8b2292fdda44	
+	https://codeburst.io/the-front-end-checklist-8b2292fdda44
 	https://medium.com/dailyjs/the-most-popular-javascript-links-of-2017-e4616e8b48c7?source=emailShare-91bfcdd30742-1514834459
 	https://levelup.gitconnected.com/5-front-end-technologies-im-keeping-my-eye-on-in-2018-a9d7b75babff
 	https://levelup.gitconnected.com/building-a-tic-tac-toe-game-app-with-javascript-5916e58071fb
@@ -37,11 +33,11 @@ http://eloquentjavascript.net/11_language.html
 	https://www.hackerrank.com/
 	https://www.codewars.com/
 	https://www.codingame.com/start
-	https://medium.com/coderbyte/the-10-best-coding-challenge-websites-for-2018-12b57645b654	
+	https://medium.com/coderbyte/the-10-best-coding-challenge-websites-for-2018-12b57645b654
 
 - JS Interviews:
 	https://codeburst.io/things-you-need-to-know-to-become-an-ace-javascript-developer-aa703397268d
-	https://codeburst.io/10-javascript-concepts-you-need-to-know-for-interviews-136df65ecce	
+	https://codeburst.io/10-javascript-concepts-you-need-to-know-for-interviews-136df65ecce
 	https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9
 	https://medium.freecodecamp.org/the-definitive-javascript-handbook-for-a-developer-interview-44ffc6aeb54e
 
@@ -58,17 +54,30 @@ http://eloquentjavascript.net/11_language.html
 
 
 
+- JQuery
+	https://learn.jquery.com/
 
-
-
+	- Functional programming VS classes:
+		https://blog.kentcdodds.com/classes-complexity-and-functional-programming-a8dd86903747
 -----------------
-READ IT!
+I'VE NOW READ IT!
 
 
-- Functional programming VS classes:
-	https://blog.kentcdodds.com/classes-complexity-and-functional-programming-a8dd86903747
+https://hackernoon.com/full-stack-web-development-the-complete-roadmap-9fe43ec0ba32
 
+	https://medium.com/coderbyte/a-guide-to-becoming-a-full-stack-developer-in-2017-5c3c08a1600c?source=linkShare-91bfcdd30742-1509920563
+	https://medium.com/coderbyte/a-guide-to-becoming-a-full-stack-developer-in-2017-5c3c08a1600c
+
+https://medium.freecodecamp.org/https-medium-com-samwcoding-how-to-get-your-first-developer-job-in-4-months-ec86da6e5d9a?source=emailShare-91bfcdd30742-1514932913
 
 https://medium.freecodecamp.org/inspirational-success-stories-from-self-taught-web-developers-4f6f375cf17d
+https://medium.freecodecamp.org/how-i-set-myself-up-to-land-my-first-job-as-a-self-taught-developer-43d326ea6b67
 
+https://medium.com/@restlessbit/how-to-get-a-job-in-front-end-web-development-b3e7f95a2ba9
+https://medium.freecodecamp.org/how-to-get-a-developer-job-in-less-than-a-year-c27bbfe71645
 
+https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e
+
+https://medium.freecodecamp.org/stories-from-300-developers-who-got-their-first-tech-job-in-their-30s-40s-and-50s-64306eb6bb27
+
+https://medium.freecodecamp.org/want-to-boost-your-job-prospects-become-an-authority-on-something-heres-how-473a62183fa9
