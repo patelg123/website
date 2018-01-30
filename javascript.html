@@ -223,6 +223,69 @@ console.log(ages.reduce(getSum));
 
 -->
 
+<div id="javascript_es6_const_let_variables" class="container-fluid text-center">
+
+	<div class="row content">
+		<div class="col-sm-2 sidenav">
+
+		</div>
+
+		<div class="col-sm-8 text-left">
+
+            <h1>ES6 Const And Let Variables</h1>
+
+            <p>Scope refers to where in your program your variables are visible.</p>
+
+            <p><b>Let</b> and <b>Const</b> Variables have block scope (surrounded by {}) and can't be used before declaration.</p>
+
+            <p><b>Var</b> variables have function scope and are hoisted to the top which means can be used before it has been declared.</p>
+<pre>
+function f() {
+  var x = 1;
+  let y = 2;
+  const z = 3;
+  {
+    var x = 100;
+    let y = 200;
+    const z = 300;
+    console.log('x in block scope is', x); // x in block scope is 100
+    console.log('y in block scope is', y); // y in block scope is 200
+    console.log('z in block scope is', z); // z in block scope is 300
+  }
+  console.log('x outside of block scope is', x); // x outside of block scope is 100
+  console.log('y outside of block scope is', y); // y outside of block scope is 2
+  console.log('z outside of block scope is', z); // z outside of block scope is 3
+}
+
+f();
+
+
+</pre>
+
+        <p><b>Const</b> variables need to be declared using an initializer, or it will generate an error. They also cannot be reassigned entirely to a different value. </p>
+
+<pre>
+const i = 0;
+i = 1; //  TypeError: Assignment to constant variable.
+</pre>
+
+        <p>However, if the value of a <b>const</b> is an object or array, the object’s properties themselves are still mutable, i.e. they are able to be modified.</p>
+
+<pre>
+const obj = {
+  i: 0
+};
+obj.i = 1;
+console.log(obj.i); // 1
+
+
+</pre>
+
+
+        </div>
+    </div>
+</div>
+
 <div id="javascript_es6_arrow_function" class="container-fluid text-center">
 
 	<div class="row content">
