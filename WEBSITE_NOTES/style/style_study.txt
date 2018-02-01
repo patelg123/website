@@ -1,6 +1,6 @@
 CSS:
 
-READ: https://hackernoon.com/how-css-grid-beats-bootstrap-85d5881cf163
+READ:
 
 https://medium.freecodecamp.org/css-naming-conventions-that-will-save-you-hours-of-debugging-35cea737d849
 
@@ -8,6 +8,7 @@ http://blog.froont.com/9-basic-principles-of-responsive-web-design/
 
 https://eu.udacity.com/course/responsive-web-design-fundamentals--ud893
 
+https://medium.com/@patrickbrosset/demystifying-css-alignment-2d3ea7a02a36
 
 - CSS box
 	https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
@@ -20,6 +21,10 @@ https://eu.udacity.com/course/responsive-web-design-fundamentals--ud893
 	https://medium.freecodecamp.org/heres-my-free-css-grid-course-merry-christmas-3826dd24f098?source=emailShare-91bfcdd30742-1514495891
 	https://medium.freecodecamp.org/learning-css-grid-through-recreating-airbnb-youtube-and-more-399c71377eaa?source=emailShare-91bfcdd30742-1514046069
 	https://medium.freecodecamp.org/how-to-recreate-mediums-article-layout-with-css-grid-b4608792bad1
+	https://open.nytimes.com/bootstrap-to-css-grid-87b3f5f830e4
+	https://hackernoon.com/how-css-grid-beats-bootstrap-85d5881cf163
+	https://medium.com/@patrickbrosset/css-grid-css-multi-columns-7664f59bb60c
+	https://codeburst.io/css-grid-layout-simple-guide-e0296cf14fe8
 
 - Bootstrap
 	https://startbootstrap.com/
@@ -30,3 +35,4 @@ https://eu.udacity.com/course/responsive-web-design-fundamentals--ud893
 - pre processors
 
 https://htmlmag.com/article/an-introduction-to-css-preprocessors-sass-less-stylus
+http://winless.org/online-less-compiler

@@ -11,7 +11,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduct
 https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
 
 - How to get job as a front end developer
-
+https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d
 
 
 

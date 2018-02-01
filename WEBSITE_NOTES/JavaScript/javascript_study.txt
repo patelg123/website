@@ -21,7 +21,7 @@ https://medium.freecodecamp.org/the-definitive-javascript-handbook-for-a-develop
 - Closure
 	https://codeburst.io/understand-closures-in-javascript-d07852fa51e7
 	https://codeburst.io/understanding-javascript-closures-da6aab330302?source=emailShare-91bfcdd30742-1516313493
-
+	https://codeburst.io/javascript-learn-understand-closures-8ab35586b0c0
 
 - Function calls: call, apply and bind
 
@@ -57,6 +57,7 @@ https://codeburst.io/why-i-am-in-love-with-es6-13f8aa64005d
 http://es6-features.org
 https://scotch.io/tutorials/better-node-with-es6-pt-i
 https://github.com/lukehoban/es6features
+https://medium.freecodecamp.org/make-your-code-cleaner-shorter-and-easier-to-read-es6-tips-and-tricks-afd4ce25977c
 
 - What is ECMA?
 
