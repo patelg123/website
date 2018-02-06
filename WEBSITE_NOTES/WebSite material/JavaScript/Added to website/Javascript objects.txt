@@ -1,0 +1,90 @@
+ES6 Javascript Classes
+
+It is important to note that Class syntax introduced in ES6 DOES NOT introduce a new object-orientated inheritance model to JavaScript. Rather it is syntactical 'sugar over' JavaScripts existing prototype-based inheritance.
+
+JavaScript classes provide a simpler and clearer syntax to create objects and deal with inheritance.
+
+
+
+prototype-based language vs class based language.
+
+JavaScript's "classes" aren't like classes in languages like Java pr Python. In these class based languages you create classes whcih are templates for objects.
+
+
+When you want a new object, you instantiate the class, which tells the language engine to copy the methods and properties of the class into a new entity, called an instance. The instance is your object, and, after instantiation, has absolutely no active relation with the parent class.
+"Instantiating" a class in JavaScript does create a new object, but not one that is independent of its parent class.
+Rather, it creates an object that is linked to a prototype. Changes to that prototype propagate to the new object, even after instantiation.
+
+
+
+
+
+
+
+
+
+JavaScript Prototypes and Objects
+
+JavaScript objects are containers for named values, called properties, and methods.
+
+Every JavaScript Object has a prototype which they inherit the properties and methods from. All JavaScript objects inherit from the Object.prototype. 
+
+
+
+The standard way to create an object prototype is to use an Object Constructor function: 
+
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+}
+var myFather = new Person("John", "Doe", 50, "blue");
+var myMother = new Person("Sally", "Rally", 48, "green"); 
+
+
+
+With a constructor function, you can use the new keyword to create new objects from the same prototype:
+
+var myFather = new Person("John", "Doe", 50, "blue");
+var myMother = new Person("Sally", "Rally", 48, "green");
+
+Using the prototype Property
+
+The JavaScript prototype property allows you to add new properties to an existing prototype:
+Example
+function Person(first, last, age, eyecolor) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eyecolor;
+}
+Person.prototype.nationality = "English";
+
+
+function Person(first, last, age, eyecolor) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eyecolor;
+}
+Person.prototype.name = function() {
+    return this.firstName + " " + this.lastName;
+};
+
+
+
+
+https://stackoverflow.com/questions/42781642/ecmascript2015-class-vs-object-create-vs-new-vs-object-setprototypeof
+
+https://scotch.io/tutorials/better-javascript-with-es6-pt-ii-a-deep-dive-into-classes
+
+https://stackoverflow.com/questions/17392857/benefits-of-using-object-create-for-inheritance
+
+
+https://www.thecodeship.com/web-development/methods-within-constructor-vs-prototype-in-javascript/
+
+https://www.bennadel.com/blog/2184-object-create-improves-constructor-based-inheritance-in-javascript---it-doesn-t-replace-it.htm
+
+
+

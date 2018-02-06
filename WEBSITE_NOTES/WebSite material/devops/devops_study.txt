@@ -1,0 +1,24 @@
+npm:
+
+https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b
+https://medium.freecodecamp.org/introduction-to-npm-scripts-1dbb2ae01633
+
+NodeJS:
+https://codeburst.io/the-only-nodejs-introduction-youll-ever-need-d969a47ef219
+https://codeburst.io/learn-node-js-the-3-best-online-node-js-courses-87e5841f4c47
+
+
+
+webpack:
+https://hackernoon.com/webpack-4-tutorial-all-you-need-to-know-from-0-conf-to-production-mode-d32759d0dc2d
+https://blog.andrewray.me/webpack-when-to-use-and-why/
+
+MINIFY/ Compressing:
+	https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer
+
+	Babel minify:
+		https://github.com/babel/minify
+
+
+	Uglyfy-es:
+		https://www.npmjs.com/package/uglify-es

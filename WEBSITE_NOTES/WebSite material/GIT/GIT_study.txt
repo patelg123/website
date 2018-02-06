@@ -1,0 +1,13 @@
+GIT:
+
+Which Git workflow is right for you?
+
+https://datasift.github.io/gitflow/IntroducingGitFlow.html
+
+https://bitbucket.org/?utm_source=newsletter&utm_medium=email&utm_campaign=bitbucket_product-digest-nine&jobid=102814461&subid=1362093901
+
+https://hackernoon.com/12-cool-things-you-can-do-with-github-f3e0424cf2f0
+
+https://codeburst.io/trunk-based-development-vs-git-flow-a0212a6cae64
+
+https://medium.freecodecamp.org/how-to-find-trending-github-projects-using-githunt-in-chrome-cb2d2a8f2468
