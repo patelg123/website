@@ -95,6 +95,8 @@ https://stackoverflow.com/questions/671118/what-exactly-is-restful-programming
 http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api
 http://www.restapitutorial.com/
 https://stackoverflow.com/questions/3477333/what-is-the-difference-between-post-and-get
+https://hackernoon.com/what-are-web-apis-c74053fa4072
+
 
 SSL:
 https://www.digicert.com/ssl/
