@@ -1,0 +1,352 @@
+# In JavaScript, functions are objects. Because of this, functions can take functions as arguments, and can be returned by other functions. Functions that do this are called higher-order functions. Any function that is passed as an argument is called a callback function.
+
+
+
+#In JavaScript, functions are first-class objects so they can be passed as an argument in another function and be executed later, or even returned to be exectued later.
+
+
+#Callback functions,  are probably the most widely used functional programming technique in JavaScript.
+
+
+#A higher-order function is a function that operates on other functions. That is, it takes functions as inputs and/or returns them as outputs.
+
+
+#A Callback function is a function that is passed to another function (lets call it otherFunction) as a parameter, and the callback function is called (or executed) inside the otherFunction.
+
+
+#The callback function is not executed immediately and can be executed anytime by the otherFunction.
+
+
+#When we pass a callback function as an argument to another function, we are only passing the function definition. We are not executing the function in the parameter. 
+
+
+
+
+(we aren’t passing the function with the trailing pair of executing parenthesis () like we do when we are executing a function).
+
+
+
+
+#When we pass a callback function as an argument to another function, the callback is executed at some point inside the containing function’s body just as if the callback were defined in the containing function. This means the callback is a closure. closures have access to the containing function’s scope, so the callback function can access the containing functions’ variables, and even the variables from the global scope.
+
+
+
+
+
+
+
+A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
+
+
+Below is a quick example:
+
+<pre>
+
+function greeting(name) {
+  alert('Hello ' + name);
+}
+
+function processUserInput(callback) {
+  var name = prompt('Please enter your name.');
+  callback(name);
+}
+
+processUserInput(greeting);
+
+</pre>
+
+----------------------------------
+
+
+
+
+
+
+
+
+
+#JavaScript is single threaded (unlike Java or C#) and all code is executed in a sequence, not in parallel. In order to perform asynchronous operations, callback functions are used.
+
+
+
+
+
+
+
+JQuery:
+
+--------------
+
+//Note that the item in the click method's parameter is a function, not a variable.?
+	?//The item is a callback function
+	$("#btn_1").click(function() {
+	  alert("Btn 1 Clicked");
+	});
+-------------
+
+
+
+
+The above example is a synchronous callback, as it is executed immediately.
+
+Note however that callbacks are often used to continue code execution after an asynchronous operation has completed — these are called asynchronous callbacks.
+
+
+
+
+
+
+Rather than wait around for a function to finish by returning a value, we can use callbacks to do it asynchronously. This is useful for things that take a while to finish, like making an AJAX request, because we aren’t holding up the browser. We can keep on doing other things while waiting for the callback to be called. In fact, very often we are required (or, rather, strongly encouraged) to do things asynchronously in Javascript.
+
+
+
+
+
+Why do we need Callbacks?
+
+For one very important reason?—?JavaScript is an event driven language. This means that instead of waiting for a response before moving on, JavaScript will keep executing while listening for other events. Lets look at a basic example:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+So why is this useful? Say you send off an HTTP request and you need to do something with the response. Instead of holding up your browser, you can use a callback to handle the response whenever it arrives. Another useful example in this context could be when your application is dependent on user input.
+
+The only reason I used setTimeout was to simulate an operation that takes a certain time. Such operations could be reading from a text file, downloading things or performing an HTTP request.
+
+
+Asynchronous calls do not block (or wait) for the API call to return from the server. Execution continues on in your program, and when the call returns from the server, a "callback" function is executed.
+
+
+
+
+
+
+
+In the below example, <b>T.get</b> simply means we are making a get request to Twitter. There are three parameters in this request: ‘search/tweets’, which is the route of our request, params which are our search parameters, and then an anonymous function which is our callback.
+
+
+<pre>
+T.get('search/tweets', params, function(err, data, response) {
+  if(!err){
+    // This is where the magic will happen
+  } else {
+    console.log(err);
+  }
+})
+</pre>
+
+A callback is important here because we need to wait for a response from the server before we can move forward in our code.
+
+We don’t know if our API request is going to be successful or not so after sending our parameters to search/tweets via a get request, we wait. Once Twitter responds, our callback function is invoked. Twitter will either send an err (error) object or a response object back to us. In our callback function we can use an if() statement to determine if our request was successful or not, and then act upon the new data accordingly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Javascript gives us an option to do things a bit differently. Rather than wait around for a function to finish by returning a value, we can use callbacks to do it #asynchronously. This is useful for things that take a while to finish, #like making an AJAX request, because we aren’t holding up the browser. We can keep on doing other things while waiting for the callback to be called. In fact, very often #we are required (or, rather, strongly encouraged) to do things #asynchronously in Javascript.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Why do we need Callbacks?
+
+#JavaScript is an event driven language which means instead of waiting for a response before moving on, JavaScript will keep executing while listening for other events.
+
+
+
+#To demonstrate this, see the examples below.
+
+#<pre>
+
+#function first(){
+#  console.log(1);
+#}
+
+#function second(){
+#  console.log(2);
+#}
+
+#</pre>
+#If we invoke our functions we get the following
+
+
+<pre>
+first();
+second();
+
+// 1
+// 2
+
+
+</pre>
+
+
+
+
+However, what if function <b>first</b> contains code that can't be executed straight way? For eg an API request where we have to send the request then wait for a response?
+
+The below simulates this action:
+
+
+<pre>
+function first(){
+  // Simulate a code delay
+  setTimeout( function(){
+    console.log(1);
+  }, 500 );
+}
+
+function second(){
+  console.log(2);
+}
+
+first();
+second();
+
+
+</pre>
+
+We get the following when we invoke our functions:
+
+<pre>
+first();
+second();
+
+// 2
+// 1
+
+</pre>
+
+So even though we invoked the <b>first()</b> function first, the reuslt got logged out after that of the <b>second()</b> function.
+
+
+JavaScript didn’t wait for a response from first() before moving on to execute second(). 
+
+So why show you this? Because you can’t just call one function after another and hope they execute in the right order. Callbacks are a way to make sure certain code doesn’t execute until other code has already finished execution.
+
+
+<pre>
+function first(callback){
+	
+
+  // Simulate a code delay
+  setTimeout( function(){
+    console.log(1);
+
+    //execute callback
+     callback();
+  }, 1000 );
+
+	
+
+}
+
+
+
+function second(){
+  console.log(2);
+}
+
+
+
+first(second);
+
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+http://dreamerslab.com/blog/en/javascript-callbacks/
+http://recurial.com/programming/understanding-callback-functions-in-javascript/
+https://codeburst.io/javascript-what-the-heck-is-a-callback-aba4da2deced
+http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/

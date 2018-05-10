@@ -1,3 +1,13 @@
+
+
+
+
+
+TESTING:
+https://medium.com/welldone-software/an-overview-of-javascript-testing-in-2018-f68950900bc3
+https://codeburst.io/javascript-unit-testing-using-mocha-and-chai-1d97d9f18e71
+
+
 TOPICS (learn them put on website):
 
 ==== JAVASCRIPT====
@@ -6,11 +16,39 @@ https://medium.freecodecamp.org/the-definitive-javascript-handbook-for-a-develop
 
 
 
+
+
+
+
+
+
+DONE:
+
+
+
+
+Promises
+http://www.datchley.name/es6-promises/
+http://es6-features.org/#PromiseUsage
+
+
+https://levelup.gitconnected.com/understand-javascript-promises-by-building-a-promise-from-scratch-84c0fd855720
+
+
+
+
+
+
+
+
+
+
+
 - Prototype and Inheritance
 
 - `new` keyword
 
-- == vs. ===
+
 
 - Scope
 
@@ -23,6 +61,8 @@ https://medium.freecodecamp.org/the-definitive-javascript-handbook-for-a-develop
 
 
 - Function calls: call, apply and bind
+https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d
+https://medium.freecodecamp.org/the-definitive-javascript-handbook-for-a-developer-interview-44ffc6aeb54e
 
 - 'this' keyword
 https://codeburst.io/javascript-the-keyword-this-for-beginners-fb5238d99f85
@@ -36,32 +76,36 @@ https://kaye.us/javascript-async-control-flow/
 
 -Rest/Spread Operators
 
+https://codeburst.io/javascript-es6-the-spread-syntax-f5c35525f754?source=emailShare-91bfcdd30742-1517956039
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
 https://codeburst.io/javascript-arrays-finding-the-minimum-maximum-sum-average-values-f02f1b0ce332?source=emailShare-91bfcdd30742-1515167580
 
 - Default function arguments
 	https://medium.freecodecamp.org/default-parameters-in-javascript-4302958331f7
 
-- call backs
+- call backs and Promises
 http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/
+https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d
+http://www.datchley.name/es6-promises/
+https://codeburst.io/javascript-what-the-heck-is-a-callback-aba4da2deced
+
 
 - Return statement:
 https://codeburst.io/javascript-what-is-the-return-statement-97d8b11a1a0c
 
 
 
-- Promises
-http://www.datchley.name/es6-promises/
+- 
 
 
+- ES6 Modules
 
+https://www.tutorialspoint.com/es6/es6_modules.htm
+https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch3.md
 
-
-
-
-
-
-
+https://medium.freecodecamp.org/javascript-modules-a-beginner-s-guide-783f7d7a5fcc
+https://medium.freecodecamp.org/javascript-modules-part-2-module-bundling-5020383cf306
+https://medium.com/@crohacz_86666/basics-of-modular-javascript-2395c82dd93a
 
 
 

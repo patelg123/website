@@ -1,0 +1,151 @@
+Yarn
+
+
+Yarn is a package management tool developed by Facebook.
+
+Advantages of Yarn include:
+
+
+
+
+It takes packages from both NpmJS or Bower registries.
+
+
+Security: Yarn uses checksums to verify the integrity of every installed package before its code is executed.
+
+
+Offline Mode
+
+If you've installed a package before, you can install it again without any internet connection. Packages installed using Yarn with yarn add packagename are stored on your disk so that during the next install, this package will be used instead of sending a HTTP request to download the package again from the registry. 
+
+
+
+
+Parallel Installation
+
+Whenever npm or Yarn needs to install a package, it carries out a series of tasks. In npm, these tasks are executed per package and sequentially, meaning it will wait for a package to be fully installed before moving on to the next. Yarn executes these tasks in parallel, increasing performance.
+
+
+
+
+Using Yarn
+
+If you need a new package.json file and to initialize a dependency tree based on Yarn you could run the following:
+
+Yarn uses the same <b>package.json</b> as npm and saves dependencies to the node_modules folder.
+
+
+<pre>
+yarn init
+</pre> 
+
+
+Adding a new dependency:
+
+<pre>
+
+// Adding a new dependency:
+yarn add [package-name]
+
+// Adding a specific package version or tag
+yarn add [package]@[version-or-tag]
+
+// for dev, peer or optional dependencies pass the --dev --peer --optional
+// the below will save gulp under devDependencies
+yarn add gulp --dev
+
+//To upgrade or remove a package, you just replace the add command with either upgrade or remove followed by the package name.
+// The below will upgrade gulp to version 4
+yarn upgrade gulp@4.0
+
+// the below will remove gulp
+yarn remove gulp
+
+
+
+Yarn lock file
+
+Yarn updates a yarn.lock file after every install, upgrade or removal. this file keeps track of the exact package version installed in the node_modules directory.
+
+
+<b>.yarnclean</b> file
+
+By running yarn clean, yarn will try and remove as much junk as it can that comes from packages.
+
+To update yarn, type the following command:
+
+yarn self-update
+
+
+npm vs yarn commands
+
+#Starting a new project
+npm init === yarn init      
+
+ #Installing all the dependencies of project
+npm install === yarn or yarn install    
+
+#Adding a dependency
+npm install [package] === yarn add [package] #The  package is saved to your package.json immediately.      
+npm install  [package]@[version] === yarn add [package]@[version]
+npm install [package]@[tag] === yarn add [package]@[tag]
+
+#Add a dev dependency
+npm install [package] --save-dev === yarn add [package] --dev
+
+#Upgrading a dependency
+npm update [package] === yarn upgrade [package]
+npm update [package]@[version] === yarn upgrade [package]@[version]
+npm update [package]@[tag] === yarn upgrade [package]@[tag]
+
+#Removing a dependency
+npm uninstall [package] === yarn remove [package]
+
+#View registry information
+npm view [package] === yarn info [package]
+
+#List installed packages
+npm list === yarn list
+npm list --depth === yarn list --depth=0
+
+#Install packages globally
+npm install -g [package] === yarn global addb [package]
+
+
+#Run a defined package script
+npm run [script] === yarn run [script]
+
+
+
+
+
+
+
+
+
+
+
+https://scotch.io/tutorials/yarn-package-manager-an-improvement-over-npm
+
+
+https://scotch.io/@brian_kimo/npm-vs-yarn
+
+
+
+
+
+39
+
+
+
+40.50
+
+
+
+
+
+
+
+
+
+

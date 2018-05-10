@@ -1,0 +1,52 @@
+CSS box model (2018-03-19) 
+ 
+A Browser's rendering engine represents each element as a rectangular box when laying out a document.
+<br /><br />
+CSS determines the size, position, and properties (color, background, border size, etc.) of these boxes.
+
+Every box is composed of four parts (or areas), defined by their respective edges: the content edge, padding edge, border edge, and margin edge.
+
+<img src="images/css_box_model.png" alt="CSS Box Model" />
+
+
+
+
+
+
+
+
+The <b>content area</b> is bounded by the content edge and contains the "real" content of the element such as text or an image. It can have a background colour or image. The content area's size are defined with width, min-width, max-width, height, min-height, and max-height properties.
+
+
+<h3>box-sizing: content-box; VS box-sizing: border-box; </h3>
+
+
+<b>box-sizing: content-box;</b> is the default in the CSS box model. The width and height you assign to an element is applied only to the element's content area.
+If you set an element's width to 100 pixels, then the element's content area will be 100 pixels wide, and the width of any border or padding will be added to the final rendered width.
+
+
+
+If <b>box-sizing: border-box;</b> is set, this tells the browser to account for any border and padding in the values you specify for width and height. So If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added, and the content box will shrink to absorb that extra width.
+
+
+The <b>padding area</b> is bounded by the padding edge. The thickness of the padding is determined by the padding-top, padding-right, padding-bottom, padding-left, and shorthand padding properties.
+
+
+
+The <b>border area</b> is bounded by the border edge. The thickness of the borders are determined by the border-width and shorthand border properties.
+If the box-sizing property is set to border-box, the border area's size can be explicitly defined with the width, min-width, max-width, height, min-height, and max-height properties. 
+
+
+The <b>margin area</b>, bounded by the margin edge, extends the border area to include an empty area used to separate the element from its neighbors. Its dimensions are the margin-box width and the margin-box height.
+
+The size of the margin area is determined by the margin-top, margin-right, margin-bottom, margin-left, and shorthand margin properties. When margin collapsing occurs, the margin area is not clearly defined since margins are shared between boxes.
+
+
+<a href
+
+
+<h3>RESOURCES:</h3>
+
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model</a>
+
+

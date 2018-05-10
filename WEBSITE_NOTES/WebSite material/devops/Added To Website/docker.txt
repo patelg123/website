@@ -1,0 +1,114 @@
+Docker
+
+
+Docker is a a helpful tool for packing, shipping, and running applications within 'containers'.
+
+Docker is an open-source project based on Linux containers. It uses Linux Kernel features like namespaces and control groups to create containers on top of an operating system.
+
+1. Ease of use: Docker has made it much easier for anyone?—?developers, systems admins, architects and others?—?to take advantage of containers in order to quickly build and test portable applications. It allows anyone to package an application on their laptop, which in turn can run unmodified on any public cloud, private cloud, or even bare metal. The mantra is: “build once, run anywhere.”
+
+2. Speed: Docker containers are very lightweight and fast. Since containers are just sandboxed environments running on the kernel, they take up fewer resources. You can create and run a Docker container in seconds, compared to VMs which might take longer because they have to boot up a full virtual operating system every time.
+
+3. Docker Hub: Docker users also benefit from the increasingly rich ecosystem of Docker Hub, which you can think of as an “app store for Docker images.” Docker Hub has tens of thousands of public images created by the community that are readily available for use. It’s incredibly easy to search for images that meet your needs, ready to pull down and use with little-to-no modification.
+
+4. Modularity and Scalability: Docker makes it easy to break out your application’s functionality into individual containers. For example, you might have your Postgres database running in one container and your Redis server in another while your Node.js app is in another. With Docker, it’s become easier to link these containers together to create your application, making it easy to scale or update components independently in the future.
+
+With Docker, the entire application can be isolated in containers that can be ported from machine to machine. This allows for consistent environments and dependencies. Thus, you can “build once, run anywhere,” and developers will now be able to install just one thing?—?Docker?—?and run a couple commands to get the application running. Newcomers will be able to rapidly begin developing without worrying about their environment.
+
+
+Docker Containers
+
+A Docker container, as discussed above, wraps an application’s software into an invisible box with everything the application needs to run. That includes the operating system, application code, runtime, system tools, system libraries, and etc. Docker containers are built off Docker images. Since images are read-only, Docker adds a read-write file system over the read-only file system of the image to create a container.
+
+
+
+Docker creates a network interface so that the container can talk to the local host, attaches an available IP address to the container, and executes the process that you specified to run your application when defining the image.
+
+Once you’ve successfully created a container, you can then run it in any environment without having to make changes.
+
+
+
+Using Docker, you can quickly deploy and scale applications into any environment and know your code will run. You can do this because Docker packages software into standardized units called containers that have everything the software needs to run including libraries, system tools, code, and runtime.
+
+
+
+
+Docker Images
+
+Docker images are read-only templates that describe a Docker Container. They include specific instructions written in a Dockerfile that defines the application and its dependencies. Think of them as a snapshot of your application at a certain time. You will get images when you <b>docker build</b>.
+
+
+
+Docker Containers
+
+Docker Containers are instances of Docker images. They include the operating system, application code, runtime, system tools, system libraries, and so on. You are able to connect multiple Docker Containers together, such as a having a Node.js application in one container that is connected to a Redis database container. You will run a Docker Container with <b>docker start</b>.
+
+
+Docker Registries
+
+A Docker Registry is a place for you to store and distribute Docker images. We will be using Docker Images as our base images from DockerHub, a free registry hosted by Docker itself.
+
+Docker Compose
+
+Docker Compose is a tool that allows you to build and start multiple Docker Images at once. Instead of running the same multiple commands every time you want to start your application, you can do them all in one command?—?once you provide a specific configuration.
+
+
+Docker is an operating system (or runtime) for containers. The Docker Engine is installed on each server you want to run containers on and provides a simple set of commands you can use to build, start, or stop containers.
+
+
+
+    You only have to build the app once. Because a Docker app runs inside a container, and the container can run on any system with Docker installed, there is no need to build the app and configure it for multiple types of hardware platforms or operating systems where it will run. You only have to build it once for Docker.
+
+    You get greater consistency between testing environments and production environments. When doing development with Docker, you test your app inside a container, and you ship it inside a container. That means the environment in which you test is identical to the one in which the app will run in production. As a result, developers can have much more confidence that end users won't experience problems that the QA team missed when it was testing the app.
+
+    You get more modularity. Doing development with Docker containers is perfect for a microservices approach to app design. Under this model, complex applications are split into discrete units. For example, your database might run in one container while the front-end part of your app runs in a separate one. This approach makes the app modular. It reduces the complexity of managing and updating the app because a problem or change related to one part of the app does not require an overhaul of the app as a whole.
+
+
+
+
+
+
+
+
+
+<h2>how to get code into containers</h2>
+
+
+
+<h3>Using Shared Volumes</h3>
+
+
+
+Docker allows for mounting local directories into containers using the shared volumes feature. Just use the -v switch to specify the local directory path that you wish to mount, along with the location where it should be mounted within the running container
+
+
+This is particularly useful when developing locally, as you can use your favorite editor to work locally, commit code to Git, and pull the latest code from remote branches.
+
+Your application will run inside a container, isolating it away from any processes you have running on your development laptop.
+
+
+
+<h3>Using COPY command</h3>
+
+
+You can use the COPY command within a Dockerfile to copy files from the local filesystem into a specific directory within the container. 
+
+
+This technique is recommended for building production-ready Docker images.
+
+
+
+
+
+
+
+
+https://blog.cloud66.com/how-to-get-code-into-a-docker-container/
+
+
+
+https://medium.freecodecamp.org/docker-development-workflow-a-guide-with-flask-and-postgres-db1a1843044a
+
+
+https://medium.freecodecamp.org/a-beginner-friendly-introduction-to-containers-vms-and-docker-79a9e3e119b
+https://hackernoon.com/an-introduction-to-docker-through-story-8ae5594d7446

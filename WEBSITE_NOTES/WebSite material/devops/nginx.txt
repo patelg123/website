@@ -1,0 +1,49 @@
+<h1>NGINX</h1>
+
+NGINX, pronounced as engine-X is a popular web server that also doubles as a reverse proxy, load balancer and HTTP cache for HTTP, TCP, and UDP servers. 
+
+
+runs on multiple environments including Unix, Linux, BSD variants, MacOS, Solaris, AIX, HP-UX, and Windows
+
+
+NGINX supports all the components of the modern Web, including WebSocket, HTTP/2, and streaming of multiple video formats (HDS, HLS, RTMP, and others).
+
+
+ NGINX uses a more scalable event-driven (asynchronous) architecture, instead of relying on thread-based request handling system, making it efficient to handle more requests per second without compromising on speed.
+
+
+
+Features of NGINX
+
+    Low memory footprint
+    Ability to handle more than 10,000 simultaneous connections
+    Handling of static files, index files and auto-indexing
+    Reverse proxy with caching
+    Load balancing
+    IPv6-compatible
+    Name-based and IP-based virtual servers
+    The PUT, DELETE, MKCOL, COPY, and MOVE methods
+    FLV and MP4 streaming
+    Response rate limiting
+    Limiting the number of simultaneous connections or requests coming from one address
+    Embedded Perl
+
+These are just a few of the features of NGINX, you can check out a complete breakdown of its features <a href="https://nginx.org/en/">here</a>.
+
+
+Open source written specifically to solve scaling issues.
+
+Uses an event-driven, asynchronous and non-blocking approach. 
+
+Allows setting multiple porcesses and each worker can handle thousands of concurrent connections.
+
+
+
+
+
+
+
+
+
+https://medium.com/@samdias9792/nginx-better-and-faster-web-server-technology-fceeed0c7374
+https://medium.com/comparethemarket/environment-configuration-with-react-nginx-2444e1f11a4c

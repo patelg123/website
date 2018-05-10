@@ -1,0 +1,120 @@
+Jenkins Pipeline
+
+
+Jenkins is an open source automation server written in Java and helps automate the "non-human" part of the software development process.
+
+
+A Pipeline is another way of defining some Jenkins steps using code, and automate the process of deploying software.
+
+A pipeline is a script which gives Jenkins a series of jobs to do in a pipeline like manner (one after the other) these jobs can be as Jenkins code, scripts, build languages etc.
+
+
+
+The list of jobs which are to be performed in the pipeline is configured in the Jenkinsfile. The file can be located on the JEnkins server itself or at the root of a linked git/Bitbucket repository.
+
+
+Jenkinsfile is a text file that contains the definition of a Jenkins Pipeline and is checked into source control.
+
+
+Build Jobs are the runnable tasks that are controlled and monitored by Jenkins. Examples of jobs include compiling source code, running tests, provisioning a test environment, deploying, archiving, posting build jobs such as reporting, and executing arbitrary scripts.
+
+
+
+Jenkins Pipeline features
+
+    Code: Pipelines are implemented in code and typically checked into source control, giving teams the ability to edit, review, and iterate upon their delivery pipeline.
+    Durable: Pipelines can survive both planned and unplanned restarts of the Jenkins master.
+    Pausable: Pipelines can optionally stop and wait for human input or approval before continuing the Pipeline run.
+    Versatile: Pipelines support complex real-world continuous delivery requirements, including the ability to fork/join, loop, and perform work in parallel.
+    Extensible: The Pipeline plugin supports custom extensions to its DSL (Domain-Specific Language) and multiple options for integration with other plugins.
+
+
+Integration of Bitbucket and Jenkins
+
+
+<a href="https://marketplace.atlassian.com/plugins/com.nerdwin15.stash-stash-webhook-jenkins/server/overview">Webhook to Jenkins for Bitbucket</a>
+can be used to Integrate Bitbucket Server and Jenkins and allows you to configure a hook on a project or repository level,
+
+
+
+
+
+
+
+
+------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://medium.com/@lukastosic/continuous-integration-workflow-91fd83b8d69a
+
+
+https://mohamicorp.atlassian.net/wiki/spaces/DOC/pages/381288449/Configuring+Webhook+To+Jenkins+for+Bitbucket+Git+Plugin
+
+
+
+https://www.youtube.com/watch?v=nNaR5Q_pIa4
+
+
+
+
+
+
+
+
+
+https://medium.com/myplanet-musings/docker-the-fun-and-easy-way-d84f5682c1f
+
+
+
+
+
+
+
+USED:
+https://medium.com/@mightywomble/jenkins-pipeline-beginners-guide-f3868f715ed9
+https://medium.com/dev-blogs/configuring-jenkins-with-github-eef13a5cc9e9
+
+https://bjurr.com/continuous-integration-with-bitbucket-server-and-jenkins/
+
+https://medium.com/@Iren.Korkishko/start-continuous-integration-with-jenkins-pipeline-90fb25aaf92f
+https://medium.com/@teeks99/continuous-integration-with-jenkins-and-gitlab-fa770c62e88a
+https://medium.com/@Iren.Korkishko/start-continuous-integration-with-jenkins-pipeline-90fb25aaf92f
+
+DONE
+https://hackernoon.com/how-to-get-continuous-integration-right-77bda4bc0d1f
+https://medium.com/@teeks99/continuous-integration-with-jenkins-and-gitlab-fa770c62e88a
+
+https://stackoverflow.com/questions/19003098/how-can-i-make-jenkins-only-build-feature-branches-if-they-have-changed-when-tri
+https://www.atlassian.com/continuous-delivery/continuous-delivery-workflows-with-feature-branching-and-gitflow
+
+https://jenkins.io/doc/book/pipeline/multibranch/
+
+https://hackernoon.com/bitbucket-pipelines-vs-jenkins-pipeline-f3b7c0e1c198
+
+https://medium.freecodecamp.org/how-to-setup-ci-on-gitlab-using-docker-66e1e04dcdc2
+
+
+
+https://hackernoon.com/continuous-integration-circleci-vs-travis-ci-vs-jenkins-41a1c2bd95f5
+https://bjurr.com/continuous-integration-with-bitbucket-server-and-jenkins/

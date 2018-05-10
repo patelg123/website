@@ -1,0 +1,222 @@
+Gulp VS Grunt
+
+
+One of the main differences between the two is that with Gulp is that it uses Node streams to group tasks together and process them sequentially in memory. To run four tasks on a group of files in Gulp requires only one write to the disk. With Grunt you would need to configure an input and output for each task resulting in four separate writes. 
+
+
+The speed difference is not noticeable with smaller projects, but can become an issue with the more files and tasks that need to be processed. 
+
+Another difference between the two is Gulp’s focuses on code over configuration. Grunt’s tasks are configured in a configuration object inside the Gruntfile, while Gulp’s are coded using a Node style syntax.
+
+
+
+
+
+
+
+
+Setup of same two tasks
+
+gulpfile.js:
+
+var gulp = require('gulp');
+     sass = require('gulp-sass');
+     autoprefixer = require('gulp-autoprefixer');
+ 
+// Styles
+gulp.task('styles', function() {
+    gulp.src('sass/styles.scss')
+        .pipe(sass())
+        .pipe(autoprefixer('last 1 version', '> 1%', 'ie 8', 'ie 7'))
+        .pipe(gulp.dest('css'));
+});
+ 
+// Watch the sass files
+gulp.task('watch', function() {
+    gulp.watch('sass/*.scss', ['styles']);
+});
+ 
+gulp.task('default', ['styles, watch']);
+
+
+
+gruntfile.js:
+
+module.exports = function(grunt) {
+ 
+  // Project configuration.
+  grunt.initConfig({
+    sass: {
+      dist: {
+        files: {
+          'sass/styles.scss': 'css/styles.css'
+        }
+      }
+    },
+ 
+    autoprefixer: {
+      single_file: {
+        options: {
+          browsers: ['last 2 version', 'ie 8', 'ie 9']
+        },
+        src: 'css/styles.css',
+        dest: 'css/styles.css'
+      },
+    },
+ 
+    watch: {
+      sass: {
+        files: 'sass/*.scss',
+        tasks: ['sass', 'autoprefixer'],
+      }
+    },
+  });
+ 
+  grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+ 
+  // Default task
+  grunt.registerTask('default', ['watch']);
+};
+
+
+
+------------------------
+
+Gulp is a streaming build system. It's streaming nature is what allows it to pipe and pass around the data being manipulated or used by it's plugins. The plugins are intended to only do one job each, so it's not uncommon to pass a singular file through multiple plugins.
+
+
+
+The gulp api is incredibly light containing 4 top level functions. They are
+
+gulp.task
+defines your tasks. Its arguments are name, deps and fn.
+Where name is a string, deps is an array of task names, and fn is the function that performs your task.
+
+
+
+
+gulp.src
+points to the files we want to use. It's parameters are globs and an optional options object. It uses .pipe for chaining it's output into other plugins.
+
+gulp.dest
+points to the output folder we want to write files to.
+
+
+gulp.watch
+
+
+
+
+
+
+
+
+
+
+gulp.plumber()
+https://scotch.io/tutorials/prevent-errors-from-crashing-gulp-watch
+https://stackoverflow.com/questions/32502678/gulp-uglify-and-sourcemaps
+return gulp.src(sourceFiles)
+    .pipe(sourcemaps.init())
+    .pipe(plumber())
+    .pipe(concat(filenameRoot + '.js'))
+    .pipe(gulp.dest(destinationFolder)) // save .js
+    .pipe(uglify({ preserveComments: 'license' }))
+    .pipe(rename({ extname: '.min.js' }))
+    .pipe(sourcemaps.write('maps'))
+    .pipe(gulp.dest(destinationFolder)) // save .min.js
+
+
+-----------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+Some of the most common tasks that either tool can accomplish and/or automate include:
+
+Compressing image files
+Eliminating debugger and console statements from scripts
+Minifying, concatenating, and cleaning up CSS and JavaScript
+Linting code for errors
+Compiling LESS files
+Running unit tests
+Sending updates to a production server
+Updating databases
+
+
+
+
+
+gulp tasks:
+
+Jshint : 
+
+
+gulp-plumber (prevents errors from terminating the gulp watcher and displays a meaningful error message).
+gulp-jshint (lints javascript)  
+jshint-stylish (reporter for jshint)
+gulp-sourcemaps (map processed, minified , or other modified files to their original sources)
+gulp-concat (pulls all the javascript files together into one file)
+gulp-ugliy (makes the file smaller)
+
+
+
+
+
+http://justinjohnson.org/javascript/getting-started-with-gulp-and-browserify/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://medium.freecodecamp.org/javascript-modules-a-beginner-s-guide-783f7d7a5fcc
+https://medium.freecodecamp.org/javascript-modules-part-2-module-bundling-5020383cf306
+
+https://medium.com/@gimenete/how-javascript-bundlers-work-1fc0d0caf2da
+
+
+
+WEBSITES:
+https://www.sitepoint.com/how-to-grunt-and-gulp-your-way-to-workflow-automation/
+https://www.keycdn.com/blog/gulp-vs-grunt/
+
+https://scotch.io/tutorials/automate-your-tasks-easily-with-gulp-js
+
+https://www.toptal.com/front-end/webpack-browserify-gulp-which-is-better
+https://scotch.io/tutorials/a-quick-guide-to-using-livereload-with-gulp
+https://scotch.io/tutorials/how-to-use-browsersync-for-faster-development

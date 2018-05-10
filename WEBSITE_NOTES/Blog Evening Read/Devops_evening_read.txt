@@ -1,102 +1,24 @@
-https://medium.freecodecamp.org/all-you-need-to-know-about-parcel-dbe151b70082
-
-https://medium.freecodecamp.org/the-life-changing-wonder-of-continuous-integration-and-deployment-97f833505eea
 
 
-SQL vs NoSQL
-https://www.sitepoint.com/sql-vs-nosql-differences/
-
-GraphQL:
-	https://medium.freecodecamp.org/all-you-need-to-know-about-parcel-dbe151b70082
-	https://dev-blog.apollodata.com/2017-the-year-in-graphql-124a050d04c6
 
 
-Formating Code:
-	https://medium.com/blackode/code-formatter-the-big-feature-in-elixir-v1-6-0-f6572061a4ba
-
-Algorithms and Data structure:
-https://medium.com/coderbyte/how-to-get-good-at-algorithms-data-structures-d33d5163353f
-https://justin.abrah.ms/computer-science/big-o-notation-explained.html
-https://medium.com/@felipernb/algorithms-data-structures-and-web-development-7772e088f1d3
-https://martin.kleppmann.com/2012/10/01/rethinking-caching-in-web-apps.html
-https://stackoverflow.com/questions/25802521/difference-between-in-memory-databases-and-disk-memory-database
-https://stackoverflow.com/questions/2074970/stack-and-queue-why
-https://stackoverflow.com/questions/730620/how-does-a-hash-table-work
-https://www.quora.com/How-do-I-create-my-own-hash-table-implementation-in-Python
-
-GIT:
-	Which Git workflow is right for you?
-	https://datasift.github.io/gitflow/IntroducingGitFlow.html
-	https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
-	https://bitbucket.org/?utm_source=newsletter&utm_medium=email&utm_campaign=bitbucket_product-digest-nine&jobid=102814461&subid=1362093901
-	https://hackernoon.com/12-cool-things-you-can-do-with-github-f3e0424cf2f0
-	https://codeburst.io/trunk-based-development-vs-git-flow-a0212a6cae64
-	https://medium.freecodecamp.org/how-to-find-trending-github-projects-using-githunt-in-chrome-cb2d2a8f2468
-	https://www.atlassian.com/git/tutorials
-	https://try.github.io/levels/1/challenges/1
-	https://www.codeschool.com/learn/git
-	https://git-scm.com/docs
 
 
 
-Web storage:
-	https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API
-
-NodeJS:
-	https://codeburst.io/learn-node-js-the-3-best-online-node-js-courses-87e5841f4c47
-	https://nodeschool.io/
-	https://codeburst.io/node-js-best-of-2017-6f81f4ccfea
-	https://codeburst.io/using-mongoose-validation-with-async-await-c3a9255459e1
-
-express:
-	https://expressjs.com/
-
-in memory databases:
-	http://www.computerweekly.com/feature/In-memory-databases-What-they-do-and-the-storage-they-need
+GIT:
 
 
-npm:
-	https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b
 
 
-browserify:
-	http://browserify.org/
 
 
-WebPack:
-
-	https://blog.andrewray.me/webpack-when-to-use-and-why/
-	https://webpack.js.org/
-
-Grunt VS Gulp:
-	https://www.keycdn.com/blog/gulp-vs-grunt/
-	https://scotch.io/tutorials/automate-your-tasks-easily-with-gulp-js
-	https://scotch.io/tutorials/a-simple-guide-to-getting-started-with-grunt
 
 
-Agile:
-	https://medium.com/@elbincodes/agile-scrum-kanban-are-these-pokemon-de8f32b64817
-	https://mediatechmgmt.wordpress.com/2015/07/10/scrumban/
 
 
-Web bundle:
-
-https://hackernoon.com/webpack-bundle-analysis-a-necessary-step-for-all-react-angular-vue-application-developers-fe6564fa62ca
-
-CLOUD:
-
-https://medium.freecodecamp.org/https-explained-with-carrier-pigeons-7029d2193351
-
-REST
-How I Explained REST to My Wife
-http://www.looah.com/source/view/2284
-https://www.pluralsight.com/blog/tutorials/representational-state-transfer-tips
-https://stackoverflow.com/questions/671118/what-exactly-is-restful-programming
-http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api
-http://www.restapitutorial.com/
-https://stackoverflow.com/questions/3477333/what-is-the-difference-between-post-and-get
-https://hackernoon.com/what-are-web-apis-c74053fa4072
 
 
-SSL:
-https://www.digicert.com/ssl/
+
+
+
+

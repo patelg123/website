@@ -1,0 +1,213 @@
+GIT Workflows
+
+
+Git offers a lot of flexibility and there is no standardized process on how to interact with Git.
+
+When working with a team on a Git managed project, it’s important to make sure the team is all in agreement on how the flow of changes will be applied. To ensure the team is on the same page, an agreed upon Git workflow should be developed or selected. There are several publicized Git workflows that may be a good fit for your team.
+
+
+Git Feature Branch Workflow
+
+
+The core idea with this workflow is that all development development should take place in a dedicated branch instead of the <b>master</b> branch.
+
+
+It allows the useage of <p>pull requests</b> which allows developers to comment on each others work before it gets integrated into the main project.
+
+
+How it works
+
+
+Instead of working and committing directly on their local <b>master</b> branch, developers create a new branch every time they start a work on a new item. The branches should have descriptive names to allow easy identification e.g. issue#865.
+
+Once work has been completed on the branch, the branch can be pushed to the central repository where the code can be reviewed by other developers with it touching the 'offical' code in the master branch.
+
+
+<h2>Simple Walk through:</h2>
+
+
+<h3>Create a new branch</h3>
+
+Use a separate branch for each work item. Run the below to create and switch to (checkout to) the newly created branch:
+
+
+<pre>
+
+git checkout -b new-feature
+
+</pre>
+
+<h3>Update, add, commit</h3>
+
+
+On this branch, edit, stage and commit changes as you would usually do 
+
+<pre>
+git add <some-files>
+git commit
+</pre>
+
+
+
+<h3>Push feature branch to remote</h3>
+
+The below command pushes new-feature to the central repository (origin), and the -u flag adds it as a remote tracking branch. After setting up the tracking branch, git push can be invoked without any parameters to automatically push the new-feature branch to the central repository. 
+
+<pre>
+git push -u origin new-feature
+</pre>
+
+
+To get feedback on the new feature branch, create a pull request in Bitbucket or GitHub.
+
+
+<h3>Resolve Feedback</h3>
+Now teammates comment and approve the pushed commits. Resolve their comments locally, commit, and push the suggested changes to Bitbucket. Your updates appear in the pull request.
+
+
+<h3>Merge Pull request</h3>
+When your pull request is approved and conflict-free, you can add your code to the master branch. Merge from the pull request in Bitbucket or GitHub.
+
+This can also be manually done by running the following:
+
+<pre>
+git checkout master
+git pull
+git pull origin marys-feature
+git push
+</pre>
+
+
+
+
+<h2>Gitflow Workflow</h2>
+
+
+
+
+The Gitflow Workflow defines a strict branching model designed around the project release. 
+
+It assigns very specific roles to different branches and defines how and when they should interact. 
+
+There is a <a href="https://github.com/nvie/gitflow">git-flow toolset</a> available which integrates with Git to provide specialized Gitflow Git command line tool extensions.
+
+
+<h3>Gitflow Branches</h3>
+Gitflow dictates what kind of branches to set up and how to merge them together.
+
+
+Instead of a single <b>master</b> branch, two branches are used to record the history of a project.
+
+The <b>master</b> branch stores the official release history,and the <b>develop</b> branch serves as an integration branch.
+
+Each new feature of a project should have its own branch and use <b>develop</b> as their parent branch instead of <b>master</b> and should never interact directly with master.
+
+When you’re done with the development work on the feature, the next step is to merge the feature_branch into develop.
+
+Once the develop branch has acquired enough features for a release, or a predetermined release date is approaching, you fork a <b>release</b> branch off of develop. Once created, no new features can be added, only bug fixes, documentation and other release task related items. These 
+
+
+
+
+Once it is ready to ship, the release branch is merged into master and tagged with a version number. It should also be merged back into develop which may have progressed since the release was initiated. Once this has been done, the release branch is then deleted.
+
+
+<h3>Maintenance Branches</h3>
+
+Maintenance or “hotfix” branches branch off of the master branch rather than develop. As soon as a fix is complete it should be merged into both master and develop (or the current release branch). You can think of maintenance branches as ad hoc release branches that work directly with master.
+
+
+
+
+The overall flow of Gitflow is:
+
+    A develop branch is created from master
+    A release branch is created from develop
+    Feature branches are created from develop
+    When a feature is complete it is merged into the develop branch
+    When the release branch is done it is merged into develop and master
+    If an issue in master is detected a hotfix branch is created from master
+    Once the hotfix is complete it is merged to both develop and master
+
+
+
+
+<h2>Forking Workflow</h2>
+
+This workfolw is most often seen in public open source projects.
+
+This workflow gives the developer their own server-side (remote) repository which means two Git repositories: a private local one and a public server side one. While you can call these remotes anything you want, a common convention is to use origin as the remote for your forked repository (this will be created automatically when you run git clone) and upstream for the official repository.
+
+Developers push to their own server-side repositories, and only the project maintainer can push to the official repository. This allows the maintainer to accept commits from any developer without giving them write access to the official codebase.
+
+When a developer wants to start working on a project, they fork (which is essentially just a git clone command executed on a server copy of a projects repo.) the official repository to create a copy of it on the server. Popular Git hosting services like GitHub and Bitbucket, offer repo forking features that automate this step.
+
+This new copy serves as their personal public repository—no other developers are allowed to push to it, but they can pull changes from it. The developer performs a git clone to get a copy of it onto their local machine.
+
+
+When they're ready to publish a local commit, they push the commit to their own public repository—not the official one. Then, they file a pull request with the main repository, which lets the project maintainer know that an update is ready to be integrated. The pull request also serves as a convenient discussion thread if there are issues with the contributed code. 
+
+
+A developer 'forks' an 'official' server-side repository. This creates their own server-side copy.
+The new server-side copy is cloned to their local system.
+A Git remote path for the 'official' repository is added to the local clone.
+A new local feature branch is created.
+The developer makes changes on the new branch.
+
+
+
+
+
+
+
+ A high-level example of a Forking Workflow is:
+
+ 
+
+    You want to contribute to an open source library hosted at bitbucket.org/userA/open-project
+    Using Bitbucket you create a fork of the repo to bitbucket.org/YourName/open-project
+    On your local system you execute git clone on https://bitbucket.org/YourName/open-project to get a local copy of the repo
+    You create a new feature branch in your local repo
+    Work is done to complete the new feature and git commit is executed to save the changes
+    You then push the new feature branch to your remote forked repo
+    Using Bitbucket you open up a pull request for the new branch against the original repo at bitbucket.org/userA/open-project
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+New commits are created for the changes.
+The branch gets pushed to the developer's own server-side copy.
+The developer opens a pull request from the new branch to the 'official' repository.
+The pull request gets approved for merge and is merged into the original server-side repository
+
+To integrate the feature into the official codebase, the maintainer pulls the contributor’s changes into their local repository, checks to make sure it doesn’t break the project, merges it into their local master branch, then pushes the master branch to the official repository on the server. The contribution is now part of the project, and other developers should pull from the official repository to synchronize their local repositories.
+
+
+Once a developer is ready to share their new feature, they need to do two things. First, they have to make their contribution accessible to other developers by pushing it to their public repository. 
+
+This is different from other workflows in that the origin remote points to the developer’s personal server-side repository, not the main codebase.
+
+Second, they need to notify the project maintainer that they want to merge their feature into the official codebase. Bitbucket provides a “pull request” button that leads to a form asking you to specify which branch you want to merge into the official repository. Typically, you’ll want to integrate your feature branch into the upstream remote’s master branch.
+
+
+
+
+
+The Forking Workflow helps a maintainer of a project open up the repository to contributions from any developer without having to manually manage authorization settings for each individual contributor. This gives the maintainer more of a "pull" style workflow. Most commonly used in open-source projects, the Forking Workflow can also be applied to private business workflows to give more authoritative control over what is merged into a release. This can be useful in teams that have Deploy Managers or strict release cycles.
+
+
+
+
+
+

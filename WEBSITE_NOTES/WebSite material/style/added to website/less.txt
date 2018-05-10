@@ -1,0 +1,706 @@
+Less
+
+Less is a CSS pre-processor with a CSS-like syntax
+
+
+Below is an example:
+
+<pre>
+
+
+@import 'bootstrap/bootstrap';
+
+@color: rgb(255, 69, 69);
+
+.fancy-text() {
+    font-family: 'Some fancy font';
+    font-style: italic;
+    font-weight: 700;
+}
+
+
+a {
+    .fancy-text();
+    color: @color;
+    transition: all 225ms ease 0ms;
+
+    &:hover,
+    &:focus {
+        color: lighten(@color, 50%);
+    }
+}
+
+</pre>
+
+
+
+
+It imports Bootstrap CSS files with all their awesome Less mixins
+On hover and focus of the <b>a</b> tag, it will brighten by 50%
+The <b>a</b> tag inherits all of the properties of .fancy-text()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3>Variables</h3>
+
+
+Allows us to define a base colour or font-size for example and use it all over the CSS file.
+
+
+E.G.:
+
+
+<pre>
+
+/* CSS */
+
+div {
+    font-size: 16px;
+}
+
+
+/* Less */
+
+@font-size: 16px;
+
+div {
+    font-size: @font-size;
+}
+
+</pre>
+
+
+<pre>
+
+/* Less Code */
+@heading-color: rgb(99, 200, 200);
+h1 {
+    color: @heading-color;
+    font-weight: 300;
+}
+
+/* Compiled CSS code */ 
+h1 {
+    color: #63c8c8;
+    font-weight: 300;
+}
+
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3>Nesting</h3>
+
+
+
+
+Nesting allows you to cascade your css properties with inheritting children where <b>&</b> operator represents the parent selectors of a nested rule.
+
+
+
+<pre>
+
+/* Less Code */
+h1 {
+    color: rgb(255, 123, 123);
+    font-weight: 300;
+
+    span {
+        font-weight: 600;
+        color: rgb(255, 69, 69) ;
+    }
+
+    &:hover {
+        color: rgb(200, 0, 0);
+    }
+
+    &:hover span {
+        color: rgb(50, 50, 58);
+    }
+}
+
+/* Compiled CSS code */ 
+h1 {
+    color: #ff7b7b;
+    font-weight: 300;
+}
+h1 span {
+    font-weight: 600;
+    color: #ff4545;
+}
+h1:hover {
+    color: #c80000;
+}
+h1:hover span {
+    color: #32323a;
+}
+</pre>
+
+
+
+When you write styles in plain CSS, you may also have come through these typical code structures.
+
+
+nav {
+  height: 40px;
+  width: 100%;
+  background: #455868;
+  border-bottom: 2px solid #283744;
+}
+nav li {
+  width: 600px;
+  height: 40px;
+}
+nav li a {
+  color: #fff;
+  line-height: 40px;
+  text-shadow: 1px 1px 0px #283744;
+}
+
+
+In plain CSS, we select child elements by first targeting the parent in every rule set, which is considerably redundant if we follow the “best practices” principle.
+
+In LESS CSS, we can simplify the rule sets by nesting the child elements inside the parents, as follows;
+
+
+
+
+
+
+nav {
+  height: 40px;
+  width: 100%;
+  background: #455868;
+  border-bottom: 2px solid #283744;
+  li {
+    width: 600px;
+    height: 40px;
+    a {
+      color: #fff;
+      line-height: 40px;
+      text-shadow: 1px 1px 0px #283744;
+    }
+  }
+}
+
+
+You can also assign pseudo-classes, like :hover, to the selector using the ampersand (&) symbol.
+
+Let’s say we want to add :hover to the anchor tag above, we can write it this way:
+
+
+
+a {
+  color: #fff;
+  line-height: 40px;
+  text-shadow: 1px 1px 0px #283744;
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+}
+
+
+
+
+
+
+With CSS you have to write selectors and thier combinations in separte lines. Nesting provides a visual hierarchy.
+
+
+<pre>
+//CSS
+
+ul { margin: 0; }
+ul li { float: left; }
+ul a { color: #999; }
+ul a:hover { color: #229ed3; }
+
+//Less
+
+@link-color: #999;
+@link-hover: #229ed3;
+
+ul {
+    margin: 0;
+
+    li {
+        float: left;
+    }
+
+    a {
+        color: @link-color;
+
+        &:hover {
+            color: @link-hover;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3>Mixins</h3>
+
+
+Allows you to mix CSS classes with each other.
+
+
+
+If you want to build a button using Bootstrap classes, you could do the following in your HTML
+
+<pre>
+<a href="https://girish-patel.com" class="btn btn-success btn-lg btn-block">
+</pre>
+
+With Less, you can do the following, then give your button that class in the HTML:
+
+<pre>
+
+
+.bootstrap-button {
+    .btn;
+    .btn-success;
+    .btn-lg;
+    .btn-block;
+}
+
+
+
+</pre>
+
+In the HTML you do the following:
+
+
+<a href="https://girish-patel.com" class="bootstrap-button">
+
+
+
+Mixins can also be functions. This way you can pass a variable or parameter to your added mixin. For example, check this mixin out that puts a border only on the top of a div.
+
+
+
+<pre>
+
+
+/* Less Code */
+div {
+    .border-top-radius(125px);
+
+    background: rgb(255, 255, 255);
+    display: inline-block;
+    padding: 50px;
+}
+
+.border-top-radius(@radius) {
+    border-top-right-radius: @radius;
+    border-top-left-radius: @radius;
+}
+
+/* Compiled CSS code */ 
+div {
+    border-top-right-radius: 125px;
+    border-top-left-radius: 125px;
+    background: #ffffff;
+    display: inline-block;
+    padding: 50px;
+}
+
+
+
+
+
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mixins are a set of definitions.
+
+<pre>
+// CSS
+
+h1 { border: 5px solid #ddd; }
+h1:hover { border-color: #999; 
+
+//Less
+.bordered (@width) {
+    border: @width solid #ddd;
+
+    &:hover {
+        border-color: #999;
+    }
+}
+
+h1 {
+    .bordered(5px);
+}
+</pre>
+
+
+
+
+
+
+In LESS, we can use Mixins to reuse whole declarations in a CSS rule set in another rule set. Here is an example:
+
+
+
+
+.gradients {
+  background: #eaeaea; 
+  background: linear-gradient(top, #eaeaea, #cccccc);
+  background: -o-linear-gradient(top, #eaeaea, #cccccc); 
+  background: -ms-linear-gradient(top, #eaeaea, #cccccc); 
+  background: -moz-linear-gradient(top, #eaeaea, #cccccc); 
+  background: -webkit-linear-gradient(top, #eaeaea, #cccccc); 
+}
+
+
+
+
+In the above snippet, we have preset a default gradient color inside the .gradients class. Whenever we want to add the gradients we simply insert the .gradients this way:
+
+	
+div {
+  .gradients;
+  border: 1px solid #555;
+  border-radius: 3px;
+}
+
+The .box will inherit all the declaration block inside the .gradients. So, the CSS rule above is equal to the following plain CSS:
+
+	
+div {
+  background: #eaeaea; 
+  background: linear-gradient(top, #eaeaea, #cccccc);
+  background: -o-linear-gradient(top, #eaeaea, #cccccc); 
+  background: -ms-linear-gradient(top, #eaeaea, #cccccc); 
+  background: -moz-linear-gradient(top, #eaeaea, #cccccc); 
+  background: -webkit-linear-gradient(top, #eaeaea, #cccccc); 
+  border: 1px solid #555;
+  border-radius: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3>Extends</h3>
+
+Extends are useful for sharing a generic definition with selectors rather than copying it in. 
+
+
+
+
+<pre>
+
+//CSS
+
+.block, p, ul, ol { margin: 10px 5px; }
+
+p { border: 1px solid #eee; }
+ul, ol { color: #333; text-transform: uppercase; }
+
+
+
+//Less
+
+.block { margin: 10px 5px; }
+
+p {
+  &:extend(.block);
+  border: 1px solid #eee;
+}
+
+ul, ol {
+  &:extend(.block);
+  color: #333;
+  text-transform: uppercase;
+}
+
+
+<h3>Control Statements</h3>
+
+<pre>
+.mixin (@color) when (lightness(@color) > 30%) {
+    background-color: black;
+}
+.mixin (@color) when (lightness(@color) =<; 30%) {
+    background-color: white;
+}
+</pre>
+
+
+
+<h3>Loops</h3>
+
+Loops are useful when iterating through an array or creating a series of styles as in grid widths. Like in the if/else case, LESS is using CSS Guards and recursive mixins for looping.
+
+<pre>
+//Less
+.loop(@counter) when (@counter > 0){
+    .loop((@counter - 1));
+
+    .border-@{counter} {
+        border: 1px * @counter solid blue;
+    }
+}
+
+</pre>
+
+
+
+
+
+
+
+
+<h3>Operations</h3>
+
+
+Operations bring math and calculations to your CSS. You can do operations on the following data types:
+
+    A Number
+    A Color
+    A Variable
+
+
+
+<pre>
+
+
+
+/* Number */
+h1 {
+    margin-bottom: 10px - 5px;
+    margin-bottom: 10px - 5;
+}
+
+/* Color */
+h1 {
+    color: #888888 / 2;
+}
+
+/* Variable */
+@h1-default-margin-bottom:  25px;
+h1.tight {
+    margin-bottom: @h1-default-margin-bottom - 10px
+}
+
+
+
+
+
+
+
+
+
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Math operations can be used for standard arithmetic or unit conversions. SASS and Stylus support arithmetic between different units. In addition to simple math, pre-processors also have complex math support such as ceiling, rounding, getting min or max value in a list etc.
+
+<pre>
+1cm * 1em => 1cm * 1em
+2in * 3in => 6in
+(1cm / 1em) * 4em => 4cm
+2in + 3cm + 2pc => 3.514in
+3in / 2in => 1.5in
+
+
+</pre>  
+
+
+<h3>Imports</h3>
+
+ather than using a one large file, separating your codes in small pieces is helpful for expressing your declarations and increasing maintainability and control over the codebase. You can group the similar code chunks in similar folders and import them to main css file. Also with import statement, frameworks can also be added to work packages.
+
+<pre>
+@import "library"
+@import "mixins/mixin.less"
+]
+ @import "reset.
+css"
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Furthermore, if you are using CSS3 a lot in your website, you can use LESS Elements to make your job much easier. LESS Elements is a collection of common CSS3 Mixins that we may use often in stylesheets, such as border-radius, gradients, drop-shadow and so on.
+
+To use LESS Elements, simply add the @import rule in your LESS stylesheet, but don’t forget to download it first and add it into your working directory.
+
+	
+@import "elements.less";
+
+We can now reuse all the classes provided from the elements.less, for example, to add 3px border radius to a div, we can write:
+
+	
+div {
+  .rounded(3px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+http://www.developerdrive.com/2012/05/learning-less-nested-rules/
+
+
+
+http://lesscss.org/
+
+
+
+https://www.smashingmagazine.com/2010/12/using-the-less-css-preprocessor-for-smarter-style-sheets/
+
+
+https://www.hongkiat.com/blog/less-basic/
+
+
+https://scotch.io/tutorials/getting-started-with-less
+
+https://tutorialzine.com/2015/07/learn-less-in-10-minutes-or-less
+
+
+https://htmlmag.com/article/an-introduction-to-css-preprocessors-sass-less-stylus

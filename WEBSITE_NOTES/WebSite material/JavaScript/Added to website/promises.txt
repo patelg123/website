@@ -1,0 +1,189 @@
+ES6 Promises
+
+
+Creating Promises
+
+
+
+
+Promises are created by using the promise constructor which takes one argument, a callback function.
+
+The callback function can take two arguments, one is typically named <b>resolve</b>, which is called if everything worked as expected, and the other is typically named <b>reject</b> if not.
+
+
+
+
+
+
+
+
+
+
+Promises give us a way to handle asynchronous processing in a more synchronous fashion. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+They represent a value that we can handle at some point in the future. And, better than callbacks here, Promises give us guarantees about that future value, specifically:
+
+    No other registered handlers of that value can change it (the Promise is immutable)
+    We are guaranteed to receive the value, regardless of when we register a handler for it, even if it's already resolved (in contrast to events, which can incur race conditions).
+
+
+
+
+But more than just allowing us to handle future values, they give us a much better way to control asynchronous program flow than plain callbacks. Plain callbacks don't really let us use our usual language features like return and throw to handle value and error processing in synchronous flows.
+
+
+
+
+
+
+<pre>
+var p = new Promise(function(resolve, reject) {  
+   // do something asynchronous which eventually calls either:
+  //
+  //   resolve(someValue); // fulfilled
+  // or
+  //   reject("failure reason"); // rejected
+});
+
+</pre>
+
+
+In this way, a Promise itself has one of the following three states:
+
+    Pending - until a Promise is fulfilled it is in pending state
+    Fulfilled - when the first handler is called the Promise is considered fulfilled with the value passed to that handler.
+    Rejected - if the second handler is called, the Promise is considered rejected with the value passed to that handler.
+
+
+
+
+
+
+Consuming Promises
+
+Once we have a Promise, it can be passed around as a value. The Promise is a stand-in for a future value; and so it can be returned from a function, passed as a parameter and used in any other way a standard value would be used.
+
+To consume the Promise - meaning we want to process the Promises value once fulfilled - we attach a handler to the Promise using it's .then() method. This method takes a function that will be passed the resolved value of the Promise once it is fulfilled.
+
+
+
+
+A Promise's .then() method actually takes two possible parameters. The first is the function to be called when the Promise is fulfilled and the second is a function to be called if the Promise is rejected.
+
+
+A Promise can only be "settled" (meaning it has been fulfilled or rejected) once. Other consumers, as we stated previously, can not change the settled value.
+
+
+
+let myFirstPromise = new Promise((resolve, reject) => {
+  // We call resolve(...) when what we were doing asynchronously was successful, and reject(...) when it failed.
+  // In this example, we use setTimeout(...) to simulate async code. 
+  // In reality, you will probably be using something like XHR or an HTML5 API.
+  setTimeout(function(){
+    resolve("Success!"); // Yay! Everything went well!
+  }, 250);
+});
+
+myFirstPromise.then((successMessage) => {
+  // successMessage is whatever we passed in the resolve(...) function above.
+  // It doesn't have to be a string, but if it is only a succeed message, it probably will be.
+  console.log("Yay! " + successMessage);
+});
+
+
+
+-------------------
+import {readFile} from 'fs';
+
+function readFilePromisified(filename) {
+    return new Promise(
+        function (resolve, reject) {
+            readFile(filename, { encoding: 'utf8' },
+                (error, data) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data);
+                    }
+                });
+        });
+}
+
+readFilePromisified() is used like this:
+
+readFilePromisified(process.argv[2])
+.then(text => {
+    console.log(text);
+})
+.catch(error => {
+    console.log(error);
+});
+
+
+
+
+
+
+
+<h3>Promise.all and Promise.race</h3>
+
+Promise.all is a way for running an array of Promises concurrently. Note that even if a single dependency is rejected, the Promise.all method will be rejected entirely as well.
+
+<pre>
+// list of files we want to read from disk
+let filenames = ['index.html', 'blog.html', 'terms.html'];
+
+Promise.all(filenames.map(readFilePromise))
+  .then(files => {
+    console.log('index:', files[0]);
+    console.log('blog:', files[1]);
+    console.log('terms:', files[2]);
+})
+
+
+
+</pre>
+
+Promise.race is similar to Promise.all but will return once ANY of the Promises resolves or rejects, discarding all the other results. This could be useful for scenarios where we want to time out a promise we otherwise have no control over.
+
+<pre>
+var p = Promise.race([
+  fetch('/resource-that-may-take-a-while'),
+  new Promise(function (resolve, reject) {
+    setTimeout(() => reject(new Error('request timeout')), 5000)
+  })
+])
+p.then(response => console.log(response))
+p.catch(error => console.log(error))
+
+</pre>
+
+
+
+---------------------
+https://medium.com/dev-bits/writing-neat-asynchronous-node-js-code-with-promises-32ed3a4fd098
+https://developers.google.com/web/fundamentals/primers/promises
+http://www.datchley.name/es6-promises/
+http://exploringjs.com/es6/ch_promises.html#sec_introduction-promises
+https://www.tutorialspoint.com/es6/es6_promises.htm
+https://ponyfoo.com/articles/es6-promises-in-depth
+https://medium.com/datafire-io/es6-promises-patterns-and-anti-patterns-bbb21a5d0918
+https://codeburst.io/the-es6-promises-87a979ab27e4
+http://es6-features.org/#PromiseUsage
+https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee
+
+
+
+

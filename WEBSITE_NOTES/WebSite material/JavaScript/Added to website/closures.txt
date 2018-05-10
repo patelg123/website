@@ -1,0 +1,108 @@
+https://medium.freecodecamp.org/the-definitive-javascript-handbook-for-a-developer-interview-44ffc6aeb54e
+
+
+
+
+https://codeburst.io/understand-closures-in-javascript-d07852fa51e7
+	https://codeburst.io/understanding-javascript-closures-da6aab330302?source=emailShare-91bfcdd30742-1516313493
+	https://codeburst.io/javascript-learn-understand-closures-8ab35586b0c0
+
+
+https://medium.freecodecamp.org/whats-a-javascript-closure-in-plain-english-please-6a1fc1d2ff1c
+https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36
+
+
+<h3>Closures</h3>
+
+
+A closure is a function that has access to the parent scope, even after the parent scope has been closed.
+
+
+Imagine if we had the following function:
+
+<pre>
+function speak() {
+  return function logIt() {
+    var words = 'hi';
+    console.log(words);
+  }
+}
+
+
+var sayHello = speak();
+
+</pre>
+
+
+If we take a look at what sayHello variable is referencing we get the following:
+
+
+<pre>
+
+console.log(sayHello);
+
+// Returns:
+//  function logIt() {
+//	var words = 'hi';
+//    	console.log(words);
+//  }
+
+</pre>
+
+
+If we invoke the function <b>sayHello</b> we get <b>hi</b> returned as expected:
+
+
+<pre>
+sayHello();
+
+// returns hi
+</pre>
+
+
+
+Imagine if we change the function to the following:
+
+
+<pre>
+function speak() {
+  var words = 'hi';
+  return function logIt() {
+    console.log(words);
+  }
+}
+
+
+var sayHello = speak();
+
+</pre>
+
+If we take a look at what sayHello variable is referencing we get the following:
+
+<pre>
+
+console.log(sayHello);
+
+// Returns:
+//  function logIt() {
+//    console.log(words);
+//  }
+
+</pre>
+
+Notice that there is no <b>words</b> variable.
+
+However, if we invoke the function <b>sayHello</b> we still get <b>hi</b> returned:
+
+<pre>
+sayHello();
+
+// returns hi
+</pre>
+
+
+The inner function has three <b>scope chains</b>. The first chain allows the inner function to access its own variables. The second allows it to access the variables and parameters of the outer function. And the third allows it to access the global variables.
+
+
+
+

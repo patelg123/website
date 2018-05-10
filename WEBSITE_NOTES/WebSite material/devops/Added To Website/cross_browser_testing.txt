@@ -1,0 +1,84 @@
+Cross Browser testing
+
+
+There is no way you can test on every combination of browser and device but instead you should try and make sure your site works on the most important target browsers and devices.
+
+You should try and code "defensively" and build in intelligent fallbacks so that if a feature or style doesn't work in a browser, the site will be able to downgrade to something less exciting that still provides an acceptable user experience.
+
+
+You can build up a chart of browsers and/devices and a common approach is to have multiple grades of support level.
+
+
+
+
+A grade: Common/modern browsers — Known to be capable. Test thoroughly and provide full support.
+
+B grade: Older/less capable browsers — known not to be capable. Test, and provide a more basic experience that gives full access to core information and services.
+
+C grade: Rare/unknown browsers — don't test, but assume they are capable. Serve the full site, which should work, at least with the fallbacks provided by our defensive coding.
+
+
+
+For example, if you site is likely to get most views in Western Europe or North America, your chart could look like the following:
+
+A grade: Chrome and Firefox for Windows/Mac, Safari for Mac, Edge and IE for Windows (last two versions of each), iOS Safari for iPhone/iPad, Android stock browser (last two versions) on phone/tablet, Chrome and Firefox for Android (last two versions) on phone/tablet
+
+B grade: IE 9 for Windows
+
+C grade: n/a
+
+
+<h2>Google Analytics</h2>
+
+
+<a href="https://www.google.com/analytics/">Google Analytics</a> will give you accurate stats on exactly what browsers people are using to browse your site. 
+
+Analytics history can be useful for finding support stats to influence say a new version of a company's site, or new features you are adding to an existing site.
+
+
+Cross browser testing can be time consuming. Automated methods like unit testing, functional testing or visual regression do not capture cross browser bugs. So as of yet, it can only be done manually. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Used:
+
+https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
+
+
+NOT USED:
+
+
+
+https://www.devstars.com/blog/cross-browser-testing-best-practices/
+https://blog.usejournal.com/tagged/cross-browser-testing
+https://medium.com/mozilla-tech/keep-the-web-open-with-cross-browser-testing-e3006662a042
+https://medium.com/@ministryoftest/cross-browser-testing-tool-d18399c75533
+https://medium.com/@sarahelson81/cross-browser-testing-strategy-explained-in-three-easy-steps-d96e2f9afbbb
+https://medium.com/tag/cross-browser-testing
+https://medium.com/@BrowseEmAll/modern-manual-and-automated-cross-browser-testing-bcc4e40aa9e3
+https://medium.com/mozilla-tech/cross-browser-testing-through-the-ages-c45ad8bbbed5
+https://blog.usejournal.com/why-is-cross-browser-testing-the-need-of-the-hour-183853f9a7
+*https://hackernoon.com/a-guide-to-cross-browser-testing-installing-all-the-things-6e56c2bd8182
+https://blog.sessionstack.com/how-javascript-works-the-rendering-engine-and-tips-to-optimize-its-performance-7b95553baeda
+to read:
+
+
+
+
+
+

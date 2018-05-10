@@ -1,0 +1,206 @@
+
+
+
+
+Website accessibility is actively designing, developing, and creating content in such a way that it does not hinder any person from interacting with the website.
+
+
+
+<h2>Perceivable?—?The way your site is seen or heard</h2>
+
+
+
+
+
+
+If any non-text accepts user input, it should have an appropriate name or label that describes its purpose. For instance, CrowdRiff galleries include social media icons that act as buttons. For these, I included the aria-label attribute to describe their purpose: aria-label="Open this image in Instagram".
+
+
+Many HTML tags have built-in accessibility features that will improve the navigation of your site.
+
+
+
+<button> tags will automatically accept focus when navigating through the page using a keyboard. However, if you need to make another element act like a button, adding role="button" to the tag will also do the trick.
+
+
+
+
+
+---------------------------------
+
+
+
+
+
+
+
+
+-----------------------
+
+
+
+
+When the user interacts with a control, it should not result in any change that would disorient the user (unless the user is informed ahead of time). For example, clicking on an image in CrowdRiff galleries will initiate a fullscreen modal with more information about the image. In order to inform the user of this change, we’ve added an aria-label to the image button that describes what will happen if you click: aria-label="Image gallery. Click to learn more about <IMAGE TITLE>".
+
+
+
+Considering colours:
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------
+
+Accessibility
+
+Accessibility should be considered as part of every web project in order to increase availability to the widest possible audience.
+
+
+There are numerous reasons why you should aim to improve the accessibility of your site, one of which is that it is the law in many countries. In the UK for example, web accessibility falls under the Disability Discrimination Act and if your website fails to comply, legal action could be brought against you. Legal issues aside however, why would you not want to open your site to the widest possible audience by making it accessible to everyone?
+
+
+
+
+
+In the UK for example, web accessibility falls under the Disability Discrimination Act and if your website fails to comply, legal action could be brought against you.
+
+A useful tool can be found at https://www.toptal.com/designers/colorfilter which provides several different filters that mimic how different types of color-blind users would perceive a website.
+
+
+A well designed website will generally not cause any major problems for color-blind users. It is worth taking extra consideration however, when designing interactive or call-to-action elements. 
+
+For example; a simple text link, styled red with no other decoration may be impossible to see if it is within a block of grey or black text. No one is suggesting that you need to stick with default link styling, 
+but it is helpful to use more than one type of decoration such as an underline or background-color. 
+
+
+It is also worth taking into account the level of contrast between foreground and background elements of your website. A high level of contrast will benefit everyone, not just those who are visually impaired. The Web Accessibility Guidelines suggest a minimum contrast ratio of 4.5:1 and an ideal ratio of 7:1 for standard sized body text. Obviously the safest option is always black text on a white background or vice versa.
+
+You can check the contrast ratio of multiple elements on a site using Juicy Studio’s Color Contrast Analyser Firefox extension. https://addons.mozilla.org/en-GB/firefox/addon/wcag-contrast-checker/ It will analyse each element on the page and provide a report on whether or not it conforms to the WAI’s guidelines.
+
+
+
+
+All images should have descriptive alt text, unless the image is purely decorative. For the images in the gallery, I set the alt text to be the photographer’s description of the image.
+
+Decorative images that provide no information to the user should either have empty alt text (alt=""), or should be set as a CSS background image.
+
+
+
+
+
+All page functionality should be available using just the keyboard. Tab through your site to ensure that each section can be reached, and all possible user actions can be performed with the keyboard.
+
+The keyboard focus should never be locked or trapped. The user should be able to navigate your site freely, without getting stuck in a loop, where they cannot navigate out or away.
+
+
+Links with an empty href attribute (or href="#") are not accessible by keyboard. This pattern is sometimes used in dropdown menus, etc. but because the links do not lead anywhere (they link to the current page) they are ignored in keyboard navigation.
+
+
+
+
+
+
+<h2>Operable?—?Can the user navigate through your site?</h2>
+
+
+
+
+
+
+
+Include appropriate alt text for each link that makes sense to the user even if read out of context. Avoid ambiguous language like click here and instead opt for a concise descriptor that clearly describes where the link leads.In order to inform the user of this change, we’ve added an aria-label to the image button that describes what will happen if you click: aria-label="Image gallery. Click to learn more about <IMAGE TITLE>".
+
+Stay consistent. Any controls that are repeated throughout your site should be located in the same place so users can find them quickly and easily. The order of navigation should also be repeated, so there are no surprises to the user. For instance, when the user views one of the gallery images in fullscreen, the navigation arrows to move to the next image, previous image, or close the slideshow are located in the same place no matter what image is clicked. All image information such as the photographer’s social handle, the original caption, location, etc. are located in consistent locations at the bottom of the image.
+
+
+When a page element is focused, it should not result in any change that would disorient the user, such as initiating a new viewport or moving focus to another element.
+
+If there is a validation error on any form field input, suggestions for how to correct the error should be provided to the user.
+
+
+
+
+
+
+For readability, consider the contrast ratio for between the text and background on your site. Here is a very <a href="http://contrast-ratio.com/">handy tool</a> that I have been using to determine if a particular text/background colour combination passes WCAG standards for text contrast.
+
+
+
+All form inputs should have appropriate labels to indicate their purpose.
+Instructions you include on your site should not rely on shape, size, or visual placement to communicate the message. For instance, “Click the square button on the left”, will not be useful information to a blind user.
+
+
+Contextual links.
+
+Those who use screen readers will often have the option to navigate a web page by skipping through the links to find something of interest. In the case of text links, the user would simply hear the word in isolation, regardless of the content that surrounds it. It is therefore extremely unhelpful when all that the user hears is ‘click here’ or ‘more’ – these types of links provide no information of where they direct the user or to what they are referring to.
+
+A much better option is to provide a more descriptive link. A link that takes the user to the complete article on a blog could read ‘learn more about S.E.O’ or ‘click here for the full article on S.E.O’.
+
+
+
+Resist the urge to completely remove those browser defaults for focused elements! All links, buttons, form fields, tool tips, menu items, etc. should include a focus indicator to allow users to navigate through your site with a keyboard. If you want to have control over when the focus ring appears (for instance, only for keyboard users), here is a <a href="https://hackernoon.com/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2">helpful post</a> we referenced that outlines how to achieve this effect.
+
+
+
+
+Accessibility Improvement #1: Skip navigation link unavailable
+
+One of the first things I check for on a site is if there’s a skip navigation link available. Skip navigation links are a small but handy feature for any site to have for keyboard-only or screen reader users. Why?
+The problem
+
+Without a skip navigation link, people using just the keyboard to navigate would need to Tab through each link in the sidebar every time the page reloads. Since there’s a lot links available, navigating through this section would be cumbersome.
+
+
+Implementing a skip navigation link is quite simple. It’s usually the first item in the DOM (Document Object Model) and on click, keyboard focus is sent to the page element which contains the primary content of the page.
+
+The link I added was coded as:
+
+<a className='skip-link sr-only sr-only-focusable' href='#main'>
+  Skip to main content
+</a>
+
+The #main value in the href attribute sends the keyboard focus to the page element which features the id="main" attribute.
+
+In order for this page element to receive keyboard focus, I needed to add a tabindex attribute to the container:
+
+<main className='main' id='main' tabIndex='-1'>
+  { props.children() }
+</main>
+
+Adding the tabindex value of -1 allows a non-focusable element to programatically receive focus, but is left out of the natural tab order.
+
+
+
+
+
+
+Consider the order of your page elements. When a user navigates through your page using a keyboard or screenreader, the navigation sequence should be logical and intuitive. By default, the order you list your elements on the page will be order of navigation. If you wish to change the order without changing the page structure, you can add tabindex on the element of your choice, and assign a number value to indicate the order in which this element should receive focus.
+
+
+
+
+
+
+
+
+
+https://developers.google.com/web/fundamentals/accessibility/
+
+
+
+
+https://medium.com/building-crowdriff/an-intro-to-web-accessibility-91844f3f5827
+
+
+https://medium.freecodecamp.org/next-level-accessibility-freecodecamp-guide-7cbd6473eabd
+
+
+
+https://webdesign.tutsplus.com/articles/6-tips-for-improving-website-accessibility--webdesign-1660

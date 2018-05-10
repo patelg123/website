@@ -1,112 +1,217 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Frontend Tech - JavaScript</title>
 
     <!-- Bootstrap  CDN files -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="dist/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="dist/jquery/3.2.1/jquery.min.js"></script>
+    <script src="dist/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-	<!-- my style sheets-->
-	<link rel="stylesheet" href="style/main.css">
-	<script src="scripts/functions.js"></script>
+    <!-- my style sheets-->
+    <link rel="stylesheet" href="style/main.css">
+    <script src="scripts/functions.js"></script>
 
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<body id="JavaScriptHome" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <nav id="navbar-main" class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-title">
+                Front End Tech
+            </div>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul id="nav-main" class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_me.html">Author</a></li>
+                    <li><a href="javascript.html">JavaScript</a></li>
+                    <li><a href="display_styling.html">Display & Styling</a></li>
+                    <li><a href="devops.html">DevOps</a></li>
+                    <li><a href="backend.html">Backend</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="github.html">GitHub Links</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <div class="jumbotron text-center">
+        <h1>JavaScript</h1>
+    </div>
 
-<!-- Nav Bar -->
-<nav id="navbar" class="navbar navbar-default navbar-fixed-top">
-	<div class="container">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-				<span class="icon-bar"></span>
-        		<span class="icon-bar"></span>
-        		<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand left" href="#"><img src="images/images_small.png" /></a>
-		</div>
-		<div class="collapse navbar-collapse" id="myNavbar">
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="index.html"><span class="glyphicon glyphicon-home"> Home</span></a></li>
-				<li><a href="about_me.html"><span class="glyphicon glyphicon-user"> About Me</span></a></li>
-				<li><a href="javascript.html">JavaScript</a></li>
-				<!--
-					<li><img class="img-responsive" alt="css logo"  width="10%" height="10%" src="images/css_icon.png" /><a href="#css">Style</a></li>
-					<li><a href="#blog">Blog</a></li>
-				-->
-			</ul>
-		</div>
-	</div>
-</nav>
+    <div id="javascript" class="container-fluid text-center">
+        <div class="row content">
+            <div class="col-sm-2">
+                <div class="vertical-menu" >
+                    Contents
+                    <a href="#javascript_objects_prototypes">JavaScript Objects and Prototypes</a>
+                    <a href="#javascript_hoisting">Hoisting</a>
+                    <a href="#javascript_array_operations">Array Operations</a>
+                    <a href="#javascript_value_reference">Value vs Reference</a>
+                    <a href="#javascript_closures">Closures</a>
+                    <a href="#javascript_call_bind_apply">Call, Apply and Bind</a>
+                    <a href="#javascript_callbacks">Callbacks And Higher-Order Functions</a>
+                    <a href="#javascript_modules">JavaScript Modules</a>
+                    <a href="#javascript_es6_const_let_variables">ES6 Const And Let Variables</a>
+                    <a href="#javascript_es6_arrow_function">ES6 Arrow Functions</a>
+                    <a href="#javascript_es6_default_parameters">ES6 Default Parameters</a>
+                    <a href="#javascript_es6_template_literals">ES6 Template Literals</a>
+                    <a href="#javascript_es6_spread_operator">ES6 Spread Operator</a>
+                    <a href="#javascript_es6_destructuring_assignment">ES6 Destructuring Assignment</a>
+                    <a href="#javascript_es6_dynamic_property_names">ES6 Dynamic Property Names</a>
+                    <a href="#javascript_es6_classes">ES6 Classes</a>
+                    <a href="#javascript_es6_promises">ES6 Promises</a>
+                    <a href="#javascript_es6_modules">ES6 Modules</a>
+                    <a href="#javascript_polyfills_transpilers">Polyfills & Transpilers</a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
 
+                </div>
+            </div>
 
-<div class="jumbotron text-center">
-	<h1>JavaScript</h1>
-</div>
+            <div class="col-sm-8 text-left">
+                <div id="javascript_objects_prototypes">
+                    <h1>JavaScript Objects and Prototypes</h1>
+                    <p>
+                        JavaScript objects are containers for named values, called properties, and methods.
+                        <br><br>
+                        Every JavaScript Object has a prototype which they inherit the properties and methods from. All JavaScript objects inherit from the Object.prototype.
+                        The standard way to create an object prototype is to use an Object Constructor function:
+                    </p>
+                    <pre>
+// It is considered good practice to name constructor functions with an upper-case first letter.
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+}
 
+//With a constructor function, you can use the new keyword to create new objects from the same prototype:
+var myFather = new Person("John", "Doe", 50, "blue");
+var myMother = new Person("Sally", "Rally", 48, "green");
 
-<!--JavaScript Arrays container-->
-<div id="javascript_array_operations" class="container-fluid text-center">
+                    </pre>
 
-	<div class="row content">
-		<div class="col-sm-2 sidenav">
+                    <p>
+                        The JavaScript prototype property allows you to add new properties to an existing prototype:
+                    </p>
+                    <pre>
+function Person(first, last, age, eyecolor) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eyecolor;
+}
 
-		</div>
+Person.prototype.nationality = "English";
 
-		<div class="col-sm-8 text-left">
+Person.prototype.name = function() {
+    return this.firstName + " " + this.lastName;
+};
 
-			<h1>Array Operations</h1>
+                    </pre>
+                </div>
 
-			<h3>push()</h3>
-			<p>Adds new items to the end of an array.</p>
-			<pre>
+                <footer class="container-fluid text-center">
+                    <a href="#JavaScriptHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                </footer>
+
+                <div id="javascript_hoisting">
+                    <h1>Hoisting</h1>
+                    <p>
+                        During compilation, var and function declarations are "moved" to the top of their respective scopes. This behaviour is called hoisting.
+                        <br><br>
+                        This means declared functions can be called before it is defined. Function expressions are not hoisted and are only
+                        usable after they are created when the execution reaches it.
+                        <br><br>
+                        var declarations are hoisted but not their assignments. let and const are not hoisted.
+                    </p>
+                    <pre>
+// only 'var g' is hoisted, not its assignment
+var g = 34;
+
+// function declaration are hoisted
+function sum(a, b) {
+    return a + b;
+}
+
+// function expression are not hoisted, only 'var sum' is hoisted
+var sum = function(a, b) {
+    return a + b;
+}
+
+                    </pre>
+                </div>
+
+                <footer class="container-fluid text-center">
+                    <a href="#JavaScriptHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                </footer>
+
+                <div id="javascript_array_operations">
+
+                    <h1>Array Operations</h1>
+
+                    <h3>push()</h3>
+                    <p>Adds new items to the end of an array.</p>
+                    <pre>
 var arr = [1,2,3];
 arr.push(4);
 // arr is now [1,2,3,4]
-			</pre>
 
-			<h3>pop()</h3>
-			<p>Removes the last element of an array.</p>
-			<pre>
+                    </pre>
+
+                    <h3>pop()</h3>
+                    <p>Removes the last element of an array.</p>
+                    <pre>
 var arr = [1, 4, 6].pop();
 // array becomes [1, 4]
-			</pre>
+                    </pre>
 
-			<h3>shift()</h3>
-			<p>Removes first item of an array.</p>
-			<pre>
+                    <h3>shift()</h3>
+                    <p>Removes first item of an array.</p>
+                    <pre>
 var oneDown = [1, 4, 6].shift();
 // array becomes [4, 6]
-			</pre>
 
-			<h3>unshift()</h3>
-			<p>Adds items to the beginning of an array.</p>
-			<pre>
+                    </pre>
+
+                    <h3>unshift()</h3>
+                    <p>Adds items to the beginning of an array.</p>
+                    <pre>
 var arr = [1,2,3];
 arr.unshift(4);
 // arr is now [4, 1, 2, 3]
-			</pre>
 
-      <h3>slice()</h3>
-      <p>Returns the selected elements in an array, as a new array object.</p>
-      <pre>
+                    </pre>
+
+                    <h3>slice()</h3>
+                    <p>Returns the selected elements in an array, as a new array object.</p>
+                    <pre>
 var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
 var citrus = fruits.slice(1, 3);
 // citrus is ["Orange", "Lemon"]
 
-      </pre>
+                    </pre>
 
 
-			<h3>forEach()</h3>
-			<p>Calls a provided function once for each element in an array, in order.</p>
-			<pre>
+                    <h3>forEach()</h3>
+                    <p>Calls a provided function once for each element in an array, in order.</p>
+                    <pre>
 var colors = ['red','blue','green'];
 
 function print(val){
-	console.log(val);
+    console.log(val);
 }
 
 colors.forEach(print);
@@ -114,40 +219,40 @@ colors.forEach(print);
 //red
 //blue
 //green
-			</pre>
+                    </pre>
 
-			<h3>map()</h3>
-			<p>Calls a provided function once for each element in an array, in order, creating a new array </p>
-			<pre>
+                    <h3>map()</h3>
+                    <p>Calls a provided function once for each element in an array, in order, creating a new array </p>
+                    <pre>
 var colors = ['red','blue','green'];
 
 function capitalize(val){
-	return val.toUpperCase();
+    return val.toUpperCase();
 }
 
 var capitalizedColors = colors.map(capitalize);
 
 //["RED", "GREEN, "BLUE"]
-			</pre>
+                    </pre>
 
-			<h3>filter()</h3>
-			<p>Creates an array filled with all array elements that pass a test (provided as a function).</p>
-			<pre>
+                    <h3>filter()</h3>
+                    <p>Creates an array filled with all array elements that pass a test (provided as a function).</p>
+                    <pre>
 var value = [1, 60, 34, 30, 20, 5]
 
 function lessThan20(val){
-	return val < 20;
+    return val < 20;
 
 }
 
 var valueLessThan20 = values.filter(lessThan20);
 
 //[1, 5]
-			</pre>
+                    </pre>
 
-			<h3>find()</h3>
-			<p>Returns the value of the first element in an array that passes a test (provided as a function).</p>
-			<pre>
+                    <h3>find()</h3>
+                    <p>Returns the value of the first element in an array that passes a test (provided as a function).</p>
+                    <pre>
 var ages = [3, 10, 18, 20];
 
 function checkAdult(age) {
@@ -156,11 +261,11 @@ function checkAdult(age) {
 
 var firstAdult = ages.find(checkAdult);
 //18
-			</pre>
+                    </pre>
 
-			<h3>every()</h3>
-			<p>Checks if all elements in an array passes a test (provided as a function) and returns <i>true</i> or <i>false</i></p>
-			<pre>
+                    <h3>every()</h3>
+                    <p>Checks if all elements in an array passes a test (provided as a function) and returns <i>true</i> or <i>false</i></p>
+                    <pre>
 var ages = [32, 33, 16, 40];
 
 function checkAdult(age) {
@@ -170,11 +275,11 @@ function checkAdult(age) {
 console.log(ages.every(checkAdult));
 
 //false
-			</pre>
+                    </pre>
 
-			<h3>some()</h3>
-			<p>Checks if any of the elements in an array passes a test (provided as a function) and returns <i>true</i> or <i>false</i></p>
-			<pre>
+                    <h3>some()</h3>
+                    <p>Checks if any of the elements in an array passes a test (provided as a function) and returns <i>true</i> or <i>false</i></p>
+                    <pre>
 var ages = [3, 10, 18, 20];
 
 function checkAdult(age) {
@@ -184,11 +289,11 @@ function checkAdult(age) {
 console.log(ages.some(checkAdult));
 
 //true
-			</pre>
+                    </pre>
 
-			<h3>reduce()</h3>
-			<p>Executes a provided function for each value of the array and reduces the array to a single value.</p>
-			<pre>
+                    <h3>reduce()</h3>
+                    <p>Executes a provided function for each value of the array and reduces the array to a single value.</p>
+                    <pre>
 var numbers = [65, 44, 12, 4];
 
 function getSum(total, num) {
@@ -198,126 +303,594 @@ function getSum(total, num) {
 console.log(ages.reduce(getSum));
 
 //125
-			</pre>
+                    </pre>
+
+                    <footer class="container-fluid text-center">
+                        <a href="#JavaScriptHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                    </footer>
+                </div>
+
+                <div id="javascript_value_reference">
+
+                    <h1>Value vs. Reference</h1>
+                    <p>
+                        Primatives, like null, undefined , boolean, number, string  are assigned by value-copy. Compound values (objects, which includes arrays, and functions),
+                        always create a copy of the reference on assignment.
+                    </p>
+
+                    <pre>
+var a = 2;        // 'a' hold a copy of the value 2.
+var b = a;        // 'b' is always a copy of the value in 'a'
+b++;
+
+console.log(a);   // 2
+console.log(b);   // 3
+
+var c = [1,2,3];
+var d = c;        // 'd' is a reference to the shared value
+
+d.push( 4 );      // Mutates the referenced value (object)
+console.log(c);   // [1,2,3,4]
+console.log(d);   // [1,2,3,4]
+
+/* Compound values are equal by reference */
+var e = [1,2,3,4];
+console.log(c === d);  // true
+console.log(c === e); // false
+
+                    </pre>
+
+                    <footer class="container-fluid text-center">
+                        <a href="#JavaScriptHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                    </footer>
+
+                </div>
+
+                <div id="javascript_closures">
+
+                    <h1>Closures</h1>
+                    <p>
+                        A closure is a function that has access to the parent scope, even after the parent scope has been closed. A closure is not only the function, but also the environment in which the function was created.
+                        <br />Imagine if we had the following function:
+                    </p>
+                    <pre>
+function speak() {
+    return function logIt() {
+        var words = 'hi';
+        console.log(words);
+    }
+}
+
+
+var sayHello = speak();
+
+                    </pre>
+                    <p>
+                        If we take a look at what sayHello variable is referencing we get the following:
+                    </p>
+
+                    <pre>
+console.log(sayHello);
+
+// Returns:
+//  function logIt() {
+    //	var words = 'hi';
+    //    	console.log(words);
+    //  }
+
+                    </pre>
+
+                    <p>
+                        If we invoke the function <b>sayHello</b> we get <b>hi</b> returned as expected:
+                    </p>
+
+                    <pre>
+sayHello();
+// returns hi
+
+                    </pre>
+                    <p>Imagine if we change the function to the following:</p>
+
+
+                    <pre>
+function speak() {
+    var words = 'hi';
+    return function logIt() {
+        console.log(words);
+    }
+}
+
+
+var sayHello = speak();
+
+                    </pre>
+
+                    <p>
+                        If we take a look at what sayHello variable is referencing we get the following:
+                    </p>
+
+                    <pre>
+console.log(sayHello);
+
+// Returns:
+//  function logIt() {
+    //    console.log(words);
+    //  }
+
+                    </pre>
+
+                    <p>
+                        Notice that there is no <b>words</b> variable. However, if we invoke the function <b>sayHello</b> we still get <b>hi</b> returned:
+                    </p>
+                    <pre>
+sayHello();
+// returns hi
+                    </pre>
+
+                    <p>
+                        sayHello() is a closure object that consists of the logIt() function and the environment variables that existed when the closure was created, including the message variable.
+                        <br /><br />
+                        The inner function has three <b>scope chains</b>. The first chain allows the inner function to access its own variables.
+                        The second allows it to access the variables and parameters of the outer function. And the third allows it to access the global variables.
+                    </p>
+
+                    <footer class="container-fluid text-center">
+                        <a href="#JavaScriptHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                    </footer>
+                </div>
 
 
 
-		</div>
+                <div id="javascript_call_bind_apply">
+                    <h1>Call, Apply and Bind</h1>
+                    <p>
+                        Call, Apply and Bind are function methods that allow you to change the value of <b>'this'</b> for a given function.
+                    </p>
 
-		<div class="col-sm-2 sidenav">
+                    <h2>call() and apply()</h2>
+                    <p>
+                        Call and Apply are invoked immediately. Call takes any number of parameters: <b>'this'</b>, followed by the additional arguments.
+                        Apply takes only two parameters: <b>'this'</b>, followed by an array of the additional arguments.
+                        <br /><br />
+                        In the below example, when we use <b>add.call()</b> the first parameter is what <b>'this'</b> should be bound to.
+                        The subsequent parameters are passed into the function we are calling. Thus, in <b>add()</b>, this.a refers to ten.a and this.b refers to ten.b and we get 1+2+3+4 returned, or 10.
+                        <br /><br />
+                        <b>add.apply()</b> is similar. The first parameter is what <b>'this'</b> should be bound to. The subsequent parameter is an array of arguments to be used in the function.
+                    </p>
+                    <br />
+                    <pre>
+function add(c, d) {
+    console.log(this.a + this.b + c + d);
+}
 
-		</div>
+var ten = {a: 1, b: 2};
+
+add.call(ten, 3, 4);
+// logs => 10
+
+add.apply(ten, [3,4]);
+// logs => 10
+
+                    </pre>
+
+                    <h2>bind()</h2>
+                    <p>
+                        With bind() the parameters are identical to call() but bind() is not invoked immediately. Instead, bind() returns a function with the context of <b>'this'</b> bound
+                        already. Because of this, bind() is useful when we don’t know all of our arguments up front.
+                    </p>
+                    <br />
+                    <pre>
+var small = {
+    a: 1,
+    go: function(b,c,d){
+        console.log(this.a+b+c+d);
+    }
+}
+
+var large = {
+    a: 100
+}
+
+// small.go is called normally
+small.go(2,3,4);
+// logs 1+2+3+4 => 10
+
+// if we want to use large.a we can use call()
+small.go.call(large,2,3,4);
+// logs 100+2+3+4 => 109
+
+// if we don't know what the other two arguments are yet we can use bind
+var bindTest = small.go.bind(large,2);
+
+// we can call it later with the other two arguments
+bindTest(3,4);
+// logs 100+2+3+4 => 109
+
+                    </pre>
+
+                    <footer class="container-fluid text-center">
+                        <a href="#JavaScriptHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                    </footer>
+                </div>
 
 
-	</div>
-</div>
+                <div id="javascript_callbacks">
+                    <h1>Callbacks And Higher-Order Functions</h1>
+                    <p> A <b>callback</b> function is a function that is passed to another function <b>(higher-order function)</b> as an argument and can be executed or returned
+                        later by the higher-order function. When a callback function is passed as an argument, only the function definition is passed. The function the function is not executed.
+                    </p>
+                    <p>
+                        When we pass a callback function as an argument to another function, the callback is executed at some point inside the containing function’s body just as if the callback were defined
+                        in the containing function.
+                    </p>
+                    <p>
+                        This means the callback is a closure. Closures have access to the containing function’s scope, so the callback function can access the containing function's
+                        variables, and even the variables from the global scope.
+                    </p>
 
-<!--
-<div id="javascript_es6_classes" class="container-fluid text-center">
+                    <p>The below is a quick example:</p>
+                    <pre>
+function greeting(name) {
+    alert('Hello ' + name);
+}
 
-	<div class="row content">
-		<div class="col-sm-2 sidenav">
+function processUserInput(callback) {
+    var name = prompt('Please enter your name.');
+    callback(name);
+}
 
-		</div>
+processUserInput(greeting);
 
-		<div class="col-sm-8 text-left">
+                    </pre>
+
+                    <p>JQuery uses callback functions extensively. Below is an example:</p>
+
+                    <pre>
+//The item in the click method's parameter is a callback function, not a variable.​
+$("#btn_1").click(function() {
+    alert("Btn 1 Clicked");
+});
+
+                    </pre>
 
 
-        </div>
+                    <h2>Asynchronous Callbacks</h2>
+
+
+                    <p>Callbacks are often used to continue code execution after an asynchronous operation has completed.</p>
+
+                    <p>Consider the code below:</p>
+
+                    <pre>
+
+function first(){
+    console.log(1);
+}
+
+function second(){
+    console.log(2);
+}
+
+                    </pre>
+                    <p>If we invoke our functions we get the following:</p>
+
+                    <pre>
+first();
+second();
+
+// 1
+// 2
+
+                    </pre>
+
+                    <p>
+                        However, what if function <b>first</b> contains code that can't be executed straight way?
+                        For example, an API request where we have to send the request then wait for a response?
+                        <br /><br />
+                        The below simulates this action:
+                    </p>
+
+                    <pre>
+function first(){
+    // Simulate a code delay
+    setTimeout( function(){
+        console.log(1);
+    }, 500 );
+}
+
+function second(){
+    console.log(2);
+}
+
+                    </pre>
+
+                    <p>We get the following when we invoke our functions:</p>
+
+                    <pre>
+first();
+second();
+
+// 2
+// 1
+
+                    </pre>
+
+                    <p>
+                        So even though we invoked the <b>first()</b> function first, the result got logged out after that of the <b>second()</b> function.
+                        <br /><br />
+
+                        JavaScript didn’t wait for a response from first() before moving on to execute second().
+                        You can’t just call one function after another and hope they execute in the right order.
+                        Callbacks are a way to make sure certain code doesn’t execute until other code has already finished execution.
+                    </p>
+
+                    <pre>
+function first(callback){
+
+    // Simulate a code delay
+    setTimeout( function(){
+        console.log(1);
+
+        //execute callback
+        callback();
+    }, 1000 );
+}
+
+function second(){
+    console.log(2);
+}
+
+
+                    </pre>
+
+                    <p>We now get the following when we invoke our functions:</p>
+
+                    <pre>
+first(second);
+
+// 1
+// 2
+
+                    </pre>
+
+                    <p>
+                        The use of Callback functions is useful for HTTP requests (like making an AJAX request) where you need to do
+                        something with the response where you can use a callback function to handle the response whenever it arrives.<br /><br />
+                        Another useful example in this context could be when your application is dependent on user input or when reading
+                        from files or when downloading things.
+                    </p>
+
+                    <p>
+                        In the below example, <b>T.get</b> simply means we are making a get request to Twitter.
+                        There are three parameters in this request: ‘search/tweets’, which is the route of our request, params
+                        which are our search parameters, and then an anonymous function which is our callback.
+                    </p>
+                    <pre>
+T.get('search/tweets', params, function(err, data, response) {
+    if(!err){
+        // This is where the magic will happen
+    } else {
+        console.log(err);
+    }
+})
+                    </pre>
+
+                    <p>
+                        A callback is important here because we need to wait for a response from the server before we can move forward in our code.
+                        We don’t know if our API request is going to be successful or not so after sending our parameters to search/tweets via a get
+                        request, we wait. <br /><br />
+
+                        Once Twitter responds, our callback function is invoked. Twitter will either send an err
+                        (error) object or a response object back to us. <br /><br />
+
+                        In our callback function we can use an if() statement to determine
+                        if our request was successful or not, and then act upon the new data accordingly.
+                    </p>
+                    <footer class="container-fluid text-center">
+                        <a href="#JavaScriptHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                    </footer>
+                </div>
+
+
+                <div id="javascript_modules">
+                    <h1>JavaScript Modules</h1>
+                    <h2>Introduction</h2>
+                    <p>
+                        Modules help developers separate functionality and organize the codebase. Also without modules JavaScript's
+                        global namespace can become easily polluted.
+                        <br /><br />
+                        Functions are the only thing in JavaScript that create a new scope; thus anything not declared within a
+                        function is apart of the global namespace.
+                        <br /><br />
+                        Thus every function we declare in JavaScript is available globally and therefore its name cannot be used again.
+                        Often this leads to a polluted namespace where names and code can be difficult to find and reuse.
+                        <br /><br />
+                        Sometimes we don’t want that function to be available everywhere.
+                        In order to make functions in one JavaScript file available to just a single other JavaScript file, we can use modules.
+                        <br /><br />
+                        There is no native support for a modules system in ES5.
+                        Fortunately there are non native ways to <i>emulate</i> a modules system.
+                        Two of the popular ones are CommonJS whose syntax will be familiar to those who work in the Node.JS ecosystem, and
+                        AMD (Asynchronous module definition).
+                    </p>
+                    <h2>CommonJS</h2>
+                    <p>
+                        A CommonJS module is essentially a reusable piece of JavaScript which <b>exports</b> specific objects,
+                        making them available for other modules to require in their programs.
+                        <br /><br />
+                        With CommonJS, each JavaScript file stores modules in its own unique module context (just like wrapping it in a closure).
+                        In this scope, we use the <b>module.exports</b> object to expose modules, and <b>require</b> to import them.
+                        <br /><br />
+                        Below is an example CommonJS module in a file called <b>myModule.js</b>
+                    </p>
+                    <pre>
+function myModule() {
+    this.hello = function() {
+        return 'hello!';
+    }
+
+    this.goodbye = function() {
+        return 'goodbye!';
+    }
+}
+
+module.exports = myModule;
+
+                    </pre>
+
+                    <p>
+                        If <i>myModule</i> needs to be used, you can <i>require</i> it in your file:
+                    </p>
+
+                    <pre>
+var myModule = require('myModule');
+
+var myModuleInstance = new myModule();
+myModuleInstance.hello(); // 'hello!'
+myModuleInstance.goodbye(); // 'goodbye!'
+
+                    </pre>
+
+                    <h2>Module Bundling</h2>
+                    <p>
+                        If you are using non-native module systems like CommonJS (which browsers can't interpret),
+                        you will need to use a specialized tool to convert your modules into properly-ordered browser-friendly code.
+                        <br /><br />
+                        Also another issue with using CommonJS is that it loads modules synchronously.
+                        This will be an issue in the browser as the browser will be blocked from running anything else until it finishes loading modules.
+                        <br /><br />
+                        To get around these issues, we must <b>"bundle"</b> the modules.
+                        Module bundling is the process of concatenating a group of modules and their dependencies into a single file
+                        (or group of files) in the correct order, in order to reduce the number of browser requests.
+                        <br /><br />
+                        Two of the most popular options are <b>Browserify</b> and <b>Webpack</b>. Please see section on Module Bundling.
+                    </p>
+
+                    <h3>Browserify</h3>
+                    <p>
+                        Consider the below main.js file that requires (imports) a module 'myDependency'
+                    </p>
+                    <pre>
+var myDependency = require(‘myDependency’);
+
+var myGrades = [93, 95, 88, 0, 91];
+
+var myAverageGrade = myDependency.average(myGrades);
+
+                    </pre>
+                    <p>
+                        We have one dependency. Using the command below, Browserify recursively bundles up all the required module(s),
+                        in the correct order, starting at main.js into a single file called bundle.js:
+                    </p>
+
+                    <pre>
+browserify main.js -o bundle.js
+
+                    </pre>
+
+                    <p>
+                        All you have to do is insert a single <b>script</b> tag with your bundle.js  file into your html to ensure
+                        that all of your source code is downloaded in one HTTP request.
+                        <br /><br />
+                        If you have multiple files with multiple dependencies, you simply tell Browserify what your entry file is.
+                        <br /><br />
+                        The final step would be Minification of the bundled code which is the process of removing unnecessary characters
+                        from source code e.g. whitespace, comments, new line characters, etc., in order to reduce the overall size of
+                        the content without changing the functionality of the code.
+                    </p>
+
+                    <h3>Webpack</h3>
+
+                    <p>
+                        Webpack is another bundler that can be used. Webpack provides some useful features like code splitting,
+                        a way to split your codebase into chunks which are loaded on demand.
+                        <br /><br />
+                        For example, if you have a web app with blocks of code that are only required under certain circumstances,
+                        it might not be efficient to put the whole codebase into a single massive bundled file.
+                        In this case, you could use code splitting to extract code into bundled chunks that can be loaded on demand,
+                        avoiding trouble with big up-front payloads when most users only need the core of your application.
+                    </p>
+                    <footer class="container-fluid text-center">
+                        <a href="#JavaScriptHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                    </footer>
+
+                </div>
 
 
 
-    <div class="col-sm-2 sidenav">
+                <div id="javascript_es6_const_let_variables">
 
-    </div>
-</div>
+                    <h1>ES6 Const And Let Variables</h1>
 
--->
+                    <p>Scope refers to where in your program your variables are visible.</p>
 
-<div id="javascript_es6_const_let_variables" class="container-fluid text-center">
+                    <p><b>Let</b> and <b>Const</b> Variables have block scope (surrounded by {}) and can't be used before declaration.</p>
 
-	<div class="row content">
-		<div class="col-sm-2 sidenav">
+                    <p><b>Var</b> variables have function scope and are hoisted to the top which means can be used before it has been declared.</p>
 
-		</div>
-
-		<div class="col-sm-8 text-left">
-
-            <h1>ES6 Const And Let Variables</h1>
-
-            <p>Scope refers to where in your program your variables are visible.</p>
-
-            <p><b>Let</b> and <b>Const</b> Variables have block scope (surrounded by {}) and can't be used before declaration.</p>
-
-            <p><b>Var</b> variables have function scope and are hoisted to the top which means can be used before it has been declared.</p>
-<pre>
+                    <pre>
 function f() {
-  var x = 1;
-  let y = 2;
-  const z = 3;
-  {
-    var x = 100;
-    let y = 200;
-    const z = 300;
-    console.log('x in block scope is', x); // x in block scope is 100
-    console.log('y in block scope is', y); // y in block scope is 200
-    console.log('z in block scope is', z); // z in block scope is 300
-  }
-  console.log('x outside of block scope is', x); // x outside of block scope is 100
-  console.log('y outside of block scope is', y); // y outside of block scope is 2
-  console.log('z outside of block scope is', z); // z outside of block scope is 3
+    var x = 1;
+    let y = 2;
+    const z = 3;
+    {
+        var x = 100;
+        let y = 200;
+        const z = 300;
+        console.log('x in block scope is', x); // x in block scope is 100
+        console.log('y in block scope is', y); // y in block scope is 200
+        console.log('z in block scope is', z); // z in block scope is 300
+    }
+    console.log('x outside of block scope is', x); // x outside of block scope is 100
+    console.log('y outside of block scope is', y); // y outside of block scope is 2
+    console.log('z outside of block scope is', z); // z outside of block scope is 3
 }
 
 f();
 
 
-</pre>
+                    </pre>
 
-        <p><b>Const</b> variables need to be declared using an initializer, or it will generate an error. They also cannot be reassigned entirely to a different value. </p>
+                    <p><b>Const</b> variables need to be declared using an initializer, or it will generate an error. They also cannot be reassigned entirely to a different value. </p>
 
-<pre>
+                    <pre>
 const i = 0;
 i = 1; //  TypeError: Assignment to constant variable.
-</pre>
+                    </pre>
 
-        <p>However, if the value of a <b>const</b> is an object or array, the object’s properties themselves are still mutable, i.e. they are able to be modified.</p>
+                    <p>However, if the value of a <b>const</b> is an object or array, the object’s properties themselves are still mutable, i.e. they are able to be modified.</p>
 
-<pre>
+                    <pre>
 const obj = {
-  i: 0
+    i: 0
 };
 obj.i = 1;
 console.log(obj.i); // 1
 
 
-</pre>
+                    </pre>
+
+                    <footer class="container-fluid text-center">
+                        <a href="#JavaScriptHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                    </footer>
+
+                </div>
 
 
-        </div>
-    </div>
-</div>
+                <div id="javascript_es6_arrow_function">
 
-<div id="javascript_es6_arrow_function" class="container-fluid text-center">
+                    <h1>ES6 Arrow Functions</h1>
 
-	<div class="row content">
-		<div class="col-sm-2 sidenav">
+                    <h3>Introduction</h3>
+                    <p>
+                        Two factors influenced the introduction of arrow functions: shorter function syntax and non-binding of <b>'this'</b>. It is important to note that
+                        arrow functions cannot be used as constructors as other functions can.
+                    </P>
 
-		</div>
+                    <h3>Shorter Function Syntax</h3>
 
-		<div class="col-sm-8 text-left">
-
-            <h1>ES6 Arrow Functions</h1>
-
-            <h3>Introduction</h3>
-            <p>
-                Two factors influenced the introduction of arrow functions: shorter function syntax and non-binding of <b>'this'</b>. It is important to note that
-                arrow functions cannot be used as constructors as other functions can.
-            </P>
-
-            <h3>Shorter Function Syntax</h3>
-
-            <p>Consider the following function</p>
-            <pre>
+                    <p>Consider the following function</p>
+                    <pre>
 function funcName(param1, param2) {
    return param1 + param2;
  }
@@ -325,19 +898,19 @@ function funcName(param1, param2) {
 funcName(2, 2);
 // returns 4
 
-            </pre>
-            <p>Using the new arrow function syntax, it can now be written in the following way:</p>
+                    </pre>
+                    <p>Using the new arrow function syntax, it can now be written in the following way:</p>
 
-            <pre>
+                    <pre>
 var funcName = (param1, param2) => { param1 + param2 };
 
 funcName(2, 2);
 // returns 4
-            </pre>
+                    </pre>
 
-            <p>If a function has only one parameter, the parenthesis are optional:</p>
+                    <p>If a function has only one parameter, the parenthesis are optional:</p>
 
-            <pre>
+                    <pre>
 function funcName(param1) {
    return param1 + 2;
  }
@@ -357,31 +930,31 @@ var funcName = param1 => param1 + 2 ;
 funcName(2);
 //returns 4
 
-            </pre>
+                    </pre>
 
-            <p>The paramter list for a function with no parameters shouldbe written with a pair of parenthesis:</p>
+                    <p>The paramter list for a function with no parameters shouldbe written with a pair of parenthesis:</p>
 
-            <pre>
+                    <pre>
 () => { statements };
-            </pre>
+                    </pre>
 
-            <P>The body of the function should be parenthesized if it is returning an object literal expression</p>
-            <pre>
+                    <P>The body of the function should be parenthesized if it is returning an object literal expression</p>
+                    <pre>
 params => ({foo: bar});
-            </pre>
+                    </pre>
 
 
-            <h3>No Binding Of <b>'This'</b></h3>
+                    <h3>No Binding Of <b>'This'</b></h3>
 
-            <p>
-                An arrow function does not bind <b>'this'</b>. Arrows instead bind <b>'this'</b> to the immediate enclosing lexical scope.
-                Therefore, you don’t need <b>bind()</b> or <b>that = this</b>, anymore.
-                <br /><br />
-                Consider the following, in non-strict mode, the growUp() function defines <b>'this'</b> as the global object,
-                which is different from the <b>'this'</b> defined by the Person() constructor. In strict mode, this is undefined.
-            </p>
+                    <p>
+                        An arrow function does not bind <b>'this'</b>. Arrows instead bind <b>'this'</b> to the immediate enclosing lexical scope.
+                        Therefore, you don’t need <b>bind()</b> or <b>that = this</b>, anymore.
+                        <br /><br />
+                        Consider the following, in non-strict mode, the growUp() function defines <b>'this'</b> as the global object,
+                        which is different from the <b>'this'</b> defined by the Person() constructor. In strict mode, this is undefined.
+                    </p>
 
-            <pre>
+                    <pre>
 function Person() {
   // The Person() constructor defines `this` as an instance of itself.
   this.age = 0;
@@ -396,11 +969,11 @@ var p = new Person();
 // The above will return NaN every 1000 milliseconds because
 // the growUp() function defines `this` as the global object
 
-            </pre>
+                    </pre>
 
-            <p>In ECMAScript 3/5, the <b>'this'</b> issue was fixable by assigning the value in <b>'this'</b> to a variable that could be closed over.</p>
+                    <p>In ECMAScript 3/5, the <b>'this'</b> issue was fixable by assigning the value in <b>'this'</b> to a variable that could be closed over.</p>
 
-            <pre>
+                    <pre>
 function Person() {
   var that = this;
   that.age = 0;
@@ -416,14 +989,14 @@ function Person() {
 var p = new Person();
 // The above will return a number incremented by 1 every second.
 
-            </pre>
+                    </pre>
 
-            <p>
-                An arrow function does not have its own <b>'this'</b>; the <b>'this'</b> value of the enclosing execution context is used.
-                Thus, in the following code, the this within the function that is passed to setInterval has the same value as <b>'this'</b> in the enclosing function:
-            </p>
+                    <p>
+                        An arrow function does not have its own <b>'this'</b>; the <b>'this'</b> value of the enclosing execution context is used.
+                        Thus, in the following code, the this within the function that is passed to setInterval has the same value as <b>'this'</b> in the enclosing function:
+                    </p>
 
-            <pre>
+                    <pre>
 function Person(){
   this.age = 0;
 
@@ -436,113 +1009,221 @@ function Person(){
 var p = new Person();
 // The above will return a number incremented by 1 every second.
 
-            </pre>
+                    </pre>
+
+                    <footer class="container-fluid text-center">
+                        <a href="#JavaScriptHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                    </footer>
+
+                </div>
+
+                <div id="javascript_es6_default_parameters">
+                    <h1>ES6 Default Parameters</h1>
+                    <p>
+                        Allows missing or undefined parameter values to be initialised with a default value, function or  expression:
+                    </p>
+                    <pre>
+//With values:
+
+function foo( a = 5, b = 10) {
+    console.log( a + b);
+}
+foo();  // 15
+foo( 7, 12 );  // 19
+foo( undefined, 8 ); // 13
+foo( 8 ); // 18
+foo( null ); // 10 as null or false values are equated as 0
+
+//With function and expression:
+
+function foo( a ) { return a * 4; }
+function bar( x = 2, y = x + 4, z = foo(x)) {
+    console.log([ x, y, z ]);
+}
+bar();  // [ 2, 6, 8 ]
+bar( 1, 2, 3 ); //[ 1, 2, 3 ]
+bar( 10, undefined, 3 );  // [ 10, 14, 3 ]
+
+                    </pre>
+
+                    <footer class="container-fluid text-center">
+                        <a href="#JavaScriptHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                    </footer>
+                </div>
 
 
 
-        </div>
+                <div id="javascript_es6_template_literals">
+                    <h1>ES6 Template Literals</h1>
+                    <p>
+                        Template literals are started with a back tick and can have variables, equations or function calls inserted in curly brackets:
+                    </p>
 
-    </div>
+                    <pre>
+var country = 'France', capital = 'Paris', continent = 'Europe';
 
-    <div class="col-sm-2 sidenav">
+// ES5
+var a = 'Hi, I\'m in ' + capital + ' capital of ' + country + ', it\'s in ' + continent + '.';
 
-    </div>
-</div>
+// ES6
+var b = `Hi, I'm  in ${ capital } capital of ${ country }, it's in ${ continent }.`;
 
 
+                    </pre>
+                    <footer class="container-fluid text-center">
+                        <a href="#JavaScriptHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                    </footer>
+
+                </div>
 
 
-<div id="javascript_es6_classes" class="container-fluid text-center">
+                <div id="javascript_es6_spread_operator">
+                    <h1>ES 6 Spread Operator / Rest Parameter</h1>
+                    <p>
+                        Spreading an array or object into a new array or object:
+                    </p>
 
-	<div class="row content">
-		<div class="col-sm-2 sidenav">
+                    <pre>
+let a = [3, 4, 5];
+let b = [1, 2, ...a, 6];
+console.log(b);  // [1, 2, 3, 4, 5, 6]
 
-		</div>
+let car = { type: 'vehicle ', wheels: 4};
+let fordGt = { make: 'Ford', ...car, model: 'GT'};
+console.log(fordGt); // {make: 'Ford', type: 'vehicle', wheels: 4, model: 'GT'}
 
-		<div class="col-sm-8 text-left">
+                    </pre>
 
-			<h1>ES6 Classes</h1>
+                    <p>
+                        Rest Parameter. Getting the rest of an array into a new array:
+                    </p>
+                    <pre>
+[a, b, ...rest] = [10, 20, 30, 40, 50];
 
-            <h3>Introduction</h3>
+console.log(rest);
+// expected output: [30,40,50]
 
-            <p>
-                It is important to note that JavaScript's 'Class' syntax in ES6 is little more than syntactic 'sugar over' for the existing prototype based behaviour.
-                It simply provides a more convenient syntax for creating objects related via prototype linkage.
-            </p>
+                    </pre>
 
-            <p>
-                JavaScript's "classes" aren't like classes in languages like Java pr Python. In these class based languages you create classes which are templates for objects.
-                <br /><br />
-                When you want a new object, you instantiate the class, which tells the language engine to copy the methods and properties of the class into a new entity, called an instance.
-                The instance is your object, and, after instantiation, has absolutely no active relation with the parent class.
-            </p>
-
-            <p>
-                "Instantiating" a class in JavaScript does create a new object, but not one that is independent of its parent class.
-                Rather, it creates an object that is linked to a prototype. Changes to that prototype propagate to the new object, even after instantiation.
-            </p>
-
-            <h3>Example Of Using Class Syntax</h3>
-
-            <pre>
-"use strict";
-
-// Food is a base class
-class Food {
-  constructor (name, protein, carbs, fat) {
-    this.name = name;
-    this.protein = protein;
-    this.carbs = carbs;
-    this.fat = fat;
-  }
-
-  toString () {
-    return `${this.name} | ${this.protein}g P :: ${this.carbs}g C :: ${this.fat}g F`
-  }
-
-  print () {
-    console.log( this.toString() );
-  }
+                    <p>
+                        Gathering variables into an array, which is useful for when you don't know how many variables are being passed to a function:
+                    </p>
+                    <pre>
+function foo(...args) {
+    console.log(args);
 }
 
-const chicken_breast = new Food('Chicken Breast', 26, 0, 3.5);
+foo( 'car', 54, 'tree');  //  [ 'car', 54, 'tree' ]
 
-chicken_breast.print(); // 'Chicken Breast | 26g P :: 0g C :: 3.5g F'
+                    </pre>
 
-            </pre>
+                    <footer class="container-fluid text-center">
+                        <a href="#JavaScriptHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                    </footer>
 
-            <h3>Same thing using Constructor Function</h3>
+                </div>
 
-            <pre>
-function Food(name, protein, carbs, fat) {
-  this.name = name;
-  this.protein = protein;
-  this.carbs = carbs;
-  this.fat = fat;
-}
+                <div id="javascript_es6_destructuring_assignment">
+                    <h1>ES6 Destructuring Assignment</h1>
+                    <p>
+                        Makes it possible to unpack values from arrays, or properties from objects, into distinct variables:
+                    </p>
+                    <pre>
+let a, b, rest;
 
-Food.prototype.toString = function toString () {
-        return `${this.name} | ${this.protein}g P :: ${this.carbs}g C :: ${this.fat}g F`
-}
+[a, b] = [10, 20];
 
-Food.prototype.print = function print() {
-      console.log( this.toString() );
-}
+console.log(a);
+// expected output: 10
+
+console.log(b);
+// expected output: 20
 
 
-const chicken_breast = new Food('Chicken Breast', 26, 0, 3.5);
+// rest operator
+[a, b, ...rest] = [10, 20, 30, 40, 50];
 
-chicken_breast.print(); // 'Chicken Breast | 26g P :: 0g C :: 3.5g F'
+console.log(rest);
+// expected output: [30,40,50]
 
-          </pre>
+let { a, c } = {a: 1, b: 2, c: 3};
+console.log(a); // 1
+console.log(c); // 3
+console.log(b); // undefined
 
-          <h3>Inheritance Using New ES6 Syntax</h3>
+// Round braces ( ... ) around the assignment statement is required syntax
+// when using object literal destructuring assignment without a declaration.
+let a, c;
+({ a, c } = {a: 1, b: 2, c: 3});
+console.log(a); // 1
+console.log(c); // 3
+console.log(b); // undefined
 
-          <p>
-            With the new syntax, subclasses are created with 'extend' and calling with 'super'
-          </p>
+// Assigning to new variable names
+var o = {p: 42, q: true};
+var {p: foo, q: bar} = o;
 
-          <pre>
+console.log(foo); // 42
+console.log(bar); // true
+
+
+                    </pre>
+                    <footer class="container-fluid text-center">
+                        <a href="#JavaScriptHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                    </footer>
+                </div>
+
+                <div id="javascript_es6_dynamic_property_names">
+
+                    <h1>ES6 Dynamic Property Names</h1>
+                    <p>
+                        Allows the ability to create or add properties with dynamically assigned keys:
+                    </p>
+
+                    <pre>
+let  city= 'leicester_';
+let a = {
+    [ city + 'population' ]: 500000
+};
+
+a[ city + 'county' ] = 'Leicestershire';
+console.log(a); // {leicester_population: 350000, leicester_county: 'South Yorkshire' }
+
+
+                    </pre>
+                    <footer class="container-fluid text-center">
+                        <a href="#JavaScriptHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                    </footer>
+
+                </div>
+
+
+
+                <div id="javascript_es6_classes">
+                    <h1>ES6 Classes</h1>
+
+                    <h3>Introduction</h3>
+
+                    <p>
+                        It is important to note that JavaScript's 'Class' syntax in ES6 is little more than syntactic 'sugar over' for the existing prototype based behaviour.
+                        It simply provides a more convenient syntax for creating objects related via prototype linkage.
+                    </p>
+
+                    <p>
+                        JavaScript's "classes" aren't like classes in languages like Java pr Python. In these class based languages you create classes which are templates for objects.
+                        <br /><br />
+                        When you want a new object, you instantiate the class, which tells the language engine to copy the methods and properties of the class into a new entity, called an instance.
+                        The instance is your object, and, after instantiation, has absolutely no active relation with the parent class.
+                    </p>
+
+                    <p>
+                        "Instantiating" a class in JavaScript does create a new object, but not one that is independent of its parent class.
+                        Rather, it creates an object that is linked to a prototype. Changes to that prototype propagate to the new object, even after instantiation.
+                    </p>
+
+                    <h3>Example Of Using Class Syntax</h3>
+
+                    <pre>
 "use strict";
 
 // Food is a base class
@@ -559,7 +1240,65 @@ class Food {
     }
 
     print () {
-      console.log( this.toString() );
+        console.log( this.toString() );
+    }
+}
+
+const chicken_breast = new Food('Chicken Breast', 26, 0, 3.5);
+
+chicken_breast.print(); // 'Chicken Breast | 26g P :: 0g C :: 3.5g F'
+
+                    </pre>
+
+                    <h3>Same thing using Constructor Function</h3>
+
+                    <pre>
+function Food(name, protein, carbs, fat) {
+    this.name = name;
+    this.protein = protein;
+    this.carbs = carbs;
+    this.fat = fat;
+}
+
+Food.prototype.toString = function toString () {
+    return `${this.name} | ${this.protein}g P :: ${this.carbs}g C :: ${this.fat}g F`
+}
+
+Food.prototype.print = function print() {
+    console.log( this.toString() );
+}
+
+
+const chicken_breast = new Food('Chicken Breast', 26, 0, 3.5);
+
+chicken_breast.print(); // 'Chicken Breast | 26g P :: 0g C :: 3.5g F'
+
+                    </pre>
+
+                    <h3>Inheritance Using New ES6 Syntax</h3>
+
+                    <p>
+                        With the new syntax, subclasses are created with 'extend' and calling with 'super'
+                    </p>
+
+                    <pre>
+"use strict";
+
+// Food is a base class
+class Food {
+    constructor (name, protein, carbs, fat) {
+        this.name = name;
+        this.protein = protein;
+        this.carbs = carbs;
+        this.fat = fat;
+    }
+
+    toString () {
+        return `${this.name} | ${this.protein}g P :: ${this.carbs}g C :: ${this.fat}g F`
+    }
+
+    print () {
+        console.log( this.toString() );
     }
 }
 
@@ -577,61 +1316,369 @@ class FatFreeFood extends Food {
 
 const fat_free_yogurt = new FatFreeFood('Greek Yogurt', 16, 12);
 fat_free_yogurt.print(); // 'Greek Yogurt | 26g P :: 16g C :: 0g F
-                        //  Would you look at that -- Greek Yogurt has no fat!'
+//  Would you look at that -- Greek Yogurt has no fat!'
 
-          </pre>
+                    </pre>
 
-          <h3>The same thing pre ES6</h3>
+                    <h3>The same thing pre ES6</h3>
 
-          <pre>
+                    <pre>
 function Food(name, protein, carbs, fat) {
-        this.name = name;
-        this.protein = protein;
-        this.carbs = carbs;
-        this.fat = fat;
+    this.name = name;
+    this.protein = protein;
+    this.carbs = carbs;
+    this.fat = fat;
 }
 
 Food.prototype.toString = function toString () {
-        return `${this.name} | ${this.protein}g P :: ${this.carbs}g C :: ${this.fat}g F`
+    return `${this.name} | ${this.protein}g P :: ${this.carbs}g C :: ${this.fat}g F`
 }
 
 Food.prototype.print = function print() {
-      console.log( this.toString() );
+    console.log( this.toString() );
 
 }
 
 function FatFreeFood (name, protein, carbs, fat) {
-	Food.call(this, name, protein, carbs, fat);
+    Food.call(this, name, protein, carbs, fat);
 }
 
 FatFreeFood.prototype = Object.create(Food.prototype);
 
 FatFreeFood.prototype.print_message = function print_message() {
-	console.log(`Would you look at that -- ${this.name} has no fat!`);
+    console.log(`Would you look at that -- ${this.name} has no fat!`);
 }
 
 const fat_free_yogurt = new FatFreeFood('Greek Yogurt', 16, 12);
 fat_free_yogurt.print();
 fat_free_yogurt.print_message(); // 'Greek Yogurt | 26g P :: 16g C :: 0g F
-                                //  Would you look at that -- Greek Yogurt has no fat!'
+//  Would you look at that -- Greek Yogurt has no fat!'
 
-          </pre>
+                    </pre>
 
+                    <footer class="container-fluid text-center">
+                        <a href="#JavaScriptHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                    </footer>
+
+                </div>
+
+
+                <div id="javascript_es6_promises">
+                    <h1>ES6 Promises</h1>
+                    <p>
+                        Promises give us a way to handle asynchronous processing in a more synchronous fashion.
+                    </p>
+
+                    <h3>Creating Promises</h3>
+                    <p>
+                        Promises are created by using the promise constructor which takes one argument, a callback function.
+                        <br /><br />
+                        The callback function can take two handler arguments, one is typically named <code><b>resolve</b></code>, which is called if everything worked as expected,
+                        and the other is typically named <code><b>reject</b></code> if not.
+                        <br /><br />
+                        A Promise can have one of the following three states:
+                        <ul>
+                            <li><b>Pending</b> - until a Promise is fulfilled, it is in the pending state</li>
+                            <li><b>Fulfilled</b> - when the first handler is called the Promise is considered fulfilled with the value passed to that handler.</li>
+                            <li><b>Rejected</b> - if the second handler is called, the Promise is considered rejected with the value passed to that handler.</li>
+                        </ul>
+                    </p>
+
+                    <h3>Processing Promises</h3>
+                    <p>
+                        To process (consume) a Promise, we use its <b>.then()</b> method. This method takes two possible handler parameters. The first is the function called
+                        if the Promise is fulfilled and the second is called if the Promise is rejected.
+                        <br /><br />
+                        A Promise can only be 'settled' (fulfilled or rejected) once. Other consumers can not change the settled value.
+                    </p>
+
+                    <h3>Example Using readFile</h3>
+
+                    <pre>
+import {readFile} from 'fs';
+
+function readFilePromisified(filename) {
+    return new Promise(
+    function (resolve, reject) {
+        readFile(filename, { encoding: 'utf8' },
+        (error, data) => {
+            if (error) {
+                reject(error);
+            } else {
+                resolve(data);
+            }
+        });
+    });
+}
+
+readFilePromisified() is used like this:
+
+readFilePromisified(process.argv[2])
+.then(text => {
+    console.log(text);
+})
+.catch(error => {
+    console.log(error);
+});
+
+                    </pre>
+
+                    <h3>Example Using XMLHttpRequest</h3>
+                    <pre>
+function get(url) {
+    // Return a new promise.
+    return new Promise(function(resolve, reject) {
+        // Do the usual XHR stuff
+        var req = new XMLHttpRequest();
+        req.open('GET', url);
+
+        req.onload = function() {
+            // This is called even on 404 etc
+            // so check the status
+            if (req.status == 200) {
+                // Resolve the promise with the response text
+                resolve(req.response);
+            }
+            else {
+                // Otherwise reject with the status text
+                // which will hopefully be a meaningful error
+                reject(Error(req.statusText));
+            }
+        };
+
+        // Handle network errors
+        req.onerror = function() {
+            reject(Error("Network Error"));
+        };
+
+        // Make the request
+        req.send();
+    });
+}
+
+//Now let's use it:
+
+get('story.json').then(function(response) {
+    console.log("Success!", response);
+})
+.catch(error => {
+    console.error("Failed!", error);
+});
+
+                    </pre>
+
+                    <h3>Promise.all and Promise.race</h3>
+                    <p>
+                        <b>Promise.all</b> is a way for running an array of Promises concurrently. Note that even if a single dependency is rejected, the Promise.all method will be rejected entirely as well.
+                        If all promises are resolved, correctly <b>Promise.all</b> triggers its <b>then</b> handler with an array of resolved values in the same order as promises passed in.
+                    </p>
+                    <pre>
+// list of files we want to read from disk
+let filenames = ['index.html', 'blog.html', 'terms.html'];
+
+Promise.all(filenames.map(readFilePromise))
+.then(files => {
+    console.log('index:', files[0]);
+    console.log('blog:', files[1]);
+    console.log('terms:', files[2]);
+})
+
+                    </pre>
+
+                    <p>
+                        <b>Promise.race</b> is similar to <b>Promise.all</b> but will return once <b>ANY</b> of the Promises resolves or rejects,
+                        discarding all the other results. This could be useful for scenarios where we want to time out a promise we otherwise have no control over.
+                    </p>
+
+                    <pre>
+var p = Promise.race([
+        fetch('/resource-that-may-take-a-while'),
+        new Promise(function (resolve, reject) {
+        setTimeout(() => reject(new Error('request timeout')), 5000)
+        })
+])
+
+p.then(response => console.log(response))
+p.catch(error => console.log(error))
+
+                    </pre>
+
+                    <h3>Resources</h3>
+                    <p>
+                        <a href="https://developers.google.com/web/fundamentals/primers/promises">https://developers.google.com/web/fundamentals/primers/promises</a><br />
+                        <a href="http://www.datchley.name/es6-promises/">http://www.datchley.name/es6-promises/</a><br />
+                        <a href="http://exploringjs.com/es6/ch_promises.html#sec_introduction-promises">http://exploringjs.com/es6/ch_promises.html</a><br />
+                        <a href="https://medium.com/datafire-io/es6-promises-patterns-and-anti-patterns-bbb21a5d0918">https://medium.com/datafire-io/es6-promises-patterns-and-anti-patterns</a><br />
+                        <a href="https://ponyfoo.com/articles/es6-promises-in-depth">https://ponyfoo.com/articles/es6-promises-in-depth</a><br />
+                    </p>
+                    <footer class="container-fluid text-center">
+                        <a href="#JavaScriptHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                    </footer>
+                </div>
+
+
+                <div id="javascript_es6_modules">
+                  <h1>ES6 Modules</h1>
+                  <p>
+                    ES6 specification sees the introduction of built-in module support.
+                    <br /><br />
+                    ES6 modules are stored in files with one module per file /one file per module.
+                    <br /><br />
+                    Modules are singletons; even if a module is imported multiple times, only a single  'instance' of it exists.
+                  </p>
+                  <h2>Named Exports</h2>
+                  <p>
+                    A module can export multiple things by prefixing its declarations with the keyword <b>export</b>:
+                  </p>
+                  <pre>
+export const sqrt = Math.sqrt;
+export function square(x) {
+return x * x;
+}
+
+export function diag(x, y) {
+return sqrt(square(x) + square(y));
+}
+
+//------ main.js ------
+import { square, diag } from 'lib';
+console.log(square(11)); // 121
+console.log(diag(4, 3)); // 5
+
+
+                  </pre>
+                  <p>
+                    You can also import the whole module:
+                  </p>
+                  <pre>
+import * as lib from 'lib';
+console.log(lib.square(11)); // 121
+console.log(lib.diag(4, 3)); // 5
+
+
+                  </pre>
+
+                  <p>
+                    The same code in CommonJS
+                  </p>
+                  <pre>
+/------ lib.js ------
+var sqrt = Math.sqrt;
+function square(x) {
+        return x * x;
+}
+function diag(x, y) {
+        return sqrt(square(x) + square(y));
+}
+module.exports = {
+sqrt: sqrt,
+square: square,
+diag: diag,
+};
+
+//------ main.js ------
+var square = require('lib').square;
+var diag = require('lib').diag;
+console.log(square(11)); // 121
+console.log(diag(4, 3)); // 5
+
+
+                  </pre>
+
+                  <h2>Default Exports</h2>
+                  <p>
+                    An ES6 module can pick a <b>default export</b>:
+                  </P>
+                  <pre>
+Default Function Export:
+
+//------ myFunc.js ------
+export default function () {} // no semicolon!
+
+//------ main1.js ------
+import myFunc from 'myFunc';
+myFunc();
+
+
+Default Class Export:
+
+//------ MyClass.js ------
+export default class {} // no semicolon!
+
+//------ main2.js ------
+import MyClass from 'MyClass';
+const inst = new MyClass();
+                  </pre>
+
+                  <p>
+                    In ES6, when you import modules, the import is resolved at compile time which allows the removal of exports
+                    that are not used by other modules (dead code elimination).
+                    <br /><br />
+                    ES6 uses a 'tree shaking ‘approach to dead code elimination where it only includes code that your bundle needs
+                    to run rather than excluding code the your bundle doesn't need. In ES6, when you import modules, the import is
+                    resolved at compile time which allows the removal of exports that are not used by other modules (dead code elimination).
+                  </p>
+                  <h2>Building ES6 modules</h2>
+                  <p>
+                    Most browsers do not implement loading of ES6 modules so they must be built.
+                    <br /><br />
+                    The most common approach for building/converting ES6 modules to work in the browser is to use a transpiler like
+                    Babel to transpile your ES6 code to ES5 code to  CommonJS, then pipe the transpiled code through a module bundler
+                    like Browserify or Webpack to create one or more bundled files.
+                  </p>
+
+                  <footer class="container-fluid text-center">
+                      <a href="#JavaScriptHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                  </footer>
+
+                </div>
+
+
+
+
+                <div id="javascript_polyfills_transpilers">
+                    <h1>Polyfills and Transpilers</h1>
+                    <p>
+                        Transpilers take the <b>syntax</b> that older browsers don't understand (e.g. classes, 'const', arrow functions)
+                        and turn them into syntax that they will understand (functions, 'var', functions).
+                        <br /><br />
+                        A polyfill is a type of shim that defines a new <b>object or method</b> in browsers that don't support that object or
+                        method (e.g. Array.prototype.includes, Map, Promise).
+                        <br /><br />
+                        You can find a lot of what you will ever need in babel-polyfill or more specifically: <a href="https://github.com/zloirock/core-js">core-js</a>
+                        (which is what babel-polyfill uses).
+                    </p>
+
+                    <h2>Resources</h2>
+                    <a href="https://hackernoon.com/polyfills-everything-you-ever-wanted-to-know-or-maybe-a-bit-less-7c8de164e423">Polyfills: everything you ever wanted to know, or maybe a bit less</a>
+
+                    <footer class="container-fluid text-center">
+                        <a href="#JavaScriptHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                    </footer>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+            <div class="col-sm-2">
+
+            </div>
         </div>
-
-
-
-        <div class="col-sm-2 sidenav">
-
-        </div>
-  </div>
-</div>
-
-
+    </div>
 
 
 <footer class="container-fluid text-center">
- 	<a href="#myPage" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+    <a href="#JavaScriptHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
 </footer>
 
 

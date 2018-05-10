@@ -1,0 +1,116 @@
+<h1>Call, Apply and Bind</h1>
+
+
+
+Call and Apply are invoked immediately. Call takes any number of parameters: this, followed by the additional arguments. Apply takes only two parameters: this, followed by an array of the additional arguments.
+
+
+Call:
+
+
+<pre>
+function add(c, d) {
+  console.log(this.a + this.b + c + d);
+}
+
+var ten = {a: 1, b: 2};
+
+add.call(ten, 3, 4);
+// logs => 10
+
+add.apply(ten, [3,4]);
+// logs => 10
+
+</pre>
+
+
+<h2>call() and apply()</h2>
+
+When we use add.call() the first parameter is what this should be bound to. The subsequent parameters are passed into the function we are calling. Thus, in add() , this.a refers to ten.a and this.b refers to ten.b and we get 1+2+3+4 returned, or 10.
+
+
+add.apply() is similar. The first parameter is what this should be bound to. The subsequent parameter is an array of arguments to be used in the function.
+
+
+<h2>bind()</h2>
+
+With bind() the parameters are identical to call() but bind() is not invoked immediately. Instead, bind() returns a function with the context of this bound already. Because of this, bind() is useful when we don’t know all of our arguments up front.
+
+
+
+
+<pre>
+var small = {
+  a: 1,
+  go: function(b,c,d){
+    console.log(this.a+b+c+d);
+  }
+}
+
+var large = {
+  a: 100
+}
+
+
+// small.go is called normally
+small.go(2,3,4);
+// logs 1+2+3+4 => 10
+
+// if we want to use large.a we can use call()
+small.go.call(large,2,3,4);
+// logs 100+2+3+4 => 109
+
+
+
+// if we don't know what the other two arguments are yet we can use bind
+var bindTest = small.go.bind(large,2);
+
+
+// we can call it later with the other two arguments
+bindTest(3,4);
+// logs 100+2+3+4 => 109
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://codeburst.io/javascript-the-keyword-this-for-beginners-fb5238d99f85
+https://codeplanet.io/javascript-apply-vs-call-vs-bind/
+https://www.hacksparrow.com/javascript-bind-vs-apply-and-call.html
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind
+
+https://medium.com/@owenyangg/javascript-call-apply-and-bind-explained-to-a-total-noob-63f146684564
+https://medium.com/@omergoldberg/javascript-call-apply-and-bind-e5c27301f7bb
+https://www.codementor.io/niladrisekhardutta/how-to-call-apply-and-bind-in-javascript-8i1jca6jp
+
+
+
+
+https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d
+https://medium.freecodecamp.org/the-definitive-javascript-handbook-for-a-developer-interview-44ffc6aeb54e

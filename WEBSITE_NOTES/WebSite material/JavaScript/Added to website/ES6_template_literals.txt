@@ -1,0 +1,100 @@
+<h1>ES6 Template Literals</h1>
+
+Template literals are started with a back tick and can have variables, equations or function calls inserted in curly brackets:
+
+<pre>
+var fName = 'Peter', sName = 'Smith', age = 43, job= 'photographer';
+var a = 'Hi, I\'m ' + fName + ' ' + sName + ', I\'m ' + age + ' and work as a ' + job + '.';
+var b = `Hi, I'm ${ fName } ${ sName }, I'm ${ age } and work as a ${ job }.`;
+
+
+</pre>
+
+
+
+
+<h1>Destructuring Assignment</h1>
+
+Makes it possible to unpack values from arrays, or properties from objects, into distinct variables:
+
+<pre>
+let a, b, rest;
+
+
+[a, b] = [10, 20];
+
+
+
+console.log(a);
+// expected output: 10
+
+
+
+console.log(b);
+// expected output: 20
+
+
+
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+
+
+
+console.log(rest);
+// expected output: [30,40,50]
+
+
+
+let { a, c } = {a: 1, b: 2, c: 3};
+console.log(a); // 1
+console.log(c); // 3
+console.log(b); // undefined
+
+
+
+// Round braces ( ... ) around the assignment statement is required syntax 
+// when using object literal destructuring assignment without a declaration.
+let a, c;
+({ a, c } = {a: 1, b: 2, c: 3});
+console.log(a); // 1
+console.log(c); // 3
+console.log(b); // undefined
+
+
+// Assigning to new variable names
+var o = {p: 42, q: true};
+var {p: foo, q: bar} = o;
+ 
+console.log(foo); // 42 
+console.log(bar); // true
+
+
+
+</pre>
+
+
+
+
+<h1>ES6 Dynamic Property Names</h1>
+
+
+
+Allows the ability to create or add add properties with dynamically assigned keys:
+
+<pre>
+
+let  city= 'sheffield_';
+let a = {
+    [ city + 'population' ]: 350000
+};
+a[ city + 'county' ] = 'South Yorkshire';
+console.log(a); // {sheffield_population: 350000, sheffield_county: 'South Yorkshire' }
+
+
+</pre>
+
+
+
+
+
+
+

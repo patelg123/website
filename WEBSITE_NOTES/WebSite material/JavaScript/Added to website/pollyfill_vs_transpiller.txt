@@ -1,0 +1,33 @@
+Pollyfills and Transpilers
+
+
+
+
+
+Transpiling takes the <b>syntax</b> that older browsers won’t understand (e.g. classes, ‘const’, arrow functions), and turns them into syntax they will understand (functions, ‘var’, functions).
+
+A polyfill is code that defines a new object or method in browsers that don’t support that object or method (e.g. Array.prototype.includes, Map, Promise).
+
+
+Transpilers and polyfills can’t do everything. It isn’t always clear what can be polyfilled or transpiled. 
+
+
+A good general rule is this:
+
+    If it’s new syntax, you can probably transpile it
+    If it’s a new object or method, you can probably polyfill it
+    If it’s something clever that the browser does outside of your code, you’re probably out of luck.
+
+
+
+A lot of what you will ever need you will find in babel-polyfill or more specifically: <a href="https://github.com/zloirock/core-js">core-js</a> (which is what babel-polyfill uses). If the feature you want to polyfill is in there, use it.
+
+
+
+Vetted set of polyfills can be found at <a href="https://github.com/es-shims/es5-shim">ES5-Shim</a> and <a href="https://github.com/es-shims/es6-shim">ES6-Shim</a>
+
+
+
+
+
+https://hackernoon.com/polyfills-everything-you-ever-wanted-to-know-or-maybe-a-bit-less-7c8de164e423

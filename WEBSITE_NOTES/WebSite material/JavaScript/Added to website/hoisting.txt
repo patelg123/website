@@ -1,0 +1,68 @@
+
+During compilation, var and function declarations are "moved" to the top of hteir respective scopes. This behavior is called hoisting.
+
+This means desclared functions can be called before it is defined. Function expressions like the below for example, are not hoisted and are only usable after they are created when the excution reaches it.
+
+
+<pre>
+
+
+// only 'var g' is hoisted, not its assignment
+var g = 34;
+
+
+// function declaration are hoisted
+function sum(a, b) {
+  return a + b;
+}
+
+// function expression are not hoisted, only 'var sum' is hoisted
+var sum = function(a, b) {
+  return a + b;
+}
+
+
+//
+
+
+</pre>
+
+
+
+
+The behavior of “moving” var and function declarations to the top of their respective scopes during the compilation phase is called hoisting.
+        Function declarations are completely hoisted. This means that a declared function can be called before it is defined.
+        Variables are partially hoisted. var declarations are hoisted but not its assignments.
+        let and const are not hoisted.
+
+
+
+
+variables for example
+
+
+var greeting = "hello";
+
+var greeting is hoisted but it's assigned value isn't.
+
+
+
+Function Declaration 
+
+can be called both before and after it was defined?—?it is hoisted.
+
+<pre>
+function sum(a, b) {
+  return a + b;
+}
+</pre>
+
+
+
+	A Function expression is created when the execution reaches it and is usable from then on?—?it is not hoisted. 
+
+<pre>
+var sum = function(a, b) {
+  return a + b;
+}
+</pre>

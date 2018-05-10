@@ -1,0 +1,35 @@
+<h1>Redux</h1>
+
+<h2>State</h2>
+
+
+State is just data. Think of it as a collection of application data like the current user’s name, if the user is logged in, if the page is loading. The state for an application might change based on things such as user actions or a response from an API. An application will read the state to determine what sort of User Interface it should show.
+What is Redux?
+
+Redux is a tool for managing application state. It’s a very common tool used in React applications.
+
+React has ‘unidirectional data flow.’ This means components send state downwards as props.
+
+We set our state in our top level component then send the data down as props. Easy.
+
+
+
+USed:
+https://medium.com/dailyjs/when-do-i-know-im-ready-for-redux-f34da253c85f
+
+
+
+
+
+
+
+
+
+
+NOT USED:
+
+https://hackernoon.com/a-basic-react-redux-introductory-tutorial-adcc681eeb5e?source=emailShare-91bfcdd30742-1524692805
+https://medium.freecodecamp.org/whats-so-great-about-redux-ac16f1cc0f8b
+https://medium.com/@nicotsou/tltr-redux-e4fc30f87e4a
+https://codeburst.io/how-redux-would-run-a-donut-shop-52af6dbd59b0
+https://hackernoon.com/writing-shorter-react-redux-containers-9852a43d457?source=emailShare-91bfcdd30742-1513894289

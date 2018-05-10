@@ -1,0 +1,42 @@
+Connect is a module that that delivers a set of wrappers around the Node.js low-level APIs to enable the development of web rich application frameworks.
+
+The Connect module uses a modular component called <b>middleware</b>. which allows you to simply register your application logic to predefined HTTP requests. Connect middleware are basically a bunch of callback functions, which get executed when a HTTP request occurs. The middleware can then perform some logic, return a response, or call the next registered middleware. 
+
+
+Express web framework is based on Connect's middleware approach.
+
+Express is built on top of Connect and it uses its middleware architecture. It extends Connect to allow a variety of common web application use cases:
+
+HTML template engines
+various data format outputs
+routing system, etc
+
+
+
+Routing in Express.
+Routing means assigning functions to respond to users requests. Express routers are basically middlewares (meaning they have access to the request and response objects and do some heavy lifting for us).
+
+Routing in Express follows this basic format.
+
+app.VERB(‘path’, callback…);
+Where VERB is any of the get, post, put, delete verbs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://medium.com/@vick_onrails/getting-off-the-ground-with-expressjs-89ada7ef4e59
+
+
+https://codeburst.io/the-only-nodejs-introduction-youll-ever-need-d969a47ef219
+
+
+https://hackhands.com/delving-node-js-express-web-framework/

@@ -1,21 +1,38 @@
+https://codepen.io/madjaybird/pen/RRLkvp?editors=1000
+
+
+
+
+
+
+
+
 CSS:
 
 READ:
 
-https://goshakkk.name/enough-css-to-psd/
 
-https://medium.freecodecamp.org/css-naming-conventions-that-will-save-you-hours-of-debugging-35cea737d849
 
-http://blog.froont.com/9-basic-principles-of-responsive-web-design/
+
+
+
+
+
 
 https://eu.udacity.com/course/responsive-web-design-fundamentals--ud893
 
-https://medium.com/@patrickbrosset/demystifying-css-alignment-2d3ea7a02a36
+
+
+
+
+
+
 
 - CSS box
-	https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
-	https://medium.freecodecamp.org/learn-css-flexbox-in-5-minutes-b941f0affc34
-
+	
+	
+	
+	
 
 - CSS Grid
 	https://medium.freecodecamp.org/learn-css-grid-in-5-minutes-f582e87b1228
@@ -27,14 +44,124 @@ https://medium.com/@patrickbrosset/demystifying-css-alignment-2d3ea7a02a36
 	https://hackernoon.com/how-css-grid-beats-bootstrap-85d5881cf163
 	https://medium.com/@patrickbrosset/css-grid-css-multi-columns-7664f59bb60c
 	https://codeburst.io/css-grid-layout-simple-guide-e0296cf14fe8
+	https://medium.com/deemaze-software/css-grid-layout-crossed-sections-fca9e956e725
+
 
 - Bootstrap
 	https://startbootstrap.com/
 	https://hackernoon.com/how-css-grid-beats-bootstrap-85d5881cf163
 	https://getbootstrap.com/docs/3.3/components/#navbar
-
+	https://medium.freecodecamp.org/learn-bootstrap-4-in-5-minutes-da94728efe41
 
 - pre processors
 
 https://htmlmag.com/article/an-introduction-to-css-preprocessors-sass-less-stylus
 http://winless.org/online-less-compiler
+https://codeburst.io/intro-to-sass-386eb8f2e005
+https://www.toptal.com/css/sass-mixins-keep-your-stylesheets-dry
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+READ IT:
+
+https://medium.com/@patrickbrosset/demystifying-css-alignment-2d3ea7a02a36
+
+https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css
+
+https://blog.prototypr.io/stunning-hover-effects-with-css-variables-f855e7b95330
+https://codeburst.io/creating-metaballs-loader-using-css-only-80090a0403da?source=emailShare-91bfcdd30742-1519855648
+
+
+
+Autoprefixer
+
+https://zellwk.com/blog/compass-vs-autoprefixer/
+
+https://css-tricks.com/autoprefixer/
+
+https://davidwalsh.name/goodbye-vendor-prefixes
+
+
+
+
+https://medium.com/@peedutuisk/lesser-known-css-quirks-oddities-and-advanced-tips-css-is-awesome-8ee3d16295bb
+
+
+
+
+
+https://medium.freecodecamp.org/everything-you-need-to-know-about-css-variables-c74d922ea855
+
+https://codeburst.io/intro-to-css-e163247d4123
+
+
+
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
+https://goshakkk.name/enough-css-to-psd/
+
+
+http://blog.froont.com/9-basic-principles-of-responsive-web-design/
+
+https://medium.com/actualize-network/modern-css-explained-for-dinosaurs-5226febe3525
+
+
+
+
+https://hackernoon.com/the-ultimate-css-battle-grid-vs-flexbox-d40da0449faf
+https://medium.freecodecamp.org/learn-css-flexbox-in-5-minutes-b941f0affc34
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+
+https://medium.freecodecamp.org/css-naming-conventions-that-will-save-you-hours-of-debugging-35cea737d849
+***https://codeburst.io/how-to-start-building-css-for-your-website-d0714763fb18
+https://medium.freecodecamp.org/learn-css-variables-in-5-minutes-80cf63b4025d
+
+
+
+
+PostCSS is the preferred CSS preprocessor,
+
+
+
+https://www.sitepoint.com/an-introduction-to-postcss/
+https://medium.com/@sunilk/postcss-the-end-of-global-css-is-here-4e645575805b
+https://medium.com/mr-frontend-community/an-introduction-to-postcss-e6b3329709b1
+**https://www.toptal.com/front-end/postcss-sass-new-play-date
+https://coursetro.com/posts/code/131/A-PostCSS-Tutorial-to-Empower-your-CSS
+
+
+
+
+

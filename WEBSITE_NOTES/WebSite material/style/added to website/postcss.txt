@@ -1,0 +1,73 @@
+PostCSS
+
+
+PostCSS is a tool for transforming styles with JS plugins. These plugins can lint your CSS, support variables and mixins, transpile future CSS syntax, inline images, and more.
+
+
+There are currently more than 200 plugins for PostCSS, many of which are listed on the <a href="https://github.com/postcss/postcss">PostCSS GitHub page</a>, PostCSS can be integrated in most the build tools including Gulp, Grunt, webpack or npm.
+
+
+
+
+
+, Autoprefixer, one of the most popular PostCSS plugins does exactly that.
+
+
+
+// gulpfile.js 
+
+
+var postcss = require('gulp-postcss');
+var gulp = require('gulp');
+var autoprefixer = require('autoprefixer');
+
+gulp.task('serve', ['css'], function() {
+    gulp.watch("./css/*.css", ['css']);
+});
+
+gulp.task('css', function() {
+    var plugin = [
+        autoprefixer()
+    ];
+    return gulp.src('./css/*.css')
+        .pipe(postcss(plugin))
+        .pipe(gulp.dest('./dest'));
+});
+
+gulp.task('default', ['serve']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Used:
+
+https://www.sitepoint.com/an-introduction-to-postcss/
+https://coursetro.com/posts/code/131/A-PostCSS-Tutorial-to-Empower-your-CSS
+
+
+
+
+
+
+Not Used
+
+https://medium.com/mr-frontend-community/an-introduction-to-postcss-e6b3329709b1
+https://medium.com/@sunilk/postcss-the-end-of-global-css-is-here-4e645575805b
+https://www.toptal.com/front-end/postcss-sass-new-play-date

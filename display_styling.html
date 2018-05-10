@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Frontend Tech - Display & Styling</title>
+    <!-- Bootstrap  CDN files -->
+    <link rel="stylesheet" href="dist/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="dist/jquery/3.2.1/jquery.min.js"></script>
+    <script src="dist/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- my style sheets-->
+    <link rel="stylesheet" href="style/main.css">
+    <script src="scripts/functions.js"></script>
+
+</head>
+<body id="DisplayStylingHome" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <nav id="navbar-main" class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-title">
+                Front End Tech
+            </div>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul id="nav-main" class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_me.html">Author</a></li>
+                    <li><a href="javascript.html">JavaScript</a></li>
+                    <li><a href="display_styling.html">Display & Styling</a></li>
+                    <li><a href="devops.html">DevOps</a></li>
+                    <li><a href="backend.html">Backend</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="github.html">GitHub Links</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron text-center">
+        <h1>Display & Styling</h1>
+    </div>
+
+    <div id="display_styling" class="container-fluid text-center">
+        <div class="row content">
+            <div class="col-sm-2">
+                <div class="vertical-menu" >
+                    Contents
+                    <a href="#css_box_model">CSS Box Model</a>
+                    <a href="#lessjs">Less.js</a>
+                    <a href="#postcss">PostCSS</a>
+                    <a href="#website_accessibilty">Website Accessibilty</a>
+                    <a href="#cross_browser_testing">Cross Browser Testing</a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+
+                </div>
+            </div>
+
+            <div class="col-sm-8 text-left">
+                <div id="css_box_model">
+                    <h1>CSS Box Model</h1>
+                    <p>
+                        A Browser's rendering engine represents each element as a rectangular box when laying out a document.
+                        <br><br>
+                        CSS determines the size, position, and properties (color, background, border size, etc.) of these boxes.
+                        Every box is composed of four parts (or areas), defined by their respective edges: the content edge, padding edge, border edge, and margin edge.
+
+                    </p>
+                    <img src="images/css_box_model.png" alt="CSS Box Model" />
+                    <br><br>
+                    <p>
+                        The <b>content area</b> is bounded by the content edge and contains the "real" content of the element
+                        such as text or an image. It can have a background colour or image. The content area's size are defined
+                        with width, min-width, max-width, height, min-height, and max-height properties.
+                        <br><br>
+                        <b>box-sizing: content-box;</b> is the default in the CSS box model. The width and height you assign to an element is applied only to the element's content area.
+                        If you set an element's width to 100 pixels, then the element's content area will be 100 pixels wide, and the width of any border or padding will be added to the final rendered width.
+                        If <b>box-sizing: border-box;</b> is set, this tells the browser to account for any border and padding in the values you specify for width and height.
+                        So If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added, and the content box will shrink to absorb that extra width.
+                        <br><br>
+                        The <b>padding area</b> is bounded by the padding edge. The thickness of the padding is determined by the padding-top, padding-right, padding-bottom, padding-left, and shorthand padding properties.
+                        <br><br>
+                        The <b>border area</b> is bounded by the border edge. The thickness of the borders are determined by the border-width and shorthand border properties.
+                        If the box-sizing property is set to border-box, the border area's size can be explicitly defined with the width, min-width, max-width, height, min-height, and max-height properties.
+                        <br><br>
+                        The <b>margin area</b>, bounded by the margin edge, extends the border area to include an empty area used to separate the element from its neighbors.
+                        Its dimensions are the margin-box width and the margin-box height.
+                        The size of the margin area is determined by the margin-top, margin-right, margin-bottom, margin-left, and shorthand margin properties.
+                        When margin collapsing occurs, the margin area is not clearly defined since margins are shared between boxes.
+                    </p>
+
+                    <h2>Resources</h2>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">CSS box model</a>
+
+                    <footer class="container-fluid text-center">
+                        <a href="#DisplayStylingHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                    </footer>
+                </div>
+
+                <div id="lessjs">
+                    <h1>Less.js</h1>
+                    <p>
+                        Less.js is a CSS pre-processor with a CSS-like syntax.
+                    </p>
+                    <h2>Variables</h2>
+                    <p>
+                        Variables allow commonly used values to be controlled from a single location.
+                    </p>
+                    <pre>
+// Variables
+@link-color:        #428bca; // sea blue
+@link-color-hover:  darken(@link-color, 10%);
+@my-selector:       banner;
+@images:            "../img";
+@themes:            "../../src/themes";
+@property:          color;
+
+
+// Usage
+
+@import "@{themes}/tidal-wave.less";
+
+a,
+.link {
+color: @link-color;
+}
+a:hover {
+color: @link-color-hover;
+}
+.widget {
+color: #fff;
+background: @link-color;
+}
+
+// the below compiles to .banner{
+.@{my-selector} {
+    font-weight: bold;
+    line-height: 40px;
+    margin: 0 auto;
+}
+
+body {
+    color: #444;
+    background: url("@{images}/white-sand.png");
+}
+
+.widget {
+    @{property}: #0ee; // compiles to color: #0ee;
+    background-@{property}: #999;
+}
+
+                    </pre>
+
+                    <h2>Nested Rules</h2>
+                    <p>
+                        Nesting allows you to cascade your CSS properties with inheriting children where <b>&</b> operator represents the parent selectors of a nested rule.
+                        <br><br>
+                        Below is an example of a nested rule and what it will compile to:
+                    </p>
+                    <pre>
+// Variables
+// ---------
+
+@textColor: #232323;
+@textHighlight: #00214D;
+@fontFamily: Helvetica, Arial, sans-serif;
+@fontSize: 14px;
+@lineHeight: 21px;
+
+@introSize: 16px;
+@introLineHeight: 24px;
+@introFontVariant: small-caps;
+
+// LESS for Paragraph
+// ------------------
+
+p {
+    color: @textColor;
+    font-family: @fontFamily;
+    font-size: @fontSize;
+    line-height: @lineHeight;
+
+    .intro {
+        font-variant: @introFontVariant;
+        font-size: @introSize;
+        line-height: @introLineHeight;
+    } // End of .intro class
+
+    .highlight {
+        color: @textHighlight;
+        font-weight: bold;
+    } // End of .highlight class
+
+} // End of paragraph rule
+
+// Gets compiled to the following:
+p {
+    color: #222222;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+}
+p .intro {
+    font-variant: small-caps;
+    font-size: 16px;
+    line-height: 24px;
+}
+p .highlight {
+    color: #00214d;
+    font-weight: bold;
+}
+
+                    </pre>
+
+                    <h3>Using &</h3>
+
+                    <p>
+                        In the above example, if the CSS needs to read <b>p.intro</b> instead of <b>p .intro</b>, an ampersand (&) can be added prior to your nested rule.
+                        (when you want to target a <b>.intro</b> that is a paragraph element  instead of targetting a <b>.intro</b> that is a descendant of a <b>paragraph</b> element).
+                    </p>
+                    <pre>
+// LESS for Paragraph
+// ------------------
+
+p {
+    color: @textColor;
+    font-family: @fontFamily;
+    font-size: @fontSize;
+    line-height: @lineHeight;
+
+    &.intro {
+        font-variant: @introFontVariant;
+        font-size: @introSize;
+        line-height: @introLineHeight;
+    }
+
+    .highlight {
+        color: @textHighlight;
+        font-weight: bold;
+    }
+
+}
+
+// Results in the below when compiled
+p {
+    color: #222222;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+}
+p.intro {
+    font-variant: small-caps;
+    font-size: 16px;
+    line-height: 24px;
+}
+p .highlight {
+    color: #00214d;
+    font-weight: bold;
+}
+
+                    </pre>
+
+                    <p>
+                        <b>&</b> is also used to assign pseudo-classes, like <b>:hover</b>
+                    </p>
+
+                    <pre>
+@link-color: #999;
+@link-hover: #229ed3;
+
+ul {
+    margin: 0;
+
+    li {
+        float: left;
+    }
+
+    a {
+        color: @link-color;
+
+        &:hover {
+            color: @link-hover;
+        }
+    }
+}
+
+//compiles to
+ul { margin: 0; }
+ul li { float: left; }
+ul a { color: #999; }
+ul a:hover { color: #229ed3; }
+
+                    </pre>
+
+                    <h2>Mixins</h2>
+                    <p>
+                        We can use Mixins to reuse whole declarations in a CSS rule set in another rule set.
+                    </p>
+                    <pre>
+// Variables
+@baseFontSize: 14px;
+@baseLineHeight: 21px;
+
+.serif {
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+p {
+    font-size: @baseFontSize;
+    line-height: @baseLineHeight;
+    .serif;
+}
+
+                    </pre>
+                    <p>
+                        Gets compiled to the following:
+                    </p>
+                    <pre>
+.serif {
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+p {
+    font-size: 14px;
+    line-height: 21px;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+                    </pre>
+
+                    <h3>Parametric Mixins</h3>
+                    <p>
+                        Parametric Mixins can accept parameters.
+                    </p>
+                    <pre>
+.bordered (@width) {
+    border: @width solid #ddd;
+
+    &:hover {
+        border-color: #999;
+    }
+}
+
+h1 {
+    .bordered(5px);
+}
+
+                    </pre>
+                    <p>
+                        Gets compiled to:
+                    </p>
+                    <pre>
+h1 { border: 5px solid #ddd; }
+h1:hover { border-color: #999; }
+                    </pre>
+
+                    <h3>elements.less</h3>
+                    <p>
+                        If you are using CSS3 a lot in your website, you can use LESS Elements to make your job much easier.
+                        LESS Elements is a collection of common CSS3 Mixins that we may use often in stylesheets, such as border-radius, gradients, drop-shadow and so on.
+                        To use LESS Elements, simply add the @import rule in your LESS stylesheet after downloading it and adding it into your working directory.
+                    </p>
+
+                    <pre>
+@import "elements.less";
+
+div {
+    .rounded(3px);
+}
+
+                    </pre>
+
+                    <h2>Operations</h2>
+                    <p>
+                        Less can bring math and calculations to your CSS. You can do operations on the numbers, colours and variables.
+                    </p>
+                    <pre>
+// Number
+h1 {
+    margin-bottom: 10px - 5px;
+    margin-bottom: 10px - 5;
+}
+
+// Color
+h1 {
+    color: #888888 / 2;
+}
+
+// Variable
+@h1-default-margin-bottom:  25px;
+h1.tight {
+    margin-bottom: @h1-default-margin-bottom - 10px
+}
+
+                    </pre>
+                    <p>
+                        Below are some colour functions built into Less.
+                    </p>
+
+                    <pre>
+lighten(@color, 10%);     // return a color which is 10% *lighter* than @color
+darken(@color, 10%);      // return a color which is 10% *darker* than @color
+
+saturate(@color, 10%);    // return a color 10% *more* saturated than @color
+desaturate(@color, 10%);  // return a color 10% *less* saturated than @color
+
+fadein(@color, 10%);      // return a color 10% *less* transparent than @color
+fadeout(@color, 10%);     // return a color 10% *more* transparent than @color
+fade(@color, 50%);        // return @color with 50% transparency
+
+spin(@color, 10);         // return a color with a 10 degree larger in hue than @color
+spin(@color, -10);        // return a color with a 10 degree smaller hue than @color
+
+mix(@color1, @color2);    // return a mix of @color1 and @color2
+
+                    </pre>
+                    <p>
+                        For a ful list of functions available in Less, visit <a href="http://lesscss.org/functions/">http://lesscss.org/functions/ </a>
+                    </p>
+
+
+                    <h2>Extends</h2>
+                    <p>
+                        Extends are useful for sharing a generic definition with selectors rather than copying it in.
+                        <br><br>
+                        The following:
+                    </p>
+                    <pre>
+.block { margin: 10px 5px; }
+
+p {
+    &:extend(.block);
+    border: 1px solid #eee;
+}
+
+ul, ol {
+    &:extend(.block);
+    color: #333;
+    text-transform: uppercase;
+}
+
+                    </pre>
+                    <p>
+                        Gets compiled into the following:
+                    </p>
+                    <pre>
+.block, p, ul, ol { margin: 10px 5px; }
+
+p { border: 1px solid #eee; }
+ul, ol { color: #333; text-transform: uppercase; }
+
+                    </pre>
+
+                    <h2>Resources:</h2>
+                    <a href="http://lesscss.org/">Less.js.org</a><br>
+                    <a href="https://htmlmag.com/article/an-introduction-to-css-preprocessors-sass-less-stylus">An Introduction to CSS Pre-Processors</a></br />
+                    <a href="https://tutorialzine.com/2015/07/learn-less-in-10-minutes-or-less">Learn LESS in 10 Minutes</a><br>
+                    <a href="https://scotch.io/tutorials/getting-started-with-less">Getting Started with Less</a>
+
+                    <footer class="container-fluid text-center">
+                        <a href="#DisplayStylingHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                    </footer>
+                </div>
+
+
+                <div id="postcss">
+                    <h1>PostCSS</h1>
+                    <p>
+                        PostCSS is a tool for processing CSS with JavaScript plugins. There are currently more than 200 plugins for PostCSS, many of which are listed on the PostCSS GitHub page.
+                        PostCSS can be integrated in most the build tools including Gulp, Grunt, webpack or npm.
+                        <br><br>
+                    </p>
+
+                    <h2>PostCSS AutoPrefixer</h2>
+                    <p>
+                        <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> is one of the most popular PostCSS plugins.
+                        It is a CSS post processor that goes through (compiled) CSS files and
+                        adds or removes vendor prefixes after checking the code against <a href="https://caniuse.com">caniuse.com</a>.
+                        This means that you don’t have to write any vendor prefixes while writing CSS code.
+                        <br><br>
+
+                        Vendor prefixes are a way for browser makers to add support for newer CSS features that are still being experimented with.
+                        Once testing is done, browser makers will automatically remove the need for prefixes for that particular CSS property.
+                        <br><br>
+                        <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>
+                        By default, Autoprefixer will support the 2 latest versions of major browsers but you can easily set which browsers and versions to support in the configuration file.
+                    </p>
+                    <pre>
+a {
+background: linear-gradient(to top, black, white);
+display: flex
+}
+
+Is Transformed To:
+
+a {
+background: -webkit-linear-gradient(bottom, black, white);
+background: linear-gradient(to top, black, white);
+display: -webkit-box;
+display: -webkit-flex;
+display: -moz-box;
+display: -ms-flexbox;
+display: flex
+}
+
+                    </pre>
+
+                    <h2>Gulp and PostCSS</h2>
+                    <p>
+                        Below is an example of how PostCSS can be used with Gulp.
+                    </p>
+
+                    <pre>
+// gulpfile.js
+var cssnano = require('cssnano');
+var postcss = require('gulp-postcss');
+var gulp = require('gulp');
+var autoprefixer = require('autoprefixer');
+
+gulp.task('serve', ['css'], function() {
+gulp.watch("./css/*.css", ['css']);
+});
+
+gulp.task('css', function() {
+var plugin = [
+autoprefixer(),
+cssnano()
+];
+return gulp.src('./css/*.css')
+.pipe(postcss(plugin))
+.pipe(gulp.dest('./dest'));
+});
+
+gulp.task('default', ['serve']);
+
+                    </pre>
+
+                    <h2>Resources</h2>
+                    <a href="https://github.com/postcss/autoprefixer">PostCSS autoprefixer</a><br>
+                    <a href="https://www.sitepoint.com/an-introduction-to-postcss/">An introduction to PostCSS</a><br>
+                    <a href="https://coursetro.com/posts/code/131/A-PostCSS-Tutorial-to-Empower-your-CSS">A PostCSS Tutorial to Empower your CSS</a>
+
+                    <footer class="container-fluid text-center">
+                        <a href="#DisplayStylingHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                    </footer>
+                </div>
+
+
+
+                <div id="website_accessibilty">
+                    <h1>Website accessibility</h1>
+                    <p>
+                        Accessibility should be considered as part of every web project. As well as increasing availability to the widest possible audience,
+                        it is a legal requirement in many countries. In the UK for example, web accessibility falls under the Disability Discrimination Act
+                        and if your website fails to comply, legal action could be brought against you.
+                    </p>
+
+                    <h2>Some ways to improve accessibilty</h2>
+
+                    <h3>Colours and contrast</h3>
+                    <p>
+                        Contrast ratio between the text and the background should be considered to increase readability. You can check the contrast ratio of multiple elements on a site using
+                        <a href="https://addons.mozilla.org/en-GB/firefox/addon/wcag-contrast-checker/">Juicy Studio’s Color Contrast Analyser Firefox extension</a>.
+                        It will analyse each element on the page and provide a report on whether or not it conforms to the WAI’s guidelines.
+                        <br><br>
+                        A simple text link, styled red with no other decoration may be hard to see if it is within a block of grey or black text.
+                        You don’t need to stick with default link styling, but it is helpful to use more than one type of decoration such as an underline or background-color.
+                        A useful tool can be found at  <a href=https://www.toptal.com/designers/colorfilter>Colorblind Web Page Filter</a>
+                        which provides several different filters that mimic how different types of colour-blind users would perceive a website.
+                    </p>
+                    <h3>Images</h3>
+                    <p>
+                        Images should all have descriptive <b>alt</b>  text unless they are purely decorative where they should have either empty <b>alt</b> text or should be set as a CSS background image.
+                    </p>
+                    <h3>Site Navigation</h3>
+                    <p>
+                        All page functionality should be available using just the keyboard. When a user tabs through the web page, make sure that each section can be reached, and all possible user actions
+                        can be performed with the keyboard. The user should be able to navigate your site freely, without getting stuck in a loop, where they cannot navigate out or away.
+                        <br><br>
+                        By default, the order you list your elements on the page will be order of navigation. If you wish to change the order without changing the page structure,
+                        you can add tabindex on the element of your choice, and assign a number value to indicate the order in which this element should receive focus.
+                        <br><br>
+                        Links with an empty href attribute (or href="#") are not accessible by keyboard. This pattern is sometimes used in dropdown menus, etc. but because the links do not lead anywhere
+                        (they link to the current page) they are ignored in keyboard navigation.
+                        <br><br>
+                        Alt text for links should be included and a concise descriptor that clearly describes where the link leads should be chosen instead of ambiguous language like “click here”.
+                        If there is a validation error on any form field input, suggestions for how to correct the error should be provided to the user.
+                        All form inputs should have appropriate labels to indicate their purpose.
+                        <br><br>
+                        Users that use screen readers will often have the option to navigate a web page by skipping through the links to find something of interest.
+                        In the case of text links, the user would simply hear the word in isolation, regardless of the content that surrounds it. It is therefore extremely
+                        unhelpful when all that the user hears is ‘click here’ or ‘more’ – these types of links provide no information of where they direct the user or to what they are referring to.
+                        A much better option is to provide a more descriptive link.  E.g. ‘learn more about S.E.O’ or ‘click here for the full article on S.E.O’.
+                    </p>
+                    <h3>Focus Indicators</h3>
+                    <p>
+                        All links, buttons, form fields, tool tips, menu items, etc. should include a focus indicator to allow users to navigate through your site with a keyboard.
+                        If you want to have control over when the focus indicator appears (for instance, only for keyboard users), the page
+                        <a href="https://hackernoon.com/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2"> Removing that ugly :focus ring (and keeping it too) </a> outlines how to achieve this effect.
+
+                    </p>
+                    <h3>Skip Navigation Links</h3>
+                    <p>
+                        If a page contained a side bar with loads of links, without a skip navigation link, people using just the keyboard or screen readers  to navigate would need to tab
+                        through each link in the sidebar every time the page reloads. Since there’s a lot links available, navigating through this section would be cumbersome.
+                        A skip navigation link is usually the first item in the DOM (Document Object Model) and when clicked, the keyboard focus is sent to the page element which contains
+                        the primary content of the page.
+                    </p>
+
+                    <h2>Resources</h2>
+                    <a href="https://medium.com/building-crowdriff/an-intro-to-web-accessibility-91844f3f5827">intro to web accessibility</a>
+                    <br>
+                    <a href="https://medium.freecodecamp.org/next-level-accessibility-freecodecamp-guide-7cbd6473eabd">accessibility freecodecamp guide</a>
+                    <br>
+                    <a href="https://webdesign.tutsplus.com/articles/6-tips-for-improving-website-accessibility--webdesign-1660">improving website accessibility</a>
+                    <br>
+                    <a href="https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en">Chrome Accessibility Developer Tools</a>
+
+                    <footer class="container-fluid text-center">
+                        <a href="#DisplayStylingHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                    </footer>
+                </div>
+
+                <div id="cross_browser_testing">
+                    <h1>Cross Browser Testing</h1>
+                    <p>
+                        There is no way you can test on every combination of browser and device but instead you should try and make sure your site works on the most important target browsers and devices.
+                        <br><br>
+                        You should try and code "defensively" and build in intelligent fall-backs so that if a feature or style doesn't work in a browser, the site will be able to downgrade to something
+                        less exciting that still provides an acceptable user experience.
+                        <br><br>
+                        You can build up a chart of browsers and/devices and a common approach is to have multiple grades of support level. Fro example:
+                        <ul>
+                            <li>A grade: Common/modern browsers — known to be capable. Test thoroughly and provide full support.</li>
+                            <li>B grade: Older/less capable browsers — known not to be capable. Test, and provide a more basic experience that gives full access to core information and services.</li>
+                            <li>C grade: Rare/unknown browsers — don't test, but assume they are capable. Serve the full site, which should work, at least with the fallbacks provided by our defensive coding.</li>
+                        </ul>
+                        So, if you site is likely to get most views in Western Europe or North America, your chart could look like the following:
+                        <ul>
+                            <li>
+                                A grade: Chrome and Firefox for Windows/Mac, Safari for Mac, Edge and IE for Windows (last two versions of each), iOS Safari for iPhone/iPad, Android stock browser (last two versions)
+                                on phone/tablet, Chrome and Firefox for Android (last two versions) on phone/tablet
+                            </li>
+                            <li>B grade: IE 9 for Windows.</li>
+                            <li>C grade: n/a</li>
+                        </ul>
+                    </p>
+                    <h2>Google Analytics</h2>
+                    <p>
+                        <a href="https://www.google.com/analytics/">Google Analytics</a> will give you accurate stats on exactly what browsers people are using to browse your site.
+                        Analytics history can be useful for finding support stats to influence say a new version of a company's site, or new features you are adding to an existing site.
+                    </p>
+
+                    <h2>Resources</h2>
+                    <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing">MDN web docs Cross browser testing</a>
+                    <footer class="container-fluid text-center">
+                        <a href="#DisplayStylingHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                    </footer>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+            <div class="col-sm-2">
+
+            </div>
+        </div>
+    </div>
+
+	<footer class="container-fluid text-center">
+		<a href="#DisplayStylingHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+	</footer>
+</body>
+</html>

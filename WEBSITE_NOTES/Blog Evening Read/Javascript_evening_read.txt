@@ -1,3 +1,9 @@
+* microservices
+
+https://micro-frontends.org/
+
+
+
 https://hackernoon.com/the-top-66-developer-resources-from-2017-e82531365e6d
 
 https://medium.freecodecamp.org/https-explained-with-carrier-pigeons-7029d2193351
@@ -10,8 +16,13 @@ http://eloquentjavascript.net/11_language.html
 https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
 https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
 
+- WebAssembly******
+
+
+
+
 - How to get job as a front end developer
-https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d
+
 
 
 
@@ -24,7 +35,7 @@ https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-
 	https://blog.logrocket.com/frontend-in-2017-the-important-parts-4548d085977f
 	https://codeburst.io/the-front-end-checklist-8b2292fdda44
 	https://medium.com/dailyjs/the-most-popular-javascript-links-of-2017-e4616e8b48c7?source=emailShare-91bfcdd30742-1514834459
-	https://levelup.gitconnected.com/5-front-end-technologies-im-keeping-my-eye-on-in-2018-a9d7b75babff
+	
 	https://levelup.gitconnected.com/building-a-tic-tac-toe-game-app-with-javascript-5916e58071fb
 
 
@@ -36,10 +47,7 @@ https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-
 	https://medium.com/coderbyte/the-10-best-coding-challenge-websites-for-2018-12b57645b654
 
 - JS Interviews:
-	https://codeburst.io/things-you-need-to-know-to-become-an-ace-javascript-developer-aa703397268d
-	https://codeburst.io/10-javascript-concepts-you-need-to-know-for-interviews-136df65ecce
-	https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9
-	https://medium.freecodecamp.org/the-definitive-javascript-handbook-for-a-developer-interview-44ffc6aeb54e
+	
 
 
 - Dev tools
@@ -88,3 +96,17 @@ https://blog.kentcdodds.com/classes-complexity-and-functional-programming-a8dd86
 
 
 https://medium.freecodecamp.org/the-definitive-javascript-handbook-for-a-developer-interview-44ffc6aeb54e
+
+https://codeburst.io/10-javascript-concepts-you-need-to-know-for-interviews-136df65ecce
+
+
+https://codeburst.io/things-you-need-to-know-to-become-an-ace-javascript-developer-aa703397268d
+	
+	https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9
+	https://medium.freecodecamp.org/the-definitive-javascript-handbook-for-a-developer-interview-44ffc6aeb54e
+
+
+https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d
+
+
+https://levelup.gitconnected.com/5-front-end-technologies-im-keeping-my-eye-on-in-2018-a9d7b75babff

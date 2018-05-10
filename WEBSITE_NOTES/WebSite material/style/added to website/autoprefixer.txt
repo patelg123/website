@@ -1,0 +1,113 @@
+Autoprefixer
+
+
+Autoprefixer is a CSS post processor that goes through compiled CSS files and adds or removes venor prefixes after checking the code against caniuse.com.
+
+
+This means that you don’t have to write any vendor prefixes while writing CSS code.
+
+
+
+
+
+
+If you didn’t know, vendor prefixes are a way for browser makers to add support for newer CSS features that they are still experimenting with. They are used to implement features that hasn’t been fully finalized. Once testing is done, browser makers will automatically remove the need for prefixes for that particular CSS property.
+
+
+ new specs are being introduced to HTML as well as CSS. Browsers apply these specs while they are in proposal state with their special vendor prefixes.
+
+
+You can specify which browsers to support by stating them within autoprefixer’s preferences. 
+
+
+
+
+EG:
+
+
+a {
+  transition: transform 1s
+}
+
+
+to:
+
+
+a {
+  -webkit-transition: -webkit-transform 1s;
+  transition: -ms-transform 1s;
+  transition: transform 1s
+}
+
+
+By default, Autoprefixer will support 2 latest versions of major browsers, much like Google does. But you can choose, what browsers are supported in your project, by name (like "ff 21") or by pattern:
+
+    Last 2 version of each major browsers using "last 2 versions".
+    With more that 1 % of global usage statistics using "> 1%".
+    Only newer versions by "ff > 20" or "ff >= 20".
+
+Then Autoprefixer calculates which prefixes are required and which are outdated.
+
+When Autoprefixer adds prefixes to your CSS, it doesn’t forget about fixing syntax differences. This way, CSS is produced according to the latest W3C specs:
+
+
+
+E.G.
+
+
+From:
+
+a {
+  background: linear-gradient(to top, black, white);
+  display: flex
+}
+::placeholder {
+  color: #ccc
+}
+
+
+
+To:
+
+
+a {
+  background: -webkit-linear-gradient(bottom, black, white);
+  background: linear-gradient(to top, black, white);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex
+}
+:-ms-input-placeholder {
+  color: #ccc
+}
+::-moz-placeholder {
+  color: #ccc
+}
+::-webkit-input-placeholder {
+  color: #ccc
+}
+::placeholder {
+  color: #ccc
+}
+
+
+Autoprefixer cleans outdated prefixes as well (from legacy code or CSS libraries like Bootstrap), so the following code:
+
+From:
+
+a {
+  -webkit-border-radius: 5px;
+  border-radius: 5px
+}
+
+To:
+
+a {
+  border-radius: 5px
+}
+
+
+
+https://github.com/postcss/autoprefixer

@@ -1,0 +1,225 @@
+ES6 Modules
+
+ES6 is the first time that JavaScript has built-in modules.
+
+ES6 modules are stored in files with one module per file /one file per module. Modules are singletons; even if a module is imnported mulitple times, only a single 'instance' of it exists.
+
+<h2>Named Exports</h2>
+
+A module can export multiple things by prefixing its declarations with the keyword <b>export</b>
+
+<pre>
+//------ lib.js ------
+export const sqrt = Math.sqrt;
+export function square(x) {
+    return x * x;
+}
+export function diag(x, y) {
+    return sqrt(square(x) + square(y));
+}
+
+//------ main.js ------
+import { square, diag } from 'lib';
+console.log(square(11)); // 121
+console.log(diag(4, 3)); // 5
+
+</pre>
+
+
+The same code in CommonJS:
+
+<pre>
+
+/------ lib.js ------
+var sqrt = Math.sqrt;
+function square(x) {
+    return x * x;
+}
+function diag(x, y) {
+    return sqrt(square(x) + square(y));
+}
+module.exports = {
+    sqrt: sqrt,
+    square: square,
+    diag: diag,
+};
+
+//------ main.js ------
+var square = require('lib').square;
+var diag = require('lib').diag;
+console.log(square(11)); // 121
+console.log(diag(4, 3)); // 5
+
+
+</pre>
+
+You can also import the whole module:
+
+<pre>
+import * as lib from 'lib';
+console.log(lib.square(11)); // 121
+console.log(lib.diag(4, 3)); // 5
+</pre>
+
+
+
+<h2>Default Exports</h2>
+
+An ES6 module can pick a <b>default export</b>
+
+Default Function Export:
+
+<pre>
+//------ myFunc.js ------
+export default function () {} // no semicolon!
+
+//------ main1.js ------
+import myFunc from 'myFunc';
+myFunc();
+</pre>
+
+
+Default Class Export:
+
+
+//------ MyClass.js ------
+export default class {} // no semicolon!
+
+//------ main2.js ------
+import MyClass from 'MyClass';
+const inst = new MyClass();
+
+
+
+
+
+In ES6, when you import modules, the import is resolved at compile time which allows the removal of exports that are not used by other modules (dead code elimination). 
+
+
+ES6 uses a 'tree shaking'approach to dead code elimination where it only includes code that your bunble needs to run rather thean exluding code the your bundle doesn't need.
+
+
+
+
+
+Building ES6 modules
+
+
+Unfortunately, ES6 modules still require some extra work, since there isn’t a native implementation for how browsers load ES6 modules just yet.
+
+
+The most common apporach for building/converting ES6 modules to work in the browser is to use a transpiler like Babel to transpile your ES6 code to ES5 code to CommonJS, then pipe the transpiled code thorugh a module bundler like Browserify or Webpack to create one or more bundled files.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+links used:
+
+
+http://exploringjs.com/es6/ch_modules.html#sec_modules-in-javascript
+
+
+
+https://medium.freecodecamp.org/javascript-modules-a-beginner-s-guide-783f7d7a5fcc
+https://medium.freecodecamp.org/javascript-modules-part-2-module-bundling-5020383cf306
+
+
+
+
+
+
+
+
+--------------------
+
+
+
+Builtin modules have been introduced with ES6. 
+
+
+ES6 modules has compact and declarative syntax and asynchronous loading, plus added benefits like better support for cyclic dependencies.
+
+
+imports are live read-only views of the exports. (Compare this to CommonJS, where imports are copies of exports and consequently not alive).
+
+
+
+In ES6, when you import modules, the import is resolved at compile time which allows the removal of exports that are not used by other modules (dead code elimination). 
+
+
+ES6 uses a 'tree shaking'approach to dead code elimination where it only includes code that your bunble needs to run rather thean exluding code the your bundle doesn't need.
+
+
+
+
+
+Building ES6 modules
+
+
+Unfortunately, ES6 modules still require some extra work, since there isn’t a native implementation for how browsers load ES6 modules just yet.
+
+
+The most common apporach for building/converting ES6 modules to work in the browser is to use a transpiler like Babel to transpile your ES6 code to ES5 code to CommonJS, then pipe the transpiled code thorugh a module bundler like Browserify or Webpack to create one or more bundled files.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+read it
+
+
+https://www.sitepoint.com/understanding-es6-modules/
+https://www.tutorialspoint.com/es6/es6_modules.htm
+https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch3.md
+https://medium.freecodecamp.org/javascript-modules-a-beginner-s-guide-783f7d7a5fcc
+https://medium.freecodecamp.org/javascript-modules-part-2-module-bundling-5020383cf306
+https://medium.com/@crohacz_86666/basics-of-modular-javascript-2395c82dd93a
+https://medium.freecodecamp.org/javascript-modules-a-beginner-s-guide-783f7d7a5fcc
+https://medium.freecodecamp.org/javascript-modules-part-2-module-bundling-5020383cf306
+
+
+

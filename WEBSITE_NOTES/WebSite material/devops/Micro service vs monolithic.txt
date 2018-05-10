@@ -1,0 +1,8 @@
+
+
+https://medium.com/@tomsoderlund/micro-frontends-a-microservice-approach-to-front-end-web-development-f325ebdadc16
+
+https://koukia.ca/a-microservices-implementation-journey-part-1-9f6471fe917
+
+
+https://medium.freecodecamp.org/monolith-vs-microservices-which-architecture-is-right-for-your-team-bb840319d531

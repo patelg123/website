@@ -1,0 +1,24 @@
+Cloud Computing
+
+HTML 5
+
+CSS 3
+
+JavaScript Testing
+
+NGINX
+https://medium.com/@samdias9792/nginx-better-and-faster-web-server-technology-fceeed0c7374
+https://medium.com/comparethemarket/environment-configuration-with-react-nginx-2444e1f11a4c
+
+
+NoSQL VS SQL
+
+
+Redux
+
+https://medium.freecodecamp.org/whats-so-great-about-redux-ac16f1cc0f8b
+https://medium.com/@nicotsou/tltr-redux-e4fc30f87e4a
+https://codeburst.io/how-redux-would-run-a-donut-shop-52af6dbd59b0
+
+https://medium.com/dailyjs/when-do-i-know-im-ready-for-redux-f34da253c85f
+https://hackernoon.com/writing-shorter-react-redux-containers-9852a43d457?source=emailShare-91bfcdd30742-1513894289

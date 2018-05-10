@@ -4,7 +4,7 @@ TO DO:
 
 
 
-
+https://goshakkk.name/next-steps-official-react-tutorial/
 
 
 
@@ -17,6 +17,8 @@ Use this to write tests: https://camjackson.net/post/9-things-every-reactjs-begi
 
 
 READ THROUGH:
+https://hackernoon.com/react-components-naming-convention-%EF%B8%8F-b50303551505
+https://hackernoon.com/episode-49-refreshing-on-react-part-1-c911f9d0c508
 https://camjackson.net/post/9-things-every-reactjs-beginner-should-know
 https://developer.telerik.com/featured/5-steps-for-learning-react-application-development/
 https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-1-a12e1833fdc

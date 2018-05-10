@@ -1,0 +1,50 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Introduction:
+
+Minification is primarily useful for decreasing the size of the JavaScript payload sent from the server to the client: users will download less code to use your website.
+
+
+
+Minification is used for decreasing the size of the JavaScript payload sent from the server to the client. 
+
+Minification removes unnecessary characters from a program without changing its functionality – things like comments, whitespace, newlines, and extra parentheses. 
+
+Minification refers to the process of removing unnecessary or redundant data without affecting how the resource is processed by the browser - e.g. code comments and formatting, removing unused code, using shorter variable and function names, and so on.
+
+
+You should minify your HTML, CSS, and JavaScript resources: 
+
+
+To minify HTML, HTMLMinifier can be used. (https://github.com/kangax/html-minifier)
+
+
+To minify CSS, CSSNano can be used.
+
+To minify JavaScript Babel-minify 
+
+
+
+
+Babel-minify:
+
+Instead of using Bable to compile ES6 code down to ES5  to support older browsers then using Uglify to minimise the code, we can just use Babel-minify.

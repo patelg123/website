@@ -1,0 +1,30 @@
+<h1>ES 6 Spread Operator</h1>
+
+The spread operator <b>...</b> has two main uses:
+
+<h2>Spreading an array or object into a new array or object</h2>
+
+<pre>
+let a = [3, 4, 5];
+let b = [1, 2, ...a, 6];
+console.log(b);  // [1, 2, 3, 4, 5, 6]
+
+
+let car = { type: 'vehicle ', wheels: 4};
+let fordGt = { make: 'Ford', ...car, model: 'GT'};
+console.log(fordGt); // {make: 'Ford', model: 'GT', type: 'vehicle', wheels: 4}
+
+
+</pre>
+
+<h2>Gathering Variables Into An Array</h2>
+<p>
+This is useful for when you don't know how many variables are being passed to a function:
+
+<pre>
+function foo(...args) {
+    console.log(args); 
+} 
+foo( 'car', 54, 'tree');  //  [ 'car', 54, 'tree' ] 
+
+</pre>

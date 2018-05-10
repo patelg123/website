@@ -1,0 +1,54 @@
+
+At its core, Node.js is a stripped-down, highly customizable server engine.
+
+
+Node.js runs JavaScript by taking advantage of Google’s fast JavaScript engine designed for Chrome, V8, which allows Node.js to create a runtime environment which in turn pushes JavaScript from the server end to the client side quickly. Instead of working overtime to make sense of it as bytecode, V8 translates JavaScript into native machine language, giving Node.js its agility.
+
+
+
+Node.js is basically a platform built on Chrome's JavaScript runtime called V8. Its greatest advantage over other JS engines is the compiling of JS code to native machine code before executing it it.
+
+It uses an <b>event-driven, non-blocking I/O </b>model.
+
+Node.js uses a single threaded <b>event loop</b>. 
+
+Node.js takes all requests and then dlegates most of the work to other system workers. There's something called a <b>Libuv</b> library which handles this work effectively with help from the OS kernel. When the background workers are done doing their work, they emit events to NodeJs callbacks registered on that event.
+
+
+Imagine we have this multi-threaded server (running Ruby on rails) that reads a file saved on the server and sends it to the requesting browser. It’s important to understand that Ruby won’t read the file for us directly. Ruby will tell the file system to read the file and return the contents . The file system is a program used to store and retrieve data on a computer.
+
+The point is, Ruby just sits there doing nothing till the file system is done. And then Ruby collects the content and sends the contents to the browser.
+
+Here’s where NodeJs comes in. In Node, while the file system is reading the file, Node uses the idle time to handle other requests. When the file system is done, it’s smart enough to tell Node to come take the resource and send to the browser. This is possible because of Node’s event loop.
+
+Node.js makes use of <b>callbacks</b> which are basically functions passed into other functions as arguments and are called when certain conditions occur. So what NodeJs developers basically do is write event handlers that get called when certain Node events happen.
+
+
+Even though NodeJS is a single threaded system, it is usually faster than multi-threaded systems. However NodeJS doesn't excel at operations that consume CPU. CPU intensive operations overload the main thread, which is the only thread in NodeJS!
+
+
+
+
+
+Advantages
+It helps with concurrent request handling. Due to its asynchronous non-blocking way of handling code execution, even though Node.js runs on a single thread with event looping, it can handle more requests than, for example, Apache HTTP server. Here, the API calls do not wait and block the other calls. It can handle more than one request at a time.
+
+Since it uses Google Chrome’s V8 JavaScript Engine, it makes the javascript code execution very fast.
+
+Thanks to the event mechanism of Node.js it allows you to write highly scalable networked apps.
+
+The Node Package Manager handles the installation and updating of reusable modules from the online collection, along with the version and dependency management of reusable modules.
+
+Node.js is a runtime system that could very well work for you if you’re building your next generation Web site, especially APIs for mobile and Web integration
+
+
+Disadvantages:
+
+It doesn’t work well with CPU-intensive tasks. Node.js is suited more for I/O stuff, like the web server.
+
+
+
+
+
+
+

@@ -1,0 +1,178 @@
+
+
+ REST (Representational State Transfer)
+
+REST is an architectural style that uses simple HTTP calls for inter-machine communication.
+
+Using the HTTP protocol means REST is a simple request/response mechanism. Each request returns a subsequent response.
+
+
+Requests are made up of a verb (POST, in this example), headers that describe the message, and a body (Hello World,  in this example). The request is a message that describes what you want the server to accomplish. Likewise, the response consists of three pieces: a status code (200), headers describing the response and the body itself.
+
+
+HTTP Verbs describe the type of operation:
+
+    GET: Retrieve a resource
+
+    POST: Create a resource
+
+    PUT: Update a resource
+
+    DELETE: Delete a resource
+
+On the Web, the most common verb is GET. This is because the main purpose of a Web page's function is to request different resources that make up a page. In REST-based APIs, we leverage these verbs to describe the types of operations we want.
+
+
+One of the advantages of REST is that you are not tying your API to your client-side technology. 
+
+
+The amazing thing about the web is the fact that clients (browsers) and servers can interact in complex ways without the client knowing anything beforehand about the server and the resources it hosts. The key constraint is that the server and client must both agree on the media used, which in the case of the web is HTML.
+
+An API that adheres to the principles of REST does not require the client to know anything about the structure of the API. Rather, the server needs to provide whatever information the client needs to interact with the service. An HTML form is an example of this: The server specifies the location of the resource and the required fields. The browser doesn't know in advance where to submit the information, and it doesn't know in advance what information to submit. Both forms of information are entirely supplied by the server.
+
+
+
+
+<h1>Restful API design guide</h1>
+
+<p>
+The API (Application Programming Interface) is an interface through which developers interact with data from an application.
+If an API is not well designed and so confusing or not verbose, then developers may stop using it.
+Even if you are not writing APIs for other developers and products, it is always good for your application to have well designed APIs.
+
+
+
+The following are the most important terms related to REST APIs:
+
+
+Resource: An object or respresentation of something, which has some associated data with it and there can be set of methods to operate on it. E.g. Companies, Animals, schools and employees are resources and delete, add, update are the operations to be performed on these resources.
+
+
+Collections:  set of resources, e.g Companies is the collection of Company resource.
+
+
+URL (Uniform Resource Locator) is a path through which a resource can be located and some actions can be performed on it.
+
+
+APIs for Companies and Employees.
+
+
+
+
+When designing an API, the URL should only contain resources (nouns, not actions or verbs) and  http methods (get, post, delete, put) should tell the server about the actions to be performed resource i.e. whether to fetch, add, delete or update. The resource should always be plural in the API endpoint and if we want to access one instance of the resource, we can always pass the id in the URL.
+
+So URL paths should contain the plural form of resources and the HTTP method should define the kind of action to be performed on the resource.
+
+
+
+For example, say we had an application that has the resource Company. 
+
+
+    method GET path /companies should get the list of all companies
+    method GET path /companies/34 should get the detail of company 34
+    method DELETE path /companies/34 should delete company 34
+
+In few other use cases, if we have resources under a resource, e.g Employees of a Company, then few of the sample API endpoints would be:
+
+    GET /companies/3/employees should get the list of all employees from company 3
+    GET /companies/3/employees/45 should get the details of employee 45, which belongs to company 3
+    DELETE /companies/3/employees/45 should delete employee 45, which belongs to company 3
+    POST /companies should create a new company and return the details of the new company created
+
+The important HTTP methods are as follows:
+
+    GET method requests data from the resource and should not produce any side effect.
+    E.g /companies/3/employees returns list of all employees from company 3.
+    POST method requests the server to create a resource in the database, mostly when a web form is submitted.
+    E.g /companies/3/employees creates a new Employee of company 3. 
+    POST is non-idempotent which means multiple requests will have different effects.
+    PUT method requests the server to update resource or create the resource, if it doesn’t exist.
+    E.g. /companies/3/employees/john will request the server to update, or create if doesn’t exist, the john resource in employees collection under company 3.
+    PUT is idempotent which means multiple requests will have the same effects.
+    DELETE method requests that the resources, or its instance, should be removed from the database.
+    E.g /companies/3/employees/john/ will request the server to delete john resource from the employees collection under the company 3.
+
+
+
+
+When the client raises a request to the server through an API, the client should know the feedback, whether it failed, passed or the request was wrong. HTTP status codes are bunch of standardized codes which has various explanations in various scenarios. The server should always return the right status code.
+
+
+2xx (Success category)
+
+These status codes represent that the requested action was received and successfully processed by the server.
+
+    200 Ok The standard HTTP response representing success for GET, PUT or POST.
+    201 Created This status code should be returned whenever the new instance is created. E.g on creating a new instance, using POST method, should always return 201 status code.
+    204 No Content represents the request is successfully processed, but has not returned any content.
+    DELETE can be a good example of this.
+    The API DELETE /companies/43/employees/2 will delete the employee 2 and in return we do not need any data in the response body of the API, as we explicitly asked the system to delete. If there is any error, like if employee 2 does not exist in the database, then the response code would be not be of 2xx Success Category but around 4xx Client Error category.
+
+3xx (Redirection Category)
+
+    304 Not Modified indicates that the client has the response already in its cache. And hence there is no need to transfer the same data again.
+
+4xx (Client Error Category)
+
+These status codes represent that the client has raised a faulty request.
+
+    400 Bad Request indicates that the request by the client was not processed, as the server could not understand what the client is asking for.
+    401 Unauthorized indicates that the client is not allowed to access resources, and should re-request with the required credentials.
+    403 Forbidden indicates that the request is valid and the client is authenticated, but the client is not allowed access the page or resource for any reason. E.g sometimes the authorized client is not allowed to access the directory on the server.
+    404 Not Found indicates that the requested resource is not available now.
+    410 Gone indicates that the requested resource is no longer available which has been intentionally moved.
+
+5xx (Server Error Category)
+
+    500 Internal Server Error indicates that the request is valid, but the server is totally confused and the server is asked to serve some unexpected condition.
+    503 Service Unavailable indicates that the server is down or unavailable to receive and process the request. Mostly if the server is undergoing maintenance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://hackernoon.com/restful-api-designing-guidelines-the-best-practices-60e1d954e7c9
+
+
+
+
+
+
+RESOURCES
+
+
+
+
+
+
+
+
+USED:
+How I Explained REST to My Wife: http://www.looah.com/source/view/2284
+https://www.pluralsight.com/blog/tutorials/representational-state-transfer-tips
+https://hackernoon.com/restful-api-designing-guidelines-the-best-practices-60e1d954e7c9
+
+
+
+
+READ:
+https://stackoverflow.com/questions/671118/what-exactly-is-restful-programming
+http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api
+http://www.restapitutorial.com/
+https://stackoverflow.com/questions/3477333/what-is-the-difference-between-post-and-get
+https://hackernoon.com/what-are-web-apis-c74053fa4072
+https://hackernoon.com/o-api-an-alternative-to-rest-apis-e9a2ed53b93c

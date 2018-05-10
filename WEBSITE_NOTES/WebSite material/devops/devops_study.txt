@@ -1,24 +1,179 @@
-npm:
+Chrome tools: https://medium.freecodecamp.org/cool-chrome-devtools-tips-and-tricks-you-wish-you-knew-already-f54f65df88d2
 
+Cross browser testing:
+
+https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction
+
+https://blog.sessionstack.com/how-javascript-works-the-rendering-engine-and-tips-to-optimize-its-performance-7b95553baeda
+https://codeburst.io/javascript-starter-architecture-part-2-the-polyfill-potion-e8e60c51d2ec
+
+
+
+
+
+
+
+
+
+
+gulp/grunt:
+
+https://scotch.io/tutorials/automate-your-tasks-easily-with-gulp-js
+https://scotch.io/tutorials/a-simple-guide-to-getting-started-with-grunt
+https://scotch.io/tutorials/prevent-errors-from-crashing-gulp-watch
+
+
+npm:
+https://scotch.io/tutorials/yarn-package-manager-an-improvement-over-npm
 https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b
 https://medium.freecodecamp.org/introduction-to-npm-scripts-1dbb2ae01633
 
 NodeJS:
 https://codeburst.io/the-only-nodejs-introduction-youll-ever-need-d969a47ef219
 https://codeburst.io/learn-node-js-the-3-best-online-node-js-courses-87e5841f4c47
+https://medium.com/swlh/what-are-the-best-practices-for-node-js-development-88e8ad57e9cc
+https://codeburst.io/learn-node-js-the-3-best-online-node-js-courses-87e5841f4c47
+https://nodeschool.io/
+https://codeburst.io/node-js-best-of-2017-6f81f4ccfea
+https://codeburst.io/using-mongoose-validation-with-async-await-c3a9255459e1
+https://medium.com/swlh/what-you-need-to-know-about-node-js-15cf39b4bc43
+https://hackhands.com/delving-node-js-express-web-framework/
 
 
 
 webpack:
 https://hackernoon.com/webpack-4-tutorial-all-you-need-to-know-from-0-conf-to-production-mode-d32759d0dc2d
 https://blog.andrewray.me/webpack-when-to-use-and-why/
+https://codeburst.io/javascript-starter-architecture-part-3-webpack-browser-list-reduction-of-transpilation-and-d751e6dcba2c
+
+
+Website performance:
+
+https://developers.google.com/web/fundamentals/performance/rail
+
+
+
 
 MINIFY/ Compressing:
-	https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer
+https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer
 
-	Babel minify:
-		https://github.com/babel/minify
+Babel minify:
+https://github.com/babel/minify
+https://medium.freecodecamp.org/were-nearing-the-7-0-babel-release-here-s-all-the-cool-stuff-we-ve-been-doing-8c1ade684039
+
+Uglyfy-es:
+https://www.npmjs.com/package/uglify-es
 
 
-	Uglyfy-es:
-		https://www.npmjs.com/package/uglify-es
+
+
+GraphQL:
+https://medium.freecodecamp.org/all-you-need-to-know-about-parcel-dbe151b70082
+https://dev-blog.apollodata.com/2017-the-year-in-graphql-124a050d04c6
+https://medium.freecodecamp.org/five-common-problems-in-graphql-apps-and-how-to-fix-them-ac74d37a293c
+https://medium.com/@weblab_tech/graphql-everything-you-need-to-know-58756ff253d8
+
+
+Browserify: 
+http://browserify.org/
+
+
+Web bundle:
+
+https://hackernoon.com/webpack-bundle-analysis-a-necessary-step-for-all-react-angular-vue-application-developers-fe6564fa62ca
+
+
+
+parcel:
+https://medium.freecodecamp.org/all-you-need-to-know-about-parcel-dbe151b70082
+
+
+API:
+https://hackernoon.com/want-to-understand-apis-read-this-dee3366e9d0c
+https://medium.freecodecamp.org/web-apis-explained-by-selling-goods-from-your-farm-84aaf99cfc78
+
+
+Continuous integration:
+https://cesium.com/blog/2016/02/03/cesium-website-continuous-integration/
+https://medium.com/@tomastrajan/how-to-speed-up-continuous-integration-build-with-new-npm-ci-and-package-lock-json-7647f91751a
+
+SQL vs NoSQL
+https://www.sitepoint.com/sql-vs-nosql-differences/
+
+
+Algorithms and Data structure:
+https://medium.com/coderbyte/how-to-get-good-at-algorithms-data-structures-d33d5163353f
+https://justin.abrah.ms/computer-science/big-o-notation-explained.html
+https://medium.com/@felipernb/algorithms-data-structures-and-web-development-7772e088f1d3
+https://martin.kleppmann.com/2012/10/01/rethinking-caching-in-web-apps.html
+https://stackoverflow.com/questions/25802521/difference-between-in-memory-databases-and-disk-memory-database
+https://stackoverflow.com/questions/2074970/stack-and-queue-why
+https://stackoverflow.com/questions/730620/how-does-a-hash-table-work
+https://www.quora.com/How-do-I-create-my-own-hash-table-implementation-in-Python
+
+
+
+
+
+Web storage:
+	https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API
+
+NodeJS:
+	
+
+express:
+	https://expressjs.com/
+	https://medium.freecodecamp.org/getting-off-the-ground-with-expressjs-89ada7ef4e59?source=emailShare-91bfcdd30742-1519743723
+
+
+in memory databases:
+	http://www.computerweekly.com/feature/In-memory-databases-What-they-do-and-the-storage-they-need
+
+
+
+
+
+Formating Code:
+	https://medium.com/blackode/code-formatter-the-big-feature-in-elixir-v1-6-0-f6572061a4ba
+
+
+
+NGINX
+https://medium.freecodecamp.org/an-introduction-to-nginx-for-developers-62179b6a458f
+
+
+
+Agile:
+	https://medium.com/@elbincodes/agile-scrum-kanban-are-these-pokemon-de8f32b64817
+	https://mediatechmgmt.wordpress.com/2015/07/10/scrumban/
+	https://hackernoon.com/6-guides-to-agile-best-practices-47954c7d4f6b
+
+
+CLOUD:
+
+https://medium.freecodecamp.org/https-explained-with-carrier-pigeons-7029d2193351
+
+REST
+How I Explained REST to My Wife
+http://www.looah.com/source/view/2284
+https://www.pluralsight.com/blog/tutorials/representational-state-transfer-tips
+https://stackoverflow.com/questions/671118/what-exactly-is-restful-programming
+http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api
+http://www.restapitutorial.com/
+https://stackoverflow.com/questions/3477333/what-is-the-difference-between-post-and-get
+https://hackernoon.com/what-are-web-apis-c74053fa4072
+https://hackernoon.com/o-api-an-alternative-to-rest-apis-e9a2ed53b93c
+
+SSL:
+https://www.digicert.com/ssl/
+
+
+
+
+
+I'VE READ IT!!
+
+gulp/grunt:
+https://www.sitepoint.com/how-to-grunt-and-gulp-your-way-to-workflow-automation/
+https://www.keycdn.com/blog/gulp-vs-grunt/
+https://medium.freecodecamp.org/the-life-changing-wonder-of-continuous-integration-and-deployment-97f833505eea

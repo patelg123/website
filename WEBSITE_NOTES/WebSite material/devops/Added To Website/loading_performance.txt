@@ -1,0 +1,176 @@
+Performance:
+
+
+Slow running websites and applications result in higher bounce rates (percentage of visitors who enter the site and then leave), fewer return visits and frustated users.
+
+In a DoubleClick by Google study,(https://www.doubleclickbygoogle.com/articles/mobile-speed-matters/) it was found that 53% of mobile site visits were abandoned if a page took longer than 3 seconds to load. In the same study, it was found that sites loading within 5 seconds had 70% longer sessions, 35% lower bounce rates  than sites taking nearly four times longer at 19 second and publishers whose sites loaded within five seconds earned up to twice as much ad revenue than sites loading within 19 seconds.
+
+With web site and application size and functionality now becoming more demanding of network and device resources, coupled with the fact that mobile users now making up the largest portion of internet users (many of who access the web through mobile LTE, 4G, 3G and even 2G networks), optimizing performance should be at the top of the list of priorities when developing web sites and applications.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Useful tools for measuring performance:
+
+The above two are primarily for your local iteration as you build your site:
+
+Chrome DevTools. 
+The developer tools built into Google Chrome. Provides in-depth analysis on everything that happens while your page loads or runs.
+
+
+Lighthouse.
+Available in Chrome DevTools, as a Chrome Extension, as a Node.js module, and within WebPageTest. You give it a URL, it simulates a mid-range device with a slow 3G connection, runs a series of audits on the page, and then gives you a report on load performance, as well as suggestions on how to improve.
+
+
+WebPageTest is excellent for testing on real mobile devices and envisioning a more real-world setup. You give it a URL, it loads the page on a real Moto G4 device with a slow 3G connection, and then gives you a detailed report on the page's load performance. 
+
+
+
+Text Content:
+
+Minification:
+
+Minification removes unnecessary characters from a program without changing its functionality – things like comments, whitespace, newlines, and extra parentheses. The below Plugins can be used for minification:
+
+HTMLMinifier for HTML https://www.npmjs.com/package/gulp-html-minifier
+CSSNano for CSS
+Babel-minify for JavaScript
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Graphical Content:
+
+Choose Appropriate Image Types:
+As a rule of thumb, use PNGs for clip art, line drawings or wherever you need tansparency, JPGs for photographs and GIFs for animation.
+
+
+Remove Image Metadata:
+For most website images, metadata is unimportant so can be stripped out. Some image editors have functionality to view and edit metadata. There are also online tools such as VerExif http://www.verexif.com/en/
+
+
+Resize Images:
+Always size images on their intended use. Yuo should not rely on the browser to resize them for rendering.
+
+Another effective technique is to reduce file size for images of all kinds is simple cropping to show only what's important.
+
+
+Reduce image quality:
+In most cases, you can reduce the quality of a JPG, and thus the file size, without suffering any visible quality difference.
+Experiment with lower-quality JPGs to see how low you can go before seeing a difference, and then use the smallest one that retains the photo's clarity
+
+
+Compress Images:
+PNG and JPG images can be squashed down even more using a compression tool, which reduces file size without affecting either image dimensions or visual quality. One such tool is TinyPing, a free online compression tool.
+
+https://tinypng.com/
+
+
+
+HTTP Requests:
+
+In addition to just reducing download size, we can also reduce download frequency.
+
+
+Combine Text Resources
+
+Web pages may have multiple JavaScript and Stylesheet files. Each file requires its own HTTP request so by combining files, we can speed up page loading.
+
+To combine JavaScript and Stylesheet files, things you could use include Gulp with the plugin gulp-concat, Browserify, and Webpack.
+
+Please note that CSS doesn't throw an error when a previously-defined property is reset by a more recent rule, so combining CSS files could cause issues. To overcome this,before concatenating, look for conflicting rules and determine whether one should always supersede the other, or if one should use more specific selectors to be applied properly.
+
+
+
+
+
+
+
+
+
+Combine Graphical Resources
+
+This technique is most commonly used with small images such as icons. 
+
+You can combine small images into one file then use CSS backgorund positioning (https://www.w3schools.com/css/css_image_sprites.asp) to display the desired part of the image (sprite) on the desired place on the page.
+
+
+
+
+
+Things that affect performance include:
+
+image size, HTTP requests, minification, zipping, caching
+
+
+
+
+
+
+
+
+
+
+HTTP Caching 
+
+When a Browser first loads a web page, it stores the resources in the HTTP Cache. When the browser goes to the page on the next visit, it can look in the cache for 
+those resources that were stored from the previous visit and retrieve them from disk, which is often faster than dowloading from the network.
+
+Browsers may have multiple caches that differ in how they acquire, store, and retain content. You can read about how these caches vary in this excellent article, 
+(https://calendar.perfplanet.com/2016/a-tale-of-four-caches/ 'A Tale of Four Caches.'
+
+Caching works by categorizing certain page resources in terms of how frequently or infrequently they change. It is imporatant to determine which types of content are more static or more dynamic.
+
+You can find a great discussion of caching patterns, options, and potential pitfalls in Caching Best Practices and Max-age Gotchas. https://jakearchibald.com/2016/caching-best-practices/
+
+
+
+
+
+
+
+
+For more detailed information visit the following page:
+
+https://developers.google.com/web/fundamentals/performance/rail
+https://medium.freecodecamp.org/a-beginners-guide-to-website-optimization-2185edca0b72
+

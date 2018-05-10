@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Frontend Tech - DevOps</title>
+
+    <!-- Bootstrap  CDN files -->
+    <link rel="stylesheet" href="dist/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="dist/jquery/3.2.1/jquery.min.js"></script>
+    <script src="dist/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- my style sheets-->
+    <link rel="stylesheet" href="style/main.css">
+    <script src="scripts/functions.js"></script>
+
+</head>
+<body id="DevOpsHome" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <nav id="navbar-main" class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-title">
+                Frontend Tech
+            </div>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul id="nav-main" class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_me.html">Author</a></li>
+                    <li><a href="javascript.html">JavaScript</a></li>
+                    <li><a href="display_styling.html">Display & Styling</a></li>
+                    <li><a href="devops.html">DevOps</a></li>
+                    <li><a href="backend.html">Backend</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="github.html">GitHub Links</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron text-center">
+        <h1>DevOps</h1>
+    </div>
+
+    <div id="devops" class="container-fluid text-center">
+        <div class="row content">
+            <div class="col-sm-2">
+                <div class="vertical-menu" >
+                    Contents
+                    <a href="#devops_yarn">Yarn</a>
+                    <a href="#devops_gulp">Gulp</a>
+                    <a href="#gitworkflows">Git Work Flows</a>
+                    <a href="#bitbucket_jenkins">Bitbucket And Jenkins Pipeline Integration</a>
+                    <a href="#docker">Docker</a>
+                    <a href="#cloud_computing">Cloud Computing</a>
+                    <a href="#web_app_performance">Website / Application Loading Performance</a>
+                    <a href="#rest">REST (Representational State Transfer)</a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+
+                </div>
+            </div>
+
+            <div class="col-sm-8 text-left">
+				<div id="devops_yarn">
+					<h1>Yarn</h1>
+					<p>
+						Yarn is a package management tool developed by Facebook.
+						<br><br>
+						Advantages of Yarn include:
+						<ul>
+							<li>
+								It takes packages from both NpmJS or Bower registries.
+								<br><br>
+							</li>
+							<li>
+								<b>Security:</b><br> Yarn uses checksums to verify the integrity of every installed package before its code is executed.
+								<br><br>
+							</li>
+							<li>
+								<b>Offline Mode:</b><br>
+								If you've installed a package before, you can install it again without any internet connection. Packages installed using Yarn with yarn add packagename are stored
+								on your disk so that during the next install, this package will be used instead of sending a HTTP request to download the package again from the registry.
+								<br><br>
+							</li>
+							<li>
+								<b>Parallel Installation</b><br>
+								Whenever npm or Yarn needs to install a package, it carries out a series of tasks. In npm, these tasks are executed per package and sequentially, meaning it will
+								wait for a package to be fully installed before moving on to the next. Yarn executes these tasks in parallel, increasing performance.
+								<br><br>
+							</li>
+							<li>
+								<b>Lockfiles</b><br>
+								The same dependencies will be installed the same exact way across every machine regardless of install order.
+								Lockfiles lock the installed dependencies to a specific version, and ensure that every install results in the exact same file structure in node_modules across all machines.
+								<br>
+								After every install, upgrade or removal, yarn updates a yarn.lock file which keeps track of the exact package version installed in node_modules directory.
+								This lockfile should be added to version control.
+								<br><br>
+							</li>
+						</ul>
+					</p>
+
+					<h2>npm vs yarn commands</h2>
+					<pre>
+#Starting a new project
+npm init === yarn init
+
+#Installing all the dependencies of project
+npm install === yarn or yarn install
+
+#Adding a dependency
+npm install [package] === yarn add [package] #The  package is saved to your package.json immediately.
+npm install  [package]@[version] === yarn add [package]@[version]
+npm install [package]@[tag] === yarn add [package]@[tag]
+
+#Add a dev dependency
+npm install [package] --save-dev === yarn add [package] --dev
+
+#Upgrading a dependency
+npm update [package] === yarn upgrade [package]
+npm update [package]@[version] === yarn upgrade [package]@[version]
+npm update [package]@[tag] === yarn upgrade [package]@[tag]
+
+#Removing a dependency
+npm uninstall [package] === yarn remove [package]
+
+#View registry information
+npm view [package] === yarn info [package]
+
+#List installed packages
+npm list === yarn list
+npm list --depth === yarn list --depth=0
+
+#Install packages globally
+npm install -g [package] === yarn global addb [package]
+
+					</pre>
+
+					<footer class="container-fluid text-center">
+						<a href="#DevOpsHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+					</footer>
+
+				</div>
+
+
+
+				<div id="devops_gulp">
+					<h1>Gulp</h1>
+					<p>
+						Gulp is a streaming build system which allows it to pipe and pass around data being manipulated or used by its plugins. The Gulp API contains 4 top level
+						Functions:
+						<br><br>
+						<b>gulp.task: </b>defines your tasks.<br>
+						<b>gulp.src: </b>points to the files that are to be used. It uses  <b>.pipe</b> for chaining output into other plugins<br>
+						<b>gulp.dest: </b>points to the output folder we want to write files to.<br>
+						<b>gulp.watch: </b>tells Gulp to watch for changes to any of the defined files and re-runs the task specified.<br><br>
+
+						<b>Gulp Plumber</b> is a global listener to a tak and displays meaningful error messages. With tasks that have multiple pipes, we only need to call plumber once.
+						Below is an example of a Gulp file:
+					</p>
+					<pre>
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
+var plumber = require('gulp-plumber');
+
+
+// Styles
+gulp.task('styles', function() {
+gulp.src('sass/styles.scss')
+
+.pipe(plumber({ errorHandler: function(err) {
+	notify.onError({
+		title: "Gulp error in " + err.plugin,
+		message:  err.toString()
+	})(err);
+	.pipe(sass())
+	.pipe(autoprefixer('last 1 version', '> 1%', 'ie 8', 'ie 7'))
+	.pipe(gulp.dest('css'));
+});
+
+// Watch the sass files
+gulp.task('watch', function() {
+	gulp.watch('sass/*.scss', ['styles']);
+});
+
+gulp.task('default', ['styles, watch']);
+
+						</pre>
+					<p>
+						Some of the most common taks Gulp is used for are the following:<br>
+						<ul>
+							<li>Compressing image files</li>
+							<li>Eliminating debugger and console statements from scripts</li>
+							<li>Minifying, concatenating, and cleaning up CSS and JavaScript</li>
+							<li>Linting code for errors</li>
+							<li>Compiling LESS files</li>
+							<li>Running unit tests</li>
+							<li>Sending updates to a production server</li>
+							<li>Updating databases</li>
+						</ul>
+					</p>
+					<h2>Resources</h2>
+					<a href="https://scotch.io/tutorials/how-to-use-browsersync-for-faster-development">BrowserSync for Faster Development</a>
+
+					<footer class="container-fluid text-center">
+						<a href="#DevOpsHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+					</footer>
+
+				</div>
+
+
+				<div id="gitworkflows">
+					<h1>GIT Work Flows</h1>
+					<p>
+						Git offers a lot of flexibility and there is no standardized process on how to interact with Git. When working
+						with a team on a Git managed project, it’s important to make sure the team is on the “same page” with regards to
+						which Git workflow should be used. Below are several publicized Git workflows that may be a good fit for your team.
+					</p>
+
+					<h2>Git Feature Branch Workflow</h2>
+					<p>
+						The core idea with this workflow is that all development should take place in a dedicated branch instead of the <b>master</b> branch.
+						<br><br>
+						It allows the usage of <b>pull requests</b> which allows developers to comment on each other’s work before it gets integrated into the main project.
+					</p>
+					<h3>How it works</h3>
+					<p>
+						Instead of working and committing directly on their local <b>master</b> branch, developers create a new branch every time they start a work on a new  item.
+						The branches should have descriptive names to allow easy identification e.g. issue#865.
+						<br><br>
+						Once work has been completed on the branch, the branch can be pushed to the central repository where the code can be reviewed by other developers without it
+						touching the 'official' code in the master branch.
+					</p>
+					<h3>Simple Walk through example:</h3>
+					<p>
+						<b>Create a new branch</b>
+						<br>
+						Use a separate branch for each work item. Run the below to create and switch to (checkout to) the newly created branch:
+					</p>
+					<pre>
+git checkout -b new-feature
+					</pre>
+					<p>
+						<b>Update, add, commit</b>
+						<br>
+						On this branch, edit, stage and commit changes as you would usually do:
+					</p>
+					<pre>
+git add <some-files>
+git commit
+						</pre>
+						<p>
+							<b>Push feature branch to remote</b>
+							<br>
+							The below command pushes new-feature to the central repository (origin), and the -u flag adds it as a remote tracking branch.
+							After setting up the tracking branch, git push can be invoked without any parameters to automatically push the new-feature branch to the central repository.
+						</p>
+						<pre>
+git push -u origin new-feature
+						</pre>
+						<p>
+							<b>Feedback</b>
+							<br>
+							To get feedback on the new feature branch, create a pull request in Bitbucket or GitHub. This allows teammates to comment on the branch pushed commit.
+							Resolve their comments locally, then commit and push the suggested changes. Your updates appear in the pull request.
+							<br><br>
+							<b>Merge Pull request</b>
+							<br>
+							When your pull request is approved and conflict-free, you can add your code to the master branch. Merge from the pull request in Bitbucket or GitHub.
+							This can also be manually done by running the following:
+						</p>
+						<pre>
+git checkout master
+git pull
+git pull origin new-feature
+git push
+
+						</pre>
+
+						<h2>Gitflow Workflow</h2>
+						<p>
+							The Gitflow Workflow defines a strict branching model designed around the project release.
+							It assigns very specific roles to different branches and defines how and when they should interact.
+							<br><br>
+							There is a <a href="https://github.com/nvie/gitflow">git-flow toolset</a> available which integrates
+							with Git to provide specialized Gitflow Git command line tool extensions.
+						</p>
+
+						<h3>Gitflow Branches</h3>
+						<p>
+							Instead of a single <b>master</b> branch, two branches are used to record the history of a project.
+							The <b>master</b> branch stores the official release history, and the <b>develop</b> branch serves as an integration branch.
+							<br><br>
+							Each new feature of a project should have its own branch and use <b>develop</b> as their parent branch; and should never  interact directly with <b>master</b>.
+							When you’ve finished with the development work on the feature, the next step is to merge the feature_branch into develop.
+							Once the develop branch has acquired enough features for a release, or a predetermined release date is approaching, you fork a <b>release</b> branch
+							off of develop.
+							<br><br>
+							Once created, no new features can be added to the <b>release</b> branch, only bug fixes, documentation and other release task related items.
+							Once it is ready to ship, the release branch is merged into master and tagged with a version number and also be merged back into develop which
+							may have progressed since the release was initiated. Once this has been done, the release branch is then deleted.
+						</p>
+						<h3>Maintenance Branches</h3>
+						<p>
+							Maintenance or “hotfix” branches branch off of the master branch rather than develop. As soon as a fix is complete it should be
+							merged into both  master and develop (or the current release branch). You can think of maintenance branches as ad hoc release branches that work directly with master.
+							<br><br>
+							Below is the overall flow of Gitflow:
+							<ul>
+								<li>A develop branch is created from master</li>
+								<li>A release branch is created from develop</li>
+								<li>Feature branches are created from develop</li>
+								<li>When a feature is complete it is merged into the develop branch</li>
+								<li>When the release branch is done it is merged into develop and master</li>
+								<li>If an issue in master is detected a hotfix branch is created from master</li>
+								<li>Once the hotfix is complete it is merged to both develop and master</li>
+							</ul>
+						</p>
+						<br>
+						<img src="images/gitflow.svg" alt="Gitflow workflow" />
+
+						<h2>Forking Workflow</h2>
+						<p>
+							This workflow is most often seen in public open source projects.
+							It  gives the developer their own server-side (remote) repository which means two Git repositories: a private local
+							one and a public server  side one. While you can call these remotes anything you want, a common convention
+							is to use <b>origin</b> as the remote for your forked repository (this  will be created automatically when you run git clone)
+							and <b>upstream</b> for the official repository.
+							<br><br>
+							Developers push to their own server-side repositories, and only the project maintainer can push to the official repository.
+							This allows the  maintainer to accept commits from any developer without giving them write access to the official codebase.
+							<br><br>
+							When a developer wants to start working on a project, they fork (which is essentially just a git clone command
+							executed on a server copy of a  projects repo.) the official repository to create a copy of it on the server.
+							Popular Git hosting services like GitHub and Bitbucket, offer repo forking features that automate this step.
+							This new copy serves as their personal public repository — no other developers are allowed to push to it, but they can pull changes from it.
+							<br><br>
+							The developer performs a git clone to get a copy of it onto their local machine. When they're ready to publish a local commit,
+							they push the commit to their own public repository—not the official one. Then, they file a pull  request with the main repository,
+							which lets the project maintainer know that an update is ready to be integrated. The pull request also serves as a
+							convenient discussion thread if there are issues with the contributed code.
+							<br><br>
+							To integrate the feature into the official codebase, the maintainer pulls the contributor’s changes into their local repository,
+							checks to make sure it doesn’t break the project, merges it into their local master branch, then pushes the master branch to the official repository on the server.
+							The contribution is now part of the project, and other developers should pull from the official repository to synchronize their local repositories.
+							<br><br>
+							The Forking Workflow helps a maintainer of a project open up the repository to contributions from any developer without having to manually manage
+							authorization settings for each individual contributor. This gives the maintainer more of a "pull" style workflow.
+							<br><br>
+							Most commonly used in open-source projects, the Forking Workflow can also be applied to private business workflows to give more authoritative
+							control over what is merged into a release. This can be useful in teams that have Deploy Managers or strict release cycles.
+						</p>
+
+
+						<h2>Resources</h2>
+						<a href="https://www.atlassian.com/git/tutorials/comparing-workflows">Comparing Workflows</a>
+
+						<footer class="container-fluid text-center">
+							<a href="#DevOpsHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+						</footer>
+
+				</div>
+
+
+				<div id="bitbucket_jenkins">
+					<h1>Bitbucket and Jenkins Pipeline Integration</h1>
+					<p>
+						A Pipeline in Jenkins is a way of defining some Jenkins steps using code, and automate the process of deploying software.
+						The list of jobs which are to be performed in the pipeline is configured in the <b>Jenkinsfile</b>, which is a
+						text file that contains the definition of a Jenkins Pipeline and is checked into source control.
+						The file can be located on the Jenkins server itself or  at the root of a linked git/Bitbucket repository.
+					</p>
+
+					<p>
+						The Bitbucket plugin <a href="https://marketplace.atlassian.com/plugins/com.nerdwin15.stash-stash-webhook-jenkins/server/overview">Webhook to Jenkins for Bitbucket</a>
+						can be used to Integrate Bitbucket Server and Jenkins and allows you to configure a hook on a project or repository level.
+						This allows BitBucket to notify Jenkins of any changes in the code base and triggers the associated Jenkins Pipeline.
+					</p>
+
+					<h2>Resources</h2>
+					<a href="https://marketplace.atlassian.com/plugins/com.nerdwin15.stash-stash-webhook-jenkins/server/overview">Webhook to Jenkins for Bitbucket</a>
+					<a href="https://medium.com/@lukastosic/continuous-integration-workflow-91fd83b8d69a">Continuous integration workflow</a>
+
+					<footer class="container-fluid text-center">
+						<a href="#DevOpsHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+					</footer>
+				</div>
+
+				<div id="docker">
+					<h1>Docker</h1>
+					<p>
+						Docker is an open-source project based on Linux containers .You can think of Docker as an operating system (or runtime) for Docker containers.
+						It allows anyone to package an application on their laptop, which in turn can run unmodified on any public cloud, private cloud, or even bare metal. The mantra is: "build once, run anywhere."
+						The Docker Engine is installed on each server you want to run containers on and provides a simple set of commands you can use to build, start, or stop Docker Containers.
+					</p>
+
+					<h2>Docker Images</h2>
+					<p>
+						Docker images are read-only templates that describe a Docker Container. They include specific instructions written in a <b>Dockerfile</b> that defines the application and its dependencies.
+						You can think of Docker images as a snapshot of an application at a certain time. You will get images when you run the <b>docker build</b> command.
+					</p>
+					<h2>Docker Containers</h2>
+					<p>
+						Docker containers are built off Docker images and wraps an application’s software into an invisible box with everything the application needs to run.
+						They include the operating system, application code, runtime, system tools, system libraries, etc. Since images are read-only, Docker adds a read-write file system
+						over the read-only file system of the image to create a container.
+						<br><br>
+						Docker containers are very lightweight and fast. Since containers are just sandboxed environments running on the kernel, they take up fewer resources.
+						You can create and run a Docker container in seconds, compared to VMs which might take longer because they have to boot up a full virtual operating system every time.
+						<br><br>
+						You are able to connect multiple Docker Containers together. For example, you might have your Postgres database running in one container and your Redis server in another
+						while your Node.js app is in another. With Docker, it’s become easier to link these containers together to create your application, making it easy to scale or update components
+						independently in the future.
+						<br><br>
+						You can  run a Docker Container with <b>docker start</b>.
+					</p>
+
+					<h2>Docker Registries</h2>
+					<p>
+						A Docker Registry is a place for you to store and distribute Docker images.
+						<br><br>
+						Docker's own registry is called <b>Docker Hub</b> which is a sort of 'app store for Docker images'. It has has tens of thousands of public images created by the community that are readily available for use.
+						It’s incredibly easy to search for images that meet your needs, ready to pull down and use with little-to-no modification.
+					</p>
+
+					<h2>Docker Compose</h2>
+					<p>
+						Docker Compose is a tool that allows you to build and start multiple Docker Images at once.
+						Instead of running the same multiple commands every time you want to start your application, you can do them all in one command — once you provide a specific configuration.
+					</p>
+
+					<h2>How to get code into containers</h2>
+
+					<h3>Using Shared Volumes</h3>
+					<p>
+						Docker allows for mounting local directories into containers using the shared volumes feature.
+						Just use the -v switch to specify the local directory path that you wish to mount, along with the location where it should be mounted within the running container
+						<br><br>
+						This is particularly useful when developing locally, as you can use your favorite editor to work locally, commit code to Git, and pull the latest code from remote branches.
+						Your application will run inside a container, isolating it away from any processes you have running on your development laptop.
+					</p>
+
+					<h3>Using COPY command</h3>
+					<p>
+						You can use the COPY command within a Dockerfile to copy files from the local filesystem into a specific directory within the container.
+						This technique is recommended for building production-ready Docker images.
+					</p>
+
+					<h2>Resources</h2>
+					<a href="https://medium.freecodecamp.org/a-beginner-friendly-introduction-to-containers-vms-and-docker-79a9e3e119b">A Beginner-Friendly Introduction to Containers, VMs and Docker</a>
+					<br>
+					<a href="https://medium.freecodecamp.org/docker-development-workflow-a-guide-with-flask-and-postgres-db1a1843044a">Docker Development WorkFlow — a guide with Flask and Postgres</a>
+					<br>
+					<a href="https://hackernoon.com/an-introduction-to-docker-through-story-8ae5594d7446">An Introduction to Docker Through Story</a>
+					<br>
+					<a href="https://aws.amazon.com/docker/">What is Docker?</a>
+					<br>
+					<a href="https://blog.cloud66.com/how-to-get-code-into-a-docker-container/">How to Get Code into a Docker Container</a>
+
+					<footer class="container-fluid text-center">
+						<a href="#DevOpsHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+					</footer>
+		   		</div>
+
+
+
+
+				<div id="cloud_computing">
+					<h1>Cloud Computing</h1>
+					<h2>Computing Service Models</h2>
+					<h3>IaaS (Infrastructure as a Service)</h3>
+					<p>
+						With IaaS, pre-configured hardware resources are provided to users through a virtual interface.
+						Implementation of applications, and even the operating system, is left up to the customer. It simply
+						enables access to the infrastructure needed to power or support that software.
+					</p>
+					<h3>Platform as a Service (PaaS)</h3>
+					<p>
+						PaaS provides a platform and environment to allow developers to build applications and services over the internet.
+						PaaS offerings typically include a base operating system and a suite of applications and development tools.
+						The consumer does not manage or control the underlying cloud infrastructure including network, servers, operating systems, or storage.
+						<br><br>
+						PaaS solutions provide a platform that allows customers to develop, launch, and manage apps in a way that is much simpler than having to build and maintain the infrastructure.
+					</p>
+					<h3>SaaS (Software as a Service)</h3>
+					<p>
+						Sometimes referred to as ‘on-demand software’, SaaS is a software licensing and delivery model where a fully functional and
+						complete software product  is delivered to users over the web on a subscription basis.
+						<br><br>
+						SaaS offerings are typically accessed by end users through a web browser (making the user’s operating system largely irrelevant)
+						and can be billed  based on consumption or, more simply, with a flat monthly charge.
+						<br><br>
+						Popular products like Office365 and Salesforce have thrust SaaS offerings to the forefront of the workplace and are used by thousands
+						of businesses every day.
+					</p>
+
+
+					<h2>Amazon Web Services</h2>
+					<p>
+						AWS provides IT infrastructure and other services over the internet. It provides on-demand computing resources and services in the cloud, with pay-as-you-go pricing.
+					</p>
+					<h2>AWS Products</h2>
+					<p>
+						AWS provides building blocks that you can assemble quickly to support any workload.
+						With AWS, you’ll find a complete set of highly available services that are designed to work together to build scalable applications.
+						The following categories represent the core products of AWS.
+					</p>
+					<h3>Compute and Networking Services</h3>
+					<ul>
+						<li>Amazon EC2 (Provides virtual servers in the AWS cloud)</li>
+						<li>Amazon VPC (Provides an isolated virtual network for your virtual servers)</li>
+						<li>Elastic Load Balancing (Distributes network traffic across your set of virtual servers)</li>
+						<li>Auto Scaling (Automatically scales your set of virtual servers based on changes in demand)</li>
+						<li>Amazon Route 53 (Routes traffic to your domain name to a resource, such as a virtual server or a load balancer)</li>
+						<li>AWS Lambda (Runs your code on virtual servers from Amazon EC2 in response to events)</li>
+						<li>Amazon ECS (Provides Docker containers on virtual servers from Amazon EC2)</li>
+					</ul>
+
+
+
+					<h3>Storage and Content Delivery Services</h3>
+					<ul>
+						<li>Amazon S3 (Scalable storage in the AWS cloud)</li>
+						<li>CloudFront (A global content delivery network (CDN))</li>
+						<li>Amazon EBS (Network attached storage volumes for your virtual servers)</li>
+						<li>Amazon Glacier (Low-cost archival storage)</li>
+					</ul>
+
+					<h3>Security and Identity Services</h3>
+					<ul>
+						<li>AWS Identity and Access Management (Manage user access to AWS resources through policies)</li>
+						<li>AWS Directory Service (Manage user access to AWS through your existing Microsoft Active Directory, or a directory you create in the AWS cloud)</li>
+					</ul>
+					<h3>Database Services</h3>
+					<ul>
+						<li>Amazon RDS (Provides managed relational databases)</li>
+						<li>Amazon Redshift (A fast, fully-managed, petabyte-scale data warehouse)</li>
+						<li>Amazon DynamoDB (Provides managed NoSQL databases)</li>
+						<li>Amazon ElastiCache (An in-memory caching service)</li>
+					</ul>
+					<h3>Analytics Services</h3>
+					<p>
+						Amazon EMR (Amazon EMR) uses Hadoop, an open source framework, to manage and process data. Hadoop uses the MapReduce engine to distribute processing using a cluster.
+					</p>
+					<ul>
+						<li>
+							Amazon EMR (You identify the data source, specify the number and type of EC2 instances for the cluster and what software should be on them,
+							and provide a MapReduce program or run interactive queries)
+						</li>
+						<li>AWS Data Pipeline (to regularly move and process data)</li>
+						<li>Amazon Kinesis (real-time processing of streaming data at a massive scale)</li>
+						<li>
+							Amazon ML (use machine learning technology to obtain predictions for their applications using simple APIs.
+							Amazon ML finds patterns in your existing data, creates machine learning models, and then uses those models to process new data and generate predictions)
+						</li>
+					</ul>
+					<h3>Application Services</h3>
+					<ul>
+						<li>Amazon AppStream (Host your streaming application in the AWS cloud and stream the input and output to your users’ devices)</li>
+						<li>Amazon CloudSearch (Add search to your website)</li>
+						<li>Amazon Elastic Transcoder (Convert digital media into the formats required by your users’ devices)</li>
+						<li>Amazon SES (Send email from the cloud)</li>
+						<li>Amazon SNS (Send or receive notifications from the cloud)</li>
+						<li>Amazon SQS (Enable components in your application to store data in a queue to be retrieved other components)</li>
+						<li>Amazon SWF (Coordinate tasks across the components of your application)</li>
+					</ul>
+					<h3>Management Tools</h3>
+					<ul>
+						<li>Amazon CloudWatch (Monitor resources and applications)</li>
+						<li>AWS CloudFormation (Provision your AWS resources using templates)</li>
+						<li>AWS CloudTrail (Track the usage history for your AWS resources by logging AWS API calls)</li>
+						<li>AWS Config (View the current and previous configuration of your AWS resources, and monitor changes to your AWS resources)</li>
+						<li>AWS OpsWorks (Configure and manage the environment for your application, whether in the AWS cloud or your own data center)</li>
+						<li>AWS Service Catalog (Distribute servers, databases, websites, and applications to users using AWS resources)</li>
+					</ul>
+					<h3>AWS can be accessed through:</h3>
+					<ul>
+						<li>AWS Management Console</li>
+						<li>AWS Command Line Interface (AWS CLI)</li>
+						<li>Command Line Tools</li>
+						<li>AWS Software Development Kits (SDK)</li>
+						<li>Query APIs</li>
+					</ul>
+					<p>
+						There is a detailed guide on how to install and use each of these options in the documentation.
+						As you can see it takes a while to get familiar with each tool to get into some sort of workflow.
+					</p>
+					<h3>Keypoints on AWS</h3>
+					<ul>
+						<li>Elastic pay-per-use infrastructure</li>
+						<li>On demand resources</li>
+						<li>Scalability</li>
+						<li>Global infrastructure</li>
+						<li>Reduced time to market</li>
+						<li>Increased opportunities for innovation</li>
+						<li>Enhanced security</li>
+					</ul>
+
+					<h2>Comparing cloud service and traditional on-premises infrastructure</h2>
+					<p>
+						Imagine a scenario where a development team is tasked to develop a new service for a global enterprise company that currently serves millions of consumers worldwide.
+						The new service must:
+						<ul>
+							<li>have the ability to scale to meet peak data demands</li>
+							<li>provide resiliency in the event of a datacenter failure</li>
+							<li>Ensure data is secure and protected</li>
+							<li>Provide in-depth debugging for troubleshooting</li>
+							<li>The project must be delivered quickly</li>
+							<li>The service be cost-efficient to build and maintain</li>
+						</ul>
+						Below is a comparison of building it on on-premises infrastructure and building it using AWS cloud infrastructure.
+					</p>
+					<h3>Scalability</h3>
+					<p>
+						With on-premises infrastructure, the compute capacity needs to sized to match peak data demands. If the service has a large variable workload, it will
+						leave you with a lot of excess and expensive compute capacity in times of low utilization, which can be seen as wasteful.
+						Also there is the operational costs for supporting a rack of bare-metal servers for a single service.
+						<br><br>
+						With a cloud based infrastructure an <b>auto scaling</b> solution you can define seamless auto scaling groups that spin up more instances of the application
+						based on demand. This means that you’re only paying for the compute resources that you use.
+					</p>
+					<h3>Resiliency</h3>
+					<p>
+						To meet basic resiliency criteria, hosting a service within a single datacentre is not an option.
+						For an on-premises solution, this team would a minimum of two servers for local resiliency — replicated in a second data center for geographic redundancy.
+						A load balancing solution also needs to be implemented that automatically redirects traffic between sites in the event of saturation or failure and it needs to
+						be ensured that the mirror sites are continually synchronised with each other.
+						<br><br>
+						AWS provide multiple availability zones within each of their 50 regions worldwide with automated failover capabilities that can seamlessly transition AWS services to other
+						zones within the region. The AWS load balancer requires minimal effort to setup and manage the traffic flow.
+					</p>
+
+					<h3>Security and protection of data</h3>
+					<p>
+						For the on-premises solution, there will be the an ongoing cost of monitoring, identifying and patching security threats.
+						For the cloud based solution, the development team still have to be vigilant but don’t have to worry about patching the underlying infrastructure.
+					</p>
+					<h3>Monitoring and logging</h3>
+					<p>
+						Infrastructure and application services need to be monitored and ideally have access to a dashboard that provides alerts when thresholds are exceeded and
+						offer the ability to easily access and search logs for trouble shooting. This can be very diffucult to set up on the on-premises solution and developers
+						may find themselves searching through log files located on different servers.
+						<br><br>
+						Native AWS services such as CloudWatch and CloudTrail make monitoring cloud applications easy with the cloud based solution. Without much setup,
+						the development team can monitor a wide variety of different metrics for each of the deployed services.
+					</p>
+
+					<h2>Disadvantages of Cloud Computing</h2>
+
+					<h3>Downtime</h3>
+					<p>
+						As the cloud requires an internet connection to work, if your connection is running slowly or is down, it will affect your work as you will not be able to
+						access any of your applications, server or data. If your internet service suffers from frequent outages or slow speeds, cloud computing may not be  suitable for your business.
+						<br><br>
+						As cloud service providers take care of a number of clients each day, they can become overwhelmed and may even come up against technical outages themselves.
+						Even the most reliable cloud computing service providers suffer server outages now and again.
+						<br><br>
+						This is why it is important to choose a reliable cloud services provider, because even if an outage occurs, you can be sure your provider will try and resolve the problem as soon as possible.
+						With the right provider, cloud computing is still much more reliable and consistent than an in-house IT infrastructure.
+					</p>
+					<h3>Security and Privacy</h3>
+					<p>
+						Cloud based solutions are exposed on the public internet and so a more vulnerable target for malicious users and hackers.
+						Nothing on the Internet is completely secure and even the biggest organisations can suffer from serious attacks and security breaches.
+						<br><br>
+						Also by using cloud-based services, a company is essentially 'outsourcing' its data so trusting the provider to effectively manage and safeguard their data.
+						It is therefore essential that a trusted, experienced and reliable provider with a  proven track record is chosen.
+						<br><br>
+						Many cloud experts however believe that trusted cloud data centres, such as Amazon Web, have better security than an in-house data centre, so security is really dependent  upon the provider.
+					</p>
+
+					<h3>Vendor Lock-in</h3>
+					<p>
+						Differences between provider systems can be difficult, and sometimes impossible, to migrate from one provider to another.
+						Not only can it be complex and expensive to reconfigure your applications to meet the requirements of a new  host, it can be really painful and
+						cumbersome to transfer huge data from the old provider to the new one and you could also expose your data to additional security and privacy vulnerabilities.
+						<br><br>
+						Be careful when you're choosing a cloud computing vendor that you're not going to become a "forever" customer because their applications and/or data formats do not allow easy
+						transfer/conversion of information into other systems. Some vendors deliberately attempt to "lock-in" customers by using proprietary software/hardware,
+						so that it is impossible or very expensive to switch to another cloud vendor.
+					</p>
+
+					<h3>Costs</h3>
+					<p>
+						For a small to medium size business, cloud computing could be a lot cheaper to have than having in-house servers. However, if your business is very large such as on
+						corporate level, the benefits of cloud computing dwindles as the cost skyrockets. Be sure to analyse the cost for both an in-house server and the cloud before making a
+						decision for your business.
+						<br><br>
+						You should look closely at the pricing plans and details for each application, taking into account possible future expansion. For example, the president of a non-profit
+						organization that recently switched to a cloud-based membership application found that when their membership numbers recently exceeded the limits on their contract the price
+						to go to the next tier was nearly double.
+						<br><br>
+						If you don't need the most up-to-date versions of software every year, desktop software can be cheaper in the long run. For instance, if you purchase the desktop
+						version of Microsoft Office 2016 and use it for several years, you pay a one-time fee and own the software forever versus having to pay an annual fee for using the cloud-based version,
+						Office 365.
+						<br><br>
+						If your business involves transferring large amounts of data, be aware that while transferring data to the cloud (inbound) is free, outbound data transfers over the basic monthly allowance
+						are charged on a per GB basis. If your business requirements will include regularly downloading large amounts of data from your cloud applications or data storage, the additional
+						costs can add up. (See, for example, Microsoft Azure data transfer pricing.)
+					</p>
+
+					<h2>Resources</h2>
+					<a href="https://doublehorn.com/saas-paas-and-iaas-understanding/">Saas, PaaS, and IaaS: Understanding the Three Cloud Computing Service Mode</a>
+					<br>
+					<a href="https://read.acloud.guru/the-true-cost-of-cloud-a-comparison-of-two-development-teams-edc77d3dc6dc">The Cost of Cloud Computing</a>
+					<br>
+					<a href="https://medium.com/of-all-things-tech-progress/introducing-amazon-web-services-aws-72c12547b9ff">Introducing Amazon Web Services (AWS)</a>
+					<br>
+					<a href="https://cloudacademy.com/blog/disadvantages-of-cloud-computing/">Disadvantages of cloud computing</a>
+
+					<footer class="container-fluid text-center">
+						<a href="#DevOpsHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+					</footer>
+		    	</div>
+
+
+				<div id="web_app_performance">
+					<h1>Website / Application Loading Performance</h1>
+
+					<h2>Introduction</h2>
+					<p>
+						Slow running websites and applications result in higher bounce rates (percentage of visitors who enter the site and then leave), fewer return visits and frustrated users.
+						<br><br>
+						In a <a href="https://www.doubleclickbygoogle.com/articles/mobile-speed-matters">DoubleClick by Google study</a>, it was found that 53% of mobile site visits were
+						abandoned if a page took longer than 3 seconds to load. In the same study, it was found that sites loading within 5 seconds had 70% longer sessions, 35% lower bounce rates
+						than sites taking nearly four times longer at 19 second and publishers whose sites loaded within five seconds earned up to twice as much ad revenue than sites loading within 19 seconds.
+						<br><br>
+						Google has also implemented site speed as a ranking signal in its mobile searches so slow loading is detrimental for search engine optimization (SEO).
+						<br><br>
+						With web site and application size and functionality now becoming more demanding of network and device resources, coupled with the fact that mobile users now making up the
+						largest portion of internet users (many of who access the web through mobile LTE, 4G, 3G and even 2G networks), optimizing performance should be at the top of the list of
+						priorities when developing web sites and applications.
+						<br><br>
+						Below are outlined some techniques we can use to 'grab the low hanging fruits' to increase performance of our web sites and applications.
+					</p>
+
+					<h2>Minifying Your JavaScript, HTML and CSS Code</h2>
+					<p>
+						Minification removes unnecessary characters from code without changing its validity or functionality (things like comments, whitespace, newlines, and extra parentheses).
+						There are quite a few plugins and apps that can be used. Below are some examples:
+						<br><br>
+						<a href="https://www.npmjs.com/package/gulp-html-minifier">gulp-html-minifier</a> is a Gulp plugin that can be used to minify HTML.
+						<br><br>
+						<a href="https://www.npmjs.com/package/gulp-babel-minify">gulp-babel-minify</a> is a Gulp plugin that can be used to minify JavaScript.
+						<br><br>
+						<a href="https://www.npmjs.com/package/gulp-clean-css">gulp-clean-css</a> and <a href="https://www.npmjs.com/package/gulp-cssnano">gulp-cssnano</a> are Gulp plugins that can be used to minify CSS.
+					</p>
+
+					<h2>Reduce Library Use</h2>
+					<p>
+						Although CSS and JavaScript libraries do their best to minify and compress their download files they can still consume serious bandwidth.
+						If you only need one or two specific things, you can save a lot of download time by replacing those features with single-use functions or CSS rules.
+						<br><br>
+						<a href="http://youmightnotneedjquery.com/">You might not need jQuery</a> is a site where you can find alternatives to jQuery code to get the same effects on your site
+						without the download overhead of jQuery.
+						<br><br>
+						CSS is a render blocking resource which means that the browser won't render any processed content until the CSS Object Model (CSSOM) is constructed.
+						Therefore it is important to keep your CSS as 'lean' as possible.
+						<br><br>
+						If you are using Bootstrap, it may be worth looking at <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexbox</a> and
+						<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">Grid</a> as alternatives so you don't have the overhead of a CSS framework.
+					</p>
+
+					<h2>Use Gzip</h2>
+					<p>
+						Gzipping text resources can achieve up to 70% compression (or more for larger files).
+						All modern browsers support Gzip compression for HTTP requests but the server must be configured to deliver the compressed resource when requested.
+						<br><br>
+						If this configuration is not possible, like for example your hosting company do not provide that option, then look into ways to add Gzipping to your code.
+						<br><br>
+						In <a href="https://codeburst.io/how-i-decreased-the-size-of-my-heroku-app-by-75-1a4cf329b0ab">this article</a>, the author explains how he used
+						<a href="https://github.com/expressjs/compression">expressjs/compression middleware</a> to decrease his JavaScript and CSS bundles.
+					</p>
+
+
+					<h2>Graphical Content</h2>
+					<p>
+						Graphical content can easily account for 60%-85% of a typical website's total bandwidth so by reducing the amount of time
+						images take to load can lead to a significant performance boost.
+					</p>
+					<h3>Remove Unnecessary Images</h3>
+					<p>
+						Consider whether each image is really needed or whether it is needed straight away. Every image removed speeds up your page load time.
+					</p>
+					<h3>Choose Appropriate Image Types</h3>
+					<p>
+						As a rule of thumb, use PNGs for clip art, line drawings or wherever you need transparency, JPGs for photographs and GIFs for animation.
+					</p>
+					<h3>Remove Image Metadata</h3>
+					<p>
+						For most website images, metadata is unimportant so can be stripped out.
+						Some image editors have functionality to view and edit metadata. There are also online tools such as  <a href="http://www.verexif.com/en/">VerExif</a>.
+					</p>
+					<h3>Resize Images</h3>
+					<p>
+						Always size images on their intended use. You should not rely on the browser to resize them for rendering.
+						Another effective technique is to reduce file size for images of all kinds is simple cropping to show only what's important.
+					</p>
+					<h3>Reduce image quality</h3>
+					<p>
+						In most cases, you can reduce the quality of a JPG, and thus the file size, without suffering any visible quality difference.
+						Experiment with lower-quality JPGs to see how low you can go before seeing a difference, and then use the smallest one that retains the photo's clarity.
+					</p>
+					<h3>Compress Images</h3>
+					<p>
+						PNG and JPG images can be squashed down even more using a compression tool, which reduces file size without affecting either image dimensions or visual quality.
+						One such tool is <a href="https://tinypng.com">TinyPing</a>, a free online compression tool.
+					</p>
+					<h2>Reducing HTTP Requests</h2>
+					<p>
+						In addition to reducing download size, we can also reduce download frequency by combining resources.
+					</p>
+
+					<h3>Combine Text Resources</h3>
+					<p>
+						Web pages may have multiple JavaScript and Stylesheet files.
+						Each file requires its own HTTP request so by combining files, we can speed up page loading.
+						<br><br>
+						To combine JavaScript and Stylesheet files, things you could use include <b>Gulp with the plugin gulp-concat</b>, <b>Browserify</b>, and <b>Webpack</b>.
+						<br><br>
+						Please note that CSS doesn't throw an error when a previously-defined property is reset by a more recent rule, so combining CSS files could cause issues.
+						To overcome this,before concatenating, look for conflicting rules and determine whether one should always supersede the other,
+						or if one should use more specific selectors to be applied properly.
+					</p>
+
+					<h3>Combine Graphical Resources</h3>
+					<p>
+						This technique is most commonly used with small images such as icons.
+						<br><br>
+						You can combine small images into one file then use <a href="https://www.w3schools.com/css/css_image_sprites.asp" >CSS background positioning</a> to display the desired part of
+						the image (sprite) on the desired place on the page.
+					</p>
+
+
+					<h2>HTTP Caching</h2>
+					<p>
+						When a Browser first loads a web page, it stores the resources in the HTTP Cache. When the browser goes to the page on the next visit,
+						it can look in the cache for those resources that were stored from the previous visit and retrieve them from disk, which is often faster than downloading from the network.
+						<br><br>
+						Browsers may have multiple caches that differ in how they acquire, store, and retain content. You can read about how these caches vary in this excellent article,
+						<a href="https://calendar.perfplanet.com/2016/a-tale-of-four-caches/">A Tale of Four Caches</a>.
+						<br><br>
+						Caching works by categorizing certain page resources in terms of how frequently or infrequently they change. It is important to determine which types of content
+						are more static or more dynamic.
+						<br><br>
+						You can find a great discussion of caching patterns, options, and potential pitfalls in
+						<a href="https://jakearchibald.com/2016/caching-best-practices"> Caching Best Practices and Max-age Gotchas</a>.
+
+
+					</p>
+
+
+
+
+					<h2>Tools To Measure Performance</h2>
+					<p>
+						<a href="https://www.webpagetest.org/">WebPageTest</a> is an excellent tool for testing on real mobile devices and envisioning a more real-world setup.
+						You give it a URL, it loads the page on a real Moto G4 device with a slow 3G connection, and then gives you a detailed report on the page's load performance.
+						<br><br>
+						<b>Chrome DevTools</b> (built into Google Chrome) provides in-depth analysis on everything that happens while your page loads or runs.
+						<br><br>
+						<b>Lighthouse</b> is available in Chrome DevTools, as a Chrome Extension, as a Node.js module, and within WebPageTest.
+						You give it a URL, it simulates a mid-range device with a slow 3G connection, runs a series of audits on the page, and then
+						gives you a report on load performance, as well as suggestions on how to improve.
+						<br><br>
+						Lighthouse and Chrome DevTools are primarily for your local iteration as you build your site.
+					</p>
+
+					<h2>Resources</h2>
+					<a href="https://developers.google.com/web/fundamentals/performance/why-performance-matters/">Google Website</a>
+					<a href="https://medium.freecodecamp.org/a-beginners-guide-to-website-optimization-2185edca0b72">Website optimization</a>
+
+					<footer class="container-fluid text-center">
+						<a href="#DevOpsHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+					</footer>
+				</div>
+
+				<div id="rest">
+					<h1>REST (Representational State Transfer)</h1>
+					<p>
+						REST (Representational State Transfer) is an architectural style that uses simple HTTP calls for inter-machine (Client and Server) communication.
+						Clients and servers can interact in complex ways without the client knowing anything beforehand about the server and the resources it hosts.
+						The key constraint is that the server and client must both agree on the media used.
+					</p>
+
+					<h2>RESTful API Design</h2>
+
+					<p>
+						The API (Application Programming Interface) is an interface through which developers interact with data from an application.
+						If an API is not well designed and so confusing or not verbose, then developers may stop using it.
+						Even if you are not writing APIs for other developers and products, it is always good for your application to have well designed APIs.
+					</p>
+
+					<p>
+						The following are the most important terms related to REST APIs:
+
+						<ul>
+							<li>
+								<b>Resource</b>: An object or representation of something, which has some associated data with it and there can be set of methods to operate on it.
+								E.g.  Companies, Animals, schools and employees are resources and delete, add, update are the operations to be performed on these resources.
+							</li>
+							<li>
+								<b>Collections</b>:  set of resources, e.g Companies is the collection of Company resource.
+							</li>
+							<li>
+								<b>URL (Uniform Resource Locator)</b> a path through which a resource can be located and some actions can be performed on it.
+							</li>
+						</ul>
+					</p>
+
+					<p>
+						The following are the most important  HTTP methods (verbs):
+						<ul>
+							<li>
+								<b>GET</b>: requests data from the resource and should not produce any side effect.
+							</li>
+							<li>
+								<b>POST</b>: method requests the server to create a resource in the database. It is <b>non-idempotent</b> which means multiple requests will have different effects
+							</li>
+							<li>
+								<b>PUT</b>: method requests the server to update resource or create the resource, if it doesn’t exist. It is <b>idempotent</b> which means multiple requests will have the same effects.
+							</li>
+							<li>
+								<b>DELETE</b>: method requests that the resources, or its instance, should be removed from the database.
+							</li>
+						</p>
+
+						<p>
+							When designing an API, URL paths should contain the plural form of resources (nouns, not actions or verbs)
+							and the HTTP method should define the kind of action to be performed on the resource.
+							If we want to access one instance of the resource, we can always pass the id in the URL.
+							<br><br>
+							For example, say we had an application that has the resource Company:
+							<ul>
+								<li>
+									method <b>GET</b> path <b>/companies</b> should get the list of all companies
+								</li>
+								<li>
+									method <b>GET</b> path <b>/companies/34</b> should get the detail of company 34
+								</li>
+								<li>
+									method <b>DELETE</b> path <b>/companies/34</b> should delete company 34
+								</li>
+							</ul>
+							<br><br>
+							If we have resources under a resource, e.g Employees of a Company, then few of the sample API endpoints would be:
+							<ul>
+								<li>
+									method <b>GET</b> path <b>/companies/3/employees</b> should get the list of all employees from company 3
+								</li>
+								<li>
+									method <b>GET</b> path <b>/companies/3/employees/45</b> should get the details of employee 45, which belongs to company 3
+								</li>
+								<li>
+									method <b>DELETE</b> path <b>/companies/3/employees/45</b> should delete employee 45, which belongs to company 3
+								</li>
+								<li>
+									method <b>POST</b> path <b>/companies</b> should create a new company and return the details of the new company created
+								</li>
+							</ul>
+						</p>
+						<p>
+							When the client raises a request to the server through an API, the client should know the feedback, whether it failed,
+							passed or the request was wrong. HTTP status codes are standardized codes with various meanings. The server should always return the right status code.
+							<br><br>
+							<b>2xx (Success category)</b>:
+							<br>
+							<b>200 Ok:</b>  The standard HTTP response representing success for GET, PUT or POST.
+							<br>
+							<b>201 Created:</b>  This status code should be returned whenever the new instance is created.
+							<br>
+							<b>204 No Content:</b>  represents the request is successfully processed, but has not returned any content. DELETE can be a good example of this.
+							<br><br>
+							<b>3xx (Redirection Category)</b>:
+							<br>
+							<b>304 Not Modified</b> indicates that the client has the response already in its cache. And hence there is no need to transfer the same data again.
+							<br><br>
+							<b>4xx (Client Error Category)</b>:
+							<br>
+							<b>400 Bad Request</b> indicates that the request by the client was not processed, as the server could not understand what the client is asking for.
+							<br>
+							<b>401 Unauthorized</b> indicates that the client is not allowed to access resources, and should re-request with the required credentials.
+							<br>
+							<b>403 Forbidden</b> indicates that the request is valid and the client is authenticated, but the client is not allowed access the page or resource for any reason.
+							<br>
+							<b>404 Not Found</b> indicates that the requested resource is not available now.
+							<br>
+							<b>410 Gone</b> indicates that the requested resource is no longer available which has been intentionally moved.
+							<br><br>
+							<b>5xx (Server Error Category)</b>:
+							<br>
+							<b>500 Internal Server Error</b> indicates that the request is valid, but the server is totally confused.
+							<br>
+							<b>503 Service Unavailable</b> indicates that the server is down or unavailable to receive and process the request.
+						</p>
+
+						<h2>Resources</h2>
+						<a href="https://hackernoon.com/restful-api-designing-guidelines-the-best-practices-60e1d954e7c9">RESTful API Designing guidelines — The best practices</a>
+
+						<footer class="container-fluid text-center">
+							<a href="#DevOpsHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+						</footer>
+
+		    		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+
+            <div class="col-sm-2">
+
+            </div>
+        </div>
+    </div>
+
+	<footer class="container-fluid text-center">
+		<a href="#DevOpsHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+	</footer>
+</body>
+</html>

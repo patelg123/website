@@ -1,13 +1,68 @@
 GIT:
 
-Which Git workflow is right for you?
+
+
+
+
+
+
+
+
+
+https://www.atlassian.com/git/tutorials/comparing-workflows#centralized-workflow
+
+
+https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#ch02-git-basics-chapter
+
+
+https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
 
 https://datasift.github.io/gitflow/IntroducingGitFlow.html
 
-https://bitbucket.org/?utm_source=newsletter&utm_medium=email&utm_campaign=bitbucket_product-digest-nine&jobid=102814461&subid=1362093901
-
-https://hackernoon.com/12-cool-things-you-can-do-with-github-f3e0424cf2f0
 
 https://codeburst.io/trunk-based-development-vs-git-flow-a0212a6cae64
 
-https://medium.freecodecamp.org/how-to-find-trending-github-projects-using-githunt-in-chrome-cb2d2a8f2468
+
+
+
+
+Used:
+
+
+
+https://medium.freecodecamp.org/a-developers-introduction-to-github-1034fa55c0db
+
+
+
+https://codeburst.io/git-good-a-practical-introduction-to-git-and-github-in-git-we-trust-f18fa263ec48
+
+https://codeburst.io/git-good-part-a-e0d826286a2a
+
+
+
+http://tom.preston-werner.com/2009/05/19/the-git-parable.html
+
+http://eagain.net/articles/git-for-computer-scientists/
+https://stackoverflow.com/questions/1457103/how-are-git-tags-different-from-git-branches
+
+
+https://www.codeschool.com/learn/git
+
+https://try.github.io/levels/1/challenges/1
+
+https://git-scm.com/docs
+https://hackernoon.com/git-it-together-some-tips-on-commit-etiquette-and-best-practices-for-junior-developers-1f147b8dfd56
+
+
+
+-------------------------------------------
+
+Which Git workflow is right for you?
+
+
+
+
+
+
+https://codeburst.io/deploy-react-to-github-pages-to-create-an-amazing-website-42d8b09cd4d	
+https://medium.freecodecamp.org/how-to-find-trending-github-projects-using-githunt-in-chrome-cb2d2a8f2468	

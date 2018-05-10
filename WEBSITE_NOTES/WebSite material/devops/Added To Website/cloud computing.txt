@@ -1,0 +1,460 @@
+<h2>Cloud Computing</h2>
+
+
+<h3>IaaS (Infrastructure as a Service)</h3>
+
+
+With IaaS, pre-configured hardware resources are provided to users through a virtual interface.
+
+IaaS doesn’t include applications or even an operating system (implementing all of that is left up to the customer), it simply enables access to the infrastructure needed to power or support that software.
+
+<h3>PaaS (Platform as a Service)</h3>
+
+ a cloud service model where the cloud is used to deliver a platform to users from which they can develop, initialize and manage applications. PaaS offerings typically include a base operating system and a suite of applications and development tools. PaaS eliminates the need for organizations to build and maintain the infrastructure traditionally used to develop applications. 
+
+
+<h3>SaaS (Software as a Service)</h3>
+
+Sometimes referred to as ‘on-demand software’, SaaS is a software licensing and delivery model where a fully functional and complete software product is delivered to users over the web on a subscription basis.
+
+SaaS offerings are typically accessed by end users through a web browser (making the user’s operating system largely irrelevant) and can be billed based on consumption or, more simply, with a flat monthly charge.
+
+Popular products like Office365 and Salesforce have thrust SaaS offerings to the forefront of the workplace and are used by thousands of businesses every day.
+
+Cloud Computing means storing and accessing data and programs in ‘the cloud' which means a service provided by another company which is accessed over the Internet.
+
+<h2>Different Models of Cloud</h2>
+
+<h3>Infrastructure as a Service (IaaS)</h3>
+
+Provides access to computing resources in a virtualised environment i.e. the server is running in the service provider’s data centers, but is fully managed by the customer. 
+
+
+It provides computing infrastructure like virtual server space, network connections, bandwidth, load balancers and IP addresses. This includes the operating system (which can be any operating system), the applications running on this operating system and the data stored on the server.
+
+
+<h3>Platform as a Service (PaaS)</h3>
+
+
+In this service model a server is running in the service provider’s data center’s and fully managed and hosted by the service provider accessed by the users via internet. The customer however is managing the applications running on the server and for the data stored on the server. This service is hosted in the cloud and Platform as a service, is referred as PaaS, it provides a platform and environment to allow developers to build applications and services. This service is hosted in the cloud and accessed by the users via internet.
+
+<h3>Software as a Service (SaaS)</h3> 
+
+in this service model, all software is running in the provider’s data center and also managed by the service provider. SaaS or software as a service is a software distribution model in which applications are hosted by a vendor or service provider and made available to customers over a network (internet). For e.g. Microsoft 365 and Adobe CC Design
+
+
+
+
+
+<h1>Comparing cloud service and traditional on-premises infrastructure</h1>
+Imagine a scenario where a team is tasked to develop a new service for a global enterprise company that currently serves millions of consumers worldwide. Below is a comparison of building it on on-premises infrastructure and building it using cloud services.
+
+The new service must:
+
+<ul>
+<li>have the ability to scale to meet peak data demands</li>
+<li>provide resiliency in the event of a datacenter failure</li>
+<li>Ensure data is secure and protected</li>
+<li>Provide in-depth debugging for troubleshooting</li>
+<li>The project must be delivered quickly</li>
+<li>The service be cost-efficient to build and maintain</li>
+</ul>
+
+
+<h2>Scalability</h2>
+
+With on-premises infrastructure, the compute capacity needs to sized to match peak data demands. For applications and services that have a variable workload, it will leave you with a lot of excess and expensive compute capacity in times of low utilization, which can be seen as wasteful.Also there is the operational costs for supporting a rack of bare-metal servers for a single service.
+<br><br>
+
+
+With a cloud-based autoscaling solution, your application scales up and down in-line with demand. This means that you’re only paying for the compute resources that you consume.
+
+A well-architected cloud-based application enables the act of scaling up and down to be seamless?—?and automatic. The development team defines auto-scaling groups that spin up more instances of your application based on high-CPU utilization, or a large number of requests per second, and you can customize these rules to your heart’s content.
+
+<h2>Resiliency</h2>
+
+To meet basic resiliency criteria, hosting a service within a single datacentre is not an option.
+
+For an on-premises solution, this team would a minimum of two servers for local resiliency?—?replicated in a second data center for geographic redundancy. The development team will need to identify a load balancing solution that automatically redirects traffic between sites in the event of saturation or failure?—?and ensure that the mirror site is continually synchronized with the entire stack.
+
+
+Within each of their 50 regions worldwide, AWS provides multiple availability zones. Each zone consists of one of more fault-tolerant data centers?—?with automated failover capabilities that can seamlessly transition AWS services to other zones within the region.
+
+Defining your infrastructure as code within a CloudFormation template ensures your infrastructure resources remain consistent across the zones during autoscaling events?—?and the AWS load balancer service requires minimal effort to setup and manage the traffic flow.
+
+
+Secure and protect your data
+
+Security is be a fundamental requirement of any system being developed within an organization. You really don’t want to be one of the unfortunate companies dealing with fallout from a security breach.
+
+The Traditional Team
+The traditional team will incur the ongoing costs of ensuring that the bare-metal servers that’s running their services is secure. This means investing in a team that is trying to monitor, identify, and patch security threats across multiple vendor solutions from a variety of unique data sources.
+
+The Cloud Team
+Leveraging the public cloud does not exempt yourself from security. The cloud team still has to remain vigilant, but doesn’t have to worry about patching the underlying infrastructure. AWS actively works combat against zero-day exploits?—?most recently with Spectre and Meltdown.
+
+Leveraging the identify management and encryption security services from AWS allows the cloud team to focus on their application?—?and not the undifferentiated security management. The API calls to AWS services are fully audited using CloudTrail, which provides transparent monitoring.
+
+
+
+4?—?Monitoring and logging
+
+Every infrastructure and application service being deployed need to be closely monitored with aggregated realtime data. The teams should have access to dashboards that provide alerts when thresholds are exceeded, and offer the ability to leverage logs for event correlation for troubleshooting.
+
+The Traditional Team
+For traditional infrastructure, you will have to set up monitoring and alerting solutions across disparate vendors and snowflake solutions. Setting this up takes a hell of a lot of time?—?and effort and getting it right is incredibly difficult.
+
+For many applications deployed on-premises, you may find yourself searching through log files stored on your server’s file-system in order to make sense of why your application is crashing. A lot of time will be wasted as teams need to ssh into the server, navigate to the unique directory of log files, and then grep through potentially hundreds of files. Having done this for an application that was deployed across 60 servers?—?I can tell you that this isn’t a pretty solution.
+
+The Cloud Team
+Native AWS services such as CloudWatch and CloudTrail make monitoring cloud applications an absolute breeze. Without much setup, the development team can monitor a wide variety of different metrics for each of the deployed services?—?
+
+making the process of debugging issues an absolute dream.
+
+With traditional infrastructure, teams need build their own solution, and configure their REST API or service to push log files to an aggregator. Getting this ‘out-of-the-box’ is an insane improvement fo productivity.
+
+
+
+
+
+
+Introducing Amazon Web Services (AWS)
+
+
+
+AWS provides IT infrastructure and other services over the internet. It provides on-demand computing resources and services in the cloud, with pay-as-you-go pricing.
+
+
+AWS Products
+
+The following categories represent the core products of AWS.
+
+
+
+Compute and Networking Services [Details]
+
+    Amazon EC2 (Provides virtual servers in the AWS cloud)
+    Amazon VPC (Provides an isolated virtual network for your virtual servers)
+    Elastic Load Balancing (Distributes network traffic across your set of virtual servers)
+    Auto Scaling (Automatically scales your set of virtual servers based on changes in demand)
+    Amazon Route 53 (Routes traffic to your domain name to a resource, such as a virtual server or a load balancer)
+    AWS Lambda (Runs your code on virtual servers from Amazon EC2 in response to events)
+    Amazon ECS (Provides Docker containers on virtual servers from Amazon EC2)
+
+
+
+
+
+
+
+Storage and Content Delivery Services [Details]
+
+    Amazon S3 (Scalable storage in the AWS cloud)
+    CloudFront (A global content delivery network (CDN))
+    Amazon EBS (Network attached storage volumes for your virtual servers)
+    Amazon Glacier (Low-cost archival storage)
+
+Security and Identity Services [Details]
+
+    AWS Identity and Access Management (Manage user access to AWS resources through policies)
+    AWS Directory Service (Manage user access to AWS through your existing Microsoft Active Directory, or a directory you create in the AWS cloud)
+
+Database Services [Details]
+
+    Amazon RDS (Provides managed relational databases)
+    Amazon Redshift (A fast, fully-managed, petabyte-scale data warehouse)
+    Amazon DynamoDB (Provides managed NoSQL databases)
+    Amazon ElastiCache (An in-memory caching service)
+
+Analytics Services [Details]
+
+Amazon EMR (Amazon EMR) uses Hadoop, an open source framework, to manage and process data. Hadoop uses the MapReduce engine to distribute processing using a cluster.
+
+    Amazon EMR (You identify the data source, specify the number and type of EC2 instances for the cluster and what software should be on them, and provide a MapReduce program or run interactive queries)
+    AWS Data Pipeline (to regularly move and process data)
+    Amazon Kinesis (real-time processing of streaming data at a massive scale)
+    ?Amazon ML (use machine learning technology to obtain predictions for their applications using simple APIs. Amazon ML finds patterns in your existing data, creates machine learning models, and then uses those models to process new data and generate predictions) ?
+
+Application Services [Details]
+
+    Amazon AppStream (Host your streaming application in the AWS cloud and stream the input and output to your users’ devices)
+    Amazon CloudSearch (Add search to your website)
+    Amazon Elastic Transcoder (Convert digital media into the formats required by your users’ devices)
+    Amazon SES (Send email from the cloud)
+    Amazon SNS (Send or receive notifications from the cloud)
+    Amazon SQS (Enable components in your application to store data in a queue to be retrieved other components)
+    Amazon SWF (Coordinate tasks across the components of your application)
+
+Management Tools [Details]
+
+    Amazon CloudWatch (Monitor resources and applications)
+    AWS CloudFormation (Provision your AWS resources using templates)
+    AWS CloudTrail (Track the usage history for your AWS resources by logging AWS API calls)
+    AWS Config (View the current and previous configuration of your AWS resources, and monitor changes to your AWS resources)
+    AWS OpsWorks (Configure and manage the environment for your application, whether in the AWS cloud or your own data center)
+    AWS Service Catalog (Distribute servers, databases, websites, and applications to users using AWS resources)
+
+
+
+
+
+
+
+AWS can be accessed through:
+
+    AWS Management Console
+    AWS Command Line Interface (AWS CLI)
+    Command Line Tools
+    AWS Software Development Kits (SDK)
+    Query APIs
+
+There is a detailed guide on how to install and use each of these options in the documentation.
+
+As you can see it takes a while to get familiar with each tool to get into some sort of workflow.
+
+
+Keypoints on AWS
+
+    Elastic pay-per-use infrastructure
+    On demand resources
+    Scalability
+    Global infrastructure
+    Reduced time to market
+    Increased opportunities for innovation
+    Enhanced security
+
+
+
+
+
+AWS provides building blocks that you can assemble quickly to support any workload. With AWS, you’ll find a complete set of highly available services that are designed to work together to build scalable applications.
+
+
+
+
+
+
+
+<h1>Disadvantages of Cloud Computing</h1>
+
+
+
+<h2>Downtime</h2>
+
+
+This may be one of the worst disadvantages of cloud computing. No cloud provider, even the very best, would claim immunity to service outages. Cloud computing systems are internet based, which means your access is fully dependent on your Internet connection. And, like any hardware, cloud platforms themselves can fail for any one of a thousand reasons. Can your business absorb a prolonged bout of frequent outages or slowdowns? And don’t think it doesn’t happen. 2014 saw more than a few incidents where service providers like DropBox faced an outage for as long as two days. 
+
+----
+
+If your internet connection is running slowly, you can expect it to affect your work as well. The cloud requires internet connection to work and if your internet is down… that’s bad new for you to do work. You’ll need constant internet connection to be able to connect to your data in order to work. Even though cloud vendors take precaution to ensure network uptime, the risk of connectivity reliability will still be prevalent.
+
+---------
+While cloud service providers take many measures to prevent service outages, nobody can be 100% immune. Cloud computing is internet-based, so it can only be utilized with a solid internet connection. If the connection is disturbed or unavailable, the cloud cannot be accessed, leading to possible downtime. This is another reason why it is imperative to choose a reliable cloud services provider, because even if an outage occurs, you can be sure your provider will resolve the problem as soon as possible. With the right provider, cloud computing is still much more reliable and consistent than an in-house IT infrastructure.
+
+----------
+Certainly the smaller business will enjoy not having to deal with the daily technical issues and will prefer handing those to an established IT company, however you should keep in mind that all systems might face dysfunctions from time to time. Outage and downtime is possible even to the best cloud service providers, as the past has shown.
+
+Additionally, you should remember that the whole setup is dependent on internet access, thus any network or connectivity problems will render the setup useless. As a minor detail, also keep in mind that it might take several minutes for the cloud to detect a server fault and launch a new instance from an image snapshot.
+
+----------------
+
+Cloud computing makes your small business dependent on the reliability of your Internet connection. When it's offline, you're offline. If your internet service suffers from frequent outages or slow speeds, cloud computing may not be suitable for your business.
+
+Another thing to consider is how dependent your business would be on cloud reliability - even the most reliable cloud computing service providers suffer server outages now and again.
+
+As described in CRN's The Biggest Cloud Outages of 2015 on May 20th, 2015 Apple iCloud had a seven-hour outage that affected email and various other cloud services such as iCloud Drive, Documents, etc. Can your business function in the event of a prolonged outage of your cloud services?
+
+----------------
+
+As cloud service providers take care of a number of clients each day, they can become overwhelmed and may even come up against technical outages. This can lead to your business processes being temporarily suspended. Additionally, if your internet connection is offline, you will not be able to access any of your applications, server or data from the cloud.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>Security and Privacy</h2>
+By using cloud-based services, a company is essentially 'outsourcing' its data so trusting the provider to effectively manage and saeguard thier data. It is therefore essential that a trusted, experienced and reliable provider with a proven track record is chosen.
+------
+Let’s face it – you’ll be accessing all your data through the internet. Nothing connected through the internet is completely and perfectly secured – you could face security breaches and potential hacking from unauthorized users. If an unauthorized user does gain access to your credentials, they may monitor your activities and influence data. You are more vulnerable to any potential attack. Of course, your cloud vendors will monitor and regulate their security to take protective measures of your data at all times.
+------
+Security often tops the list of business owners’ main concerns about switching over to the cloud. By leveraging remote cloud-based services, a company is essentially outsourcing their data, so they are trusting their provider to effectively manage and safeguard their data. When considering a cloud services provider, it is essential to select a trusted, experienced and reliable provider with a proven track record. Many cloud experts believe that trusted cloud data centers, such as Amazon Web, have better security than an in-house data center, so security is really contingent upon the reliability of the provider. Users can also choose from public, private or hybrid offerings, depending on their security needs, which is another important factor to consider in order to optimize security.
+------
+Security is the biggest concern when it comes to cloud computing. By leveraging a remote cloud based infrastructure, a company essentially gives away private data and information, things that might be sensitive and confidential. It is then up to the cloud service provider to manage, protect and retain them, thus the provider’s reliability is very critical. A company’s existence might be put in jeopardy, so all possible alternatives should be explored before a decision. On the same note, even end users might feel uncomfortable surrendering their data to a third party.
+
+Similarly, privacy in the cloud is another huge issue. Companies and users have to trust their cloud service vendors that they will protect their data from unauthorized users. The various stories of data loss and password leakage in the media does not help to reassure some of the most concerned users.
+------------
+
+How safe is your data? Cloud computing means internet computing. So you should not be using cloud computing applications that involve using or storing data that you are not comfortable having on the internet.
+
+Established cloud computing vendors have gone to great lengths to promote the idea that they have the latest, most sophisticated data security systems possible as they want your business and realize that data security is a big concern; however, their credibility in this regard has suffered greatly in the wake of ?NSA snooping scandals.
+
+Keep in mind also that your cloud data is accessible from anywhere on the internet, meaning that if a data breach occurs via hacking, a disgruntled employee, or careless username/password security, your business data can be compromised.
+
+And more data breaches are happening to more supposedly secure companies all the time. You would think that the IRS, for instance, would have one of the most secure systems of all, but even they experienced an IRS data breach in 2015.
+
+But switching to the cloud can actually improve security for a small business, says Michael Redding, managing director of Accenture Technology Labs. "Because large cloud computing companies have more resources, he says, they are often able to offer levels of security an average small business may not be able to afford to implement on its own servers" (Outsource IT Headaches to the Cloud (The Globe and Mail).
+
+As a small business owner, you have to decide if the levels of security a cloud computing company provides offset the potential security disadvantages of cloud computing.
+---------------
+Although cloud service providers implement the best security standards and industry certifications, storing data and important files on external service providers always opens up risks. Using cloud-powered technologies means you need to provide your service provider with access to important business data. Meanwhile, being a public service opens up cloud service providers to security challenges on a routine basis. The ease in procuring and accessing cloud services can also give nefarious users the ability to scan, identify and exploit loopholes and vulnerabilities within a system. For instance, in a multi-tenant cloud architecture where multiple users are hosted on the same server, a hacker might try to break into the data of other users hosted and stored on the same server. However, such exploits and loopholes are not likely to surface, and the likelihood of a compromise is not great.
+
+
+
+<h2>Vulnerability to attack</h2>
+
+In cloud computing, every component is potentially accessible from the Internet. Of course, nothing connected to the Internet is perfectly secure and even the best teams suffer severe attacks and security breeches. But since cloud computing is built as a public service and it’s easy to run before you learn to walk. No one at AWS checks your administration skills before granting you an account: all it takes to get started is a valid credit card.
+----------
+Related to the security and privacy mentioned before, note that cloud based solutions are exposed on the public internet and are thus a more vulnerable target for malicious users and hackers. Nothing on the Internet is completely secure and even the biggest players suffer from serious attacks and security breaches. Due to the interdependency of the system, If there is a compromise one one of the machines that data is stored, there might be a leakage of personal information to the world.
+------
+Let’s face it – you’ll be accessing all your data through the internet. Nothing connected through the internet is completely and perfectly secured – you could face security breaches and potential hacking from unauthorized users. If an  
+unauthorized user does gain access to your credentials, they may monitor your activities and influence data. You are more vulnerable to any potential attack. Of course, your cloud vendors will monitor and regulate their security to take  
+protective measures of your data at all times.
+
+
+
+
+<h2>Limited control and flexibility</h2>
+
+
+To varying degrees, depending on the particular service, 
+--------
+Limited control is generally not a huge issue with cloud services, but it is another potentially negative aspect of cloud computing that should be taken into account. When a business moves over to the cloud, users have limited control over the function of their hosting infrastructure. They are still able to control and manage applications, data and services, but not the back-end infrastructure – a big change for companies accustomed to a traditional IT system. Some businesses see this as a benefit of cloud computing, however, since this frees up the IT department to focus on other projects.
+--------
+Since the applications and services run on remote, third party virtual environments, companies and users have limited control over the function and execution of the hardware and software. Moreover, since remote software is being used, it usually lacks the features of an application running locally.
+------------
+
+Since the cloud infrastructure is entirely owned, managed and monitored by the service provider, it transfers minimal control over to the customer. The customer can only control and manage the applications, data and services operated on top of that, not the backend infrastructure itself. Key administrative tasks such as server shell access, updating and firmware management may not be passed to the customer or end user.
+
+It is easy to see how the advantages of cloud computing easily outweigh the drawbacks. Decreased costs, reduced downtime, and less management effort are benefits that speak for themselves.
+
+
+
+<h3>Vendor Lock-in</h3>
+
+Deep-rooted differences between vendor systems can sometimes make it impossible to migrate from one cloud platform to another. Not only can it be complex and expensive to reconfigure your applications to meet the requirements of a new host, but migration could also expose your data to additional security and privacy vulnerabilities.
+-------------
+One of the major disadvantages of cloud computing is the implicit dependency on the provider. This is what the industry calls “vendor lock-in” since it is difficult, and sometimes impossible, to migrate from a provider once you have rolled with him. If a user wishes to switch to some other provider, then it can be really painful and cumbersome to transfer huge data from the old provider to the new one. This is another reason why you should carefully and thoroughly contemplate all options when picking a vendor.
+-----------
+The inflexibility of some cloud apps can be another serious disadvantage of cloud computing. Be careful when you're choosing a cloud computing vendor that you're not going to become a "forever" customer because their applications and/or data formats do not allow easy transfer/conversion of information into other systems.
+
+Just ask someone who has gone through the painful process of migrating from one accounting package to another. As an even simpler example, you can't insert a document created in another application into a Google Docs spreadsheet. 
+
+Some vendors deliberately attempt to "lock-in" customers by using proprietary software/hardware, so that it is impossible or very expensive to switch to another cloud vendor.
+
+If you are considering a move to the cloud, make sure that your cloud vendor contract stipulates that you retain ownership of your data and that the vendor offerings conform to current standards.
+
+Also, make sure that you can easily (and inexpensively) add and subtract cloud computing users and data storage as necessary as your business grows or contracts. 
+----------
+Although cloud service providers promise that the cloud will be flexible to use and integrate, switching cloud services is something that hasn’t yet completely evolved. Organizations may find it difficult to migrate their services from one vendor to another. Hosting and integrating current cloud applications on another platform may throw up interoperability and support issues. For instance, applications developed on Microsoft Development Framework (.Net) might not work properly on the Linux platform.
+
+
+
+<h2>Costs</h2>
+
+Cloud computing – especially on a small scale and for short term projects – can be pricey. Though it can allow you to reduce staff and hardware costs, the overall price tag could end up higher than you expected. Until you’re sure of what will work best for you, it’s a good idea to experiment with a variety of offerings. You might also make use of the cost calculators made available by providers like Amazon’s AWS and Google’s GCP.
+-------
+Although we previously mentioned cost as an advantage of cloud computing, it can also be a disadvantage. For a small to medium size business, cloud computing could be a lot cheaper to have than having in-house servers. However, if your business is very large such as on corporate level, the benefits of cloud computing dwindles as the cost skyrockets. Be sure to analyze the cost for both an in-house server and the cloud before making a decision for your business.
+
+---------
+
+At first glance, a cloud computing application may appear to be a lot cheaper than a particular software solution installed and run in-house, but you need to be sure you're comparing apples and apples.
+
+Yes, cloud applications (also known as Software as Service applications or Saas) do not require large capital investment for licenses or support infrastructure, but does the cloud application have all the features that the software does and if not, are the missing features important to you?
+
+Having to customize your cloud-based software to suit your needs can add greatly to the cost. If you use custom-developed in-house software, it may not be possible to move it to the cloud without an expensive re-write - definitely a disadvantage. To be sure you're saving money, you have to look closely at the pricing plans and details for each application, taking into account possible future expansion.
+
+For example, the president of a non-profit organization that recently switched to a cloud-based membership application found that when their membership numbers recently exceeded the limits on their contract the price to go to the next tier was nearly double. Like cell phone plans, the devil can be in the details with cloud service contracts.
+
+If you don't need the most up-to-date versions of software every year, desktop software can be cheaper in the long run.
+
+For instance, if you purchase the desktop version of Microsoft Office 2016 and use it for several years, you pay a one-time fee and own the software forever versus having to pay an annual fee for using the cloud-based version, Office 365.
+
+Other types of business applications such as accounting and tax preparation software require annual updates and are ideally suited to the cloud.
+
+
+If your business involves transferring large amounts of data, be aware that while transferring data to the cloud (inbound) is free, outbound data transfers over the basic monthly allowance are charged on a per GB basis.
+
+If your business requirements will include regularly downloading large amounts of data from your cloud applications or data storage, the additional costs can add up. (See, for example, Microsoft Azure data transfer pricing.)
+
+Fortunately, cloud computing is a very competitive business and costs are generally decreasing, so check current pricing.
+
+
+
+
+
+
+
+
+
+USED:
+
+https://cloudacademy.com/blog/disadvantages-of-cloud-computing/
+http://www.squeezetech.com/cloud-computing-disadvantages/
+https://www.gflesch.com/blog/3-pros-and-cons-of-cloud-computing
+https://www.javacodegeeks.com/2013/04/advantages-and-disadvantages-of-cloud-computing-cloud-computing-pros-and-cons.html
+https://www.thebalancesmb.com/disadvantages-of-cloud-computing-4067218
+https://www.levelcloud.net/why-levelcloud/cloud-education-center/advantages-and-disadvantages-of-cloud-computing/
+
+
+
+
+
+
+
+NOT USED:
+
+
+
+
+
+
+
+
+NOT USED:
+https://medium.com/@2ma2ez/the-pros-cons-of-cloud-computing-17bc7c5bb98b
+
+
+
+
+
+
+
+https://www.thebalancesmb.com/why-cloud-computing-is-ideal-for-small-businesses-2948273
+
+
+
+
+
+
+
+
+
+
+
+
+https://medium.com/@vickynimbalkar/cloud-computing-for-beginners-ceb417658912?source=emailShare-91bfcdd30742-1524433253
+
+
+
+https://medium.com/of-all-things-tech-progress/introducing-amazon-web-services-aws-72c12547b9ff?source=emailShare-91bfcdd30742-1524433191
+
+
+
+
+https://read.acloud.guru/the-true-cost-of-cloud-a-comparison-of-two-development-teams-edc77d3dc6dc?source=emailShare-91bfcdd30742-1524433342
+
+
+
+https://medium.com/@Unfoldlabs/8-trends-in-cloud-computing-for-2018-d893be2d8989?source=emailShare-91bfcdd30742-1524433271
