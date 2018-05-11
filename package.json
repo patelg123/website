@@ -1,0 +1,23 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "website",
+  "main": "index.html",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patelg123/website.git"
+  },
+  "author": "Girish Patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patelg123/website/issues"
+  },
+  "homepage": "https://github.com/patelg123/website#readme"
+}

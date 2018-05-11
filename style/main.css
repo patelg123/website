@@ -1,5 +1,6 @@
 :root {
-  --header-font-style: "Consolas"
+  --header-font-style: "Consolas";
+  --header-text-color:  "silver"";
 }
 
 
@@ -22,18 +23,18 @@ img {
 
 h1 {
     font: 30px var(--header-font-style);
-    color: #565254;
+    color: var(--header-text-color);
     text-transform: uppercase;
 }
 
 h2 {
     font: 25px var(--header-font-style);
-    color: #565254;
+    color: var(--header-text-color);
 }
 
 h3 {
     font: 20px var(--header-font-style);
-    color: #565254;
+    color: var(--header-text-color);
 }
 
 p{
@@ -123,7 +124,7 @@ a:hover {
 }
 
 .vertical-menu a:hover {
-    background-color: #DCDCDC; /* Dark grey background on mouse-over */
+    background-color: "#DCDCDC"; /* Dark grey background on mouse-over */
 }
 
 .affix {
