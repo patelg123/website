@@ -1,6 +1,6 @@
 :root {
   --header-font-style: "Consolas";
-  --header-text-color:  "silver"";
+  --header-text-color:  "silver";
 }
 
 
@@ -124,7 +124,7 @@ a:hover {
 }
 
 .vertical-menu a:hover {
-    background-color: "#DCDCDC"; /* Dark grey background on mouse-over */
+    background-color: #DCDCDC; /* Dark grey background on mouse-over */
 }
 
 .affix {
