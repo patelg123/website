@@ -1,0 +1,63 @@
+
+
+
+
+
+
+<h1>HTTP request in JavaScript</h1>
+
+
+
+jQuery has many methods to easily handle HTTP requests.
+
+<h2>$.ajax</h2>
+
+
+jQuery Ajax is one of the simplest methods to make an HTTP call.
+
+<img src='images/jquery_ajax.png'>
+
+
+
+The $.ajax method takes many parameters, some of which are required and others optional. It contains two callback options <b>success</b> and <b>error</b> to handle the response received.
+
+
+<h2>$.get method</h2>
+
+The $.get method is used to execute GET requests. It takes two parameters: the endpoint and a callback function.
+
+<img src='images/jquery_get.png'>
+
+
+<h2>$.post</h2>
+
+The $.post method is another way to post data to the server. It take three parameters: the url, the data you want to post, and a callback function.
+
+
+<img src='images/jquery_post.png'>
+
+<h2>$.getJSON</h2>
+The $.getJSON method only retrieves data that is in JSON format. It takes two parameters: the url and a callback function.
+
+
+
+jQuery has all these methods to request for or post data to a remote server. But you can actually put all these methods into one: the $.ajax method, as seen in the example below:
+
+
+<img src='images/jquery_ajax_get_post.png'>
+
+
+
+<h2>fetch</h2>
+
+
+fetch is a new powerful web API that lets you make asynchronous requests. In fact, fetch is one of the best and my favorite way to make an HTTP request. It returns a “Promise” which is one of the great features of ES6. If you are not familiar with ES6, you can read about it in this article. Promises allow us to handle the asynchronous request in a smarter way. Let’s take a look at how fetch technically works.
+
+The fetch function takes one required parameter: the endpoint URL. It also has other optional parameters as in the example below:
+
+
+<img src='images/fetch.png'>
+
+
+
+https://medium.freecodecamp.org/here-is-the-most-popular-ways-to-make-an-http-request-in-javascript-954ce8c95aaa

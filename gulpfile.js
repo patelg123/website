@@ -5,7 +5,7 @@ var autoprefixer    = require('gulp-autoprefixer');
 var csso            = require('gulp-csso');
 var rename          = require('gulp-rename');
 var watch           = require('gulp-watch');
-
+var runSequence     = require('run-sequence');
 
 // Set the browser that you want to support
 const AUTOPREFIXER_BROWSERS = [
@@ -50,4 +50,11 @@ gulp.task('watch', function() {
     gulp.watch('*html', ['copy_html'])
 });
 
-gulp.task('default', ['minify_css', 'copy_html', 'watch', 'copy_imgs']);
+gulp.task('default',  function () {
+  runSequence(
+      'minify_css',
+      'copy_html',
+      'copy_imgs',
+      'watch'
+  );
+});
