@@ -1,0 +1,15 @@
+Enhance the Deployment Process
+
+NPM offers an option which allows to only install app dependencies required for production environment. Use one of the following commands to skip the devDependencies in your package.json.
+
+npm install --production  
+
+or
+
+NODE_ENV=production npm install  
+
+Both options will do the job for you. The first one passes the --production flag to NPM. The second sets the node environment variable NODE_ENV to production. NPM recognizes this variable and considers it before executing the npm install command.
+
+Additionally, you can reduce the log levels to just show warnings:
+
+npm install --loglevel warn  
