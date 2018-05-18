@@ -1,6 +1,7 @@
 :root {
   --header-font-style: "Consolas";
   --header-text-color:  "silver";
+  --header-text-weight: bold;
 }
 
 body {
@@ -23,16 +24,19 @@ h1 {
     font: 30px var(--header-font-style);
     color: var(--header-text-color);
     text-transform: uppercase;
+    font-weight: var(--header-text-weight)!important;
 }
 
 h2 {
     font: 25px var(--header-font-style);
     color: var(--header-text-color);
+    font-weight: var(--header-text-weight)!important;
 }
 
 h3 {
     font: 20px var(--header-font-style);
     color: var(--header-text-color);
+    font-weight: var(--header-text-weight)!important;
 }
 
 p {
@@ -81,7 +85,7 @@ a:hover {
     z-index: 9999;
     border: 0;
     font-family: var(--header-font-style);
-    font-size: 14px !important;
+    font-size: 16px !important;
     line-height: 1.42857143 !important;
     letter-spacing: 4px;
     border-radius: 0;
@@ -94,7 +98,7 @@ a:hover {
 }
 
 .navbar-right {
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .navbar li a, .navbar .navbar-brand {
