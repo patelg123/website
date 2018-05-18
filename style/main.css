@@ -57,12 +57,13 @@ a:hover {
 .jumbotron{
     background-color: #DCDCDC;
     color: #000000;
-    padding: 100px 25px;
+    font-size: 40px !important;
+    padding: 15px 25px;
 }
 
 
 .container-fluid {
-	padding: 60px 50px;
+	padding: 15px 15px;
 }
 
 
@@ -87,11 +88,14 @@ a:hover {
 }
 
 .navbar-title {
-    font-size: 20px !important;
+    font-size: 30px !important;
     font-weight: bold;
     text-align: center;
 }
 
+.navbar-right {
+    font-weight: 700;
+}
 
 .navbar li a, .navbar .navbar-brand {
     color: #000000 !important;
