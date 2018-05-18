@@ -1,10 +1,16 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const http = require("http");
 
 // Make the distribution directory available to public
 app.use(express.static(__dirname + '/dist'));
 
+
+//default to the index page
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/dist/index.html'));
+});
 
 //get index page
 app.get('/index.html', function(req, res) {
@@ -37,10 +43,7 @@ app.get('/backend.html', function(req, res) {
 });
 
 
-//default to the index page
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/dist/index.html'));
-});
+
 
 
 app.listen(8080, () => console.log('Example app listening on port 8080!'))
