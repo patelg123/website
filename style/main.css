@@ -89,6 +89,7 @@ a:hover {
     line-height: 1.42857143 !important;
     letter-spacing: 4px;
     border-radius: 0;
+    text-transform: uppercase;
 }
 
 .navbar-title {
