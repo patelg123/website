@@ -13,3 +13,8 @@ Both options will do the job for you. The first one passes the --production flag
 Additionally, you can reduce the log levels to just show warnings:
 
 npm install --loglevel warn  
+
+
+
+
+
