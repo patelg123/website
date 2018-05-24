@@ -1,11 +1,13 @@
 :root {
+    /*--header-font-style: "Consolas";*/
   --header-font-style: "Consolas";
   --header-text-color:  "silver";
   --header-text-weight: bold;
+  --body-font-style: "Consolas";
 }
 
 body {
- font-family: var(--header-font-style);
+ font-family: var(--body-font-style);
  font-size: 18px;
  line-height: 1.5;
  color: #3b3a3a;
@@ -17,6 +19,7 @@ body {
 img {
     max-width: 100%;
     height: auto;
+    vertical-align: middle;
     width: auto\9; /* ie8 */
 }
 
@@ -53,6 +56,13 @@ a:hover {
  color: #000;
 }
 
+pre code {
+  white-space: pre;
+  overflow-x: auto;
+  display: inline-block;
+  min-width: 100%;
+}
+
 .highlight {
     background-color: #fff2ac;
     background-image: linear-gradient(to right, #ffe359 0%, #fff2ac 100%);
@@ -86,30 +96,40 @@ a:hover {
     border: 0;
     font-family: var(--header-font-style);
     font-size: 16px !important;
+    font-weight: bold;
+    color: #000000 !important;
     line-height: 1.42857143 !important;
     letter-spacing: 4px;
     border-radius: 0;
-    text-transform: uppercase;
+    padding: 3px 3px;
 }
 
-.navbar-title {
-    font-size: 20px !important;
-    font-weight: bold;
-    text-align: left;
-    vertical-align: bottom;
+/*
+.navbar-header {
     padding: 15px 15px;
 }
+*/
 
-.navbar-right {
+.navbar-logotext {
+    font-size: 12px !important;
     font-weight: bold;
+    bottom: 0;
+    top: 3px;
+    right:17px;
+    color: whitesmoke;
+    white-space: nowrap;
+}
+
+.navbar-logoimg {
+    float: left;
 }
 
 .navbar li a, .navbar .navbar-brand {
+    text-transform: uppercase;
     color: #000000 !important;
 }
 
 .navbar-nav li a:hover, .navbar-nav li.active a {
-    color: #000000 !important;
     background-color: #fff !important;
 }
 
@@ -122,12 +142,16 @@ a:hover {
     background-color: black;
 }
 
-
 .vertical-menu {
     font-size: 20px;
     text-align: left;
     font-weight: bold;
     color: black;
+    padding: 5px;
+}
+
+.vertical-menu-title {
+    padding: 5px;
 }
 
 .vertical-menu a {
@@ -136,7 +160,6 @@ a:hover {
     display: block; /* Make the links appear below each other */
     padding: 5px; /* Add some padding */
     text-decoration: none; /* Remove underline from links */
-    text-align: left;
     border-bottom: 1px solid gainsboro;
 }
 
