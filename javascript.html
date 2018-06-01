@@ -1211,7 +1211,7 @@ console.log(a); // {leicester_population: 350000, leicester_county: 'South Yorks
                     </p>
 
                     <p>
-                        JavaScript's "classes" aren't like classes in languages like Java pr Python. In these class based languages you create classes which are templates for objects.
+                        JavaScript's "classes" aren't like classes in languages like Java or Python. In these class based languages you create classes which are templates for objects.
                         <br /><br />
                         When you want a new object, you instantiate the class, which tells the language engine to copy the methods and properties of the class into a new entity, called an instance.
                         The instance is your object, and, after instantiation, has absolutely no active relation with the parent class.
@@ -1254,21 +1254,21 @@ chicken_breast.print(); // 'Chicken Breast | 26g P :: 0g C :: 3.5g F'
                     <h3>Same thing using Constructor Function</h3>
 
                     <pre>
+"use strict";
+
 function Food(name, protein, carbs, fat) {
     this.name = name;
     this.protein = protein;
     this.carbs = carbs;
     this.fat = fat;
-}
-
-Food.prototype.toString = function toString () {
-    return `${this.name} | ${this.protein}g P :: ${this.carbs}g C :: ${this.fat}g F`
+    this.toString = function () {
+        return `${this.name} | ${this.protein}g P :: ${this.carbs}g C :: ${this.fat}g F`
+    };
 }
 
 Food.prototype.print = function print() {
     console.log( this.toString() );
 }
-
 
 const chicken_breast = new Food('Chicken Breast', 26, 0, 3.5);
 
@@ -1324,15 +1324,16 @@ fat_free_yogurt.print(); // 'Greek Yogurt | 26g P :: 16g C :: 0g F
                     <h3>The same thing pre ES6</h3>
 
                     <pre>
+"use strict";
+
 function Food(name, protein, carbs, fat) {
     this.name = name;
     this.protein = protein;
     this.carbs = carbs;
     this.fat = fat;
-}
-
-Food.prototype.toString = function toString () {
-    return `${this.name} | ${this.protein}g P :: ${this.carbs}g C :: ${this.fat}g F`
+    this.toString = function () {
+        return `${this.name} | ${this.protein}g P :: ${this.carbs}g C :: ${this.fat}g F`
+    };
 }
 
 Food.prototype.print = function print() {
@@ -1340,10 +1341,11 @@ Food.prototype.print = function print() {
 
 }
 
-function FatFreeFood (name, protein, carbs, fat) {
-    Food.call(this, name, protein, carbs, fat);
+function FatFreeFood (name, protein, carbs) {
+    Food.call(this, name, protein, carbs, 0);
 }
 
+// set FatFreeFood's prototype to Food's proptype
 FatFreeFood.prototype = Object.create(Food.prototype);
 
 FatFreeFood.prototype.print_message = function print_message() {
@@ -1356,6 +1358,9 @@ fat_free_yogurt.print_message(); // 'Greek Yogurt | 26g P :: 16g C :: 0g F
 //  Would you look at that -- Greek Yogurt has no fat!'
 
                     </pre>
+
+                    <h2>Resources</h2>
+                    <a href="https://scotch.io/tutorials/better-javascript-with-es6-pt-ii-a-deep-dive-into-classes">A Deep Dive into Classes</a>
 
                     <footer class="container-fluid text-center">
                         <a href="#JavaScriptHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
