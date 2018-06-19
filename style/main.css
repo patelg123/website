@@ -3,7 +3,8 @@
   --header-font-style: "Consolas";
   --header-text-color:  "silver";
   --header-text-weight: bold;
-  --body-font-style: "Consolas";
+  --body-font-style: "Georgia";
+  --vertical-menu-style: "Georgia";
 }
 
 body {
@@ -14,7 +15,51 @@ body {
  font-weight: 300;
  margin: 0;
  padding: 0;
+ /*background-image: url("../images/circles-light.png");*/
+
 }
+
+a {
+ color: #428bca;
+ text-decoration: none;
+}
+
+a:hover {
+ color: #000;
+ text-decoration: none;
+}
+
+
+
+.section-title {
+    font: 25px "Georgia";
+    font-weight: bold;
+    padding: 15px 25px;
+    color: white;
+    background-color: #008B8B;
+    text-align: center;
+}
+
+.section-title a {
+  color: white;
+}
+
+.section-buttons {
+  font: 20px "Georgia";
+  font-weight: bold !important;
+  font-style: italic !important;
+  padding: 15px 25px;
+  color: black;
+  background-color: transparent;
+  border-color: black;
+}
+
+
+
+.thumbnail  a:hover {
+  color: white;
+}
+
 
 img {
     max-width: 100%;
@@ -47,14 +92,7 @@ p {
     margin: 5px 0;
 }
 
-a {
- color: #428bca;
- text-decoration: none;
-}
 
-a:hover {
- color: #000;
-}
 
 pre code {
   white-space: pre;
@@ -68,18 +106,9 @@ pre code {
     background-image: linear-gradient(to right, #ffe359 0%, #fff2ac 100%);
 }
 
-.jumbotron{
-    background-color: #DCDCDC;
-    color: #000000;
-    font-size: 40px !important;
-    padding: 15px 25px;
-}
-
-
 .container-fluid {
 	padding: 15px 15px;
 }
-
 
 .bg-grey {
     background-color: #f6f6f6;
@@ -91,13 +120,12 @@ pre code {
 
 .navbar {
     margin-bottom: 0;
-    background-color: silver;
+    background-color: white;
     z-index: 9999;
     border: 0;
     font-family: var(--header-font-style);
-    font-size: 16px !important;
+    font-size: 18px !important;
     font-weight: bold;
-    color: #000000 !important;
     line-height: 1.42857143 !important;
     letter-spacing: 4px;
     border-radius: 0;
@@ -126,11 +154,12 @@ pre code {
 
 .navbar li a, .navbar .navbar-brand {
     text-transform: uppercase;
-    color: #000000 !important;
+    color: #008B8B !important;
 }
 
 .navbar-nav li a:hover, .navbar-nav li.active a {
     background-color: #fff !important;
+    color: red !important;
 }
 
 .navbar-default .navbar-toggle {
@@ -139,11 +168,16 @@ pre code {
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: black;
+    background-color: #008B8B;
+}
+
+.navbar-collapse {
+    text-align: center;
 }
 
 .vertical-menu {
     font-size: 20px;
+    font-family: var(--vertical-menu-style);
     text-align: left;
     font-weight: bold;
     color: black;
