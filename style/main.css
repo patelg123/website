@@ -15,8 +15,8 @@ body {
  font-weight: 300;
  margin: 0;
  padding: 0;
- /*background-image: url("../images/circles-light.png");*/
-
+ background-color: #F0F0F0;
+ /*background-image: url("../images/circles-light.png"); */
 }
 
 a {
@@ -28,38 +28,6 @@ a:hover {
  color: #000;
  text-decoration: none;
 }
-
-
-
-.section-title {
-    font: 25px "Georgia";
-    font-weight: bold;
-    padding: 15px 25px;
-    color: white;
-    background-color: #008B8B;
-    text-align: center;
-}
-
-.section-title a {
-  color: white;
-}
-
-.section-buttons {
-  font: 20px "Georgia";
-  font-weight: bold !important;
-  font-style: italic !important;
-  padding: 15px 25px;
-  color: black;
-  background-color: transparent;
-  border-color: black;
-}
-
-
-
-.thumbnail  a:hover {
-  color: white;
-}
-
 
 img {
     max-width: 100%;
@@ -92,8 +60,6 @@ p {
     margin: 5px 0;
 }
 
-
-
 pre code {
   white-space: pre;
   overflow-x: auto;
@@ -101,51 +67,42 @@ pre code {
   min-width: 100%;
 }
 
-.highlight {
-    background-color: #fff2ac;
-    background-image: linear-gradient(to right, #ffe359 0%, #fff2ac 100%);
+.section-title {
+    font: 23px "Georgia";
+    font-weight: 400;
+    padding: 15px 25px;
+    color: white;
+    background-color: #008B8B;
+    text-align: center;
+}
+
+
+.section-buttons {
+  font: 20px "Georgia";
+  font-weight: bold !important;
+  font-style: italic !important;
+  padding: 15px 25px;
+  color: black;
+  background: linear-gradient(white, silver);
+  border-color: black;
 }
 
 .container-fluid {
 	padding: 15px 15px;
 }
 
-.bg-grey {
-    background-color: #f6f6f6;
-}
-
-.bg-lblue {
-    background-color: #EAF2F8;
-}
-
 .navbar {
     margin-bottom: 0;
-    background-color: white;
+    background: linear-gradient(white, #D3D3D3);
     z-index: 9999;
     border: 0;
     font-family: var(--header-font-style);
     font-size: 18px !important;
-    font-weight: bold;
+    font-weight: 900;
     line-height: 1.42857143 !important;
     letter-spacing: 4px;
     border-radius: 0;
     padding: 3px 3px;
-}
-
-/*
-.navbar-header {
-    padding: 15px 15px;
-}
-*/
-
-.navbar-logotext {
-    font-size: 12px !important;
-    font-weight: bold;
-    bottom: 0;
-    top: 3px;
-    right:17px;
-    color: whitesmoke;
-    white-space: nowrap;
 }
 
 .navbar-logoimg {
@@ -163,12 +120,20 @@ pre code {
 }
 
 .navbar-default .navbar-toggle {
-    border-color: transparent;
     color: #000000 !important;
+    border: 0;
 }
+
+/*
+.collapsed{
+  background-color: transparent;
+}
+*/
 
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #008B8B;
+    height: 4px;
+    border: 0;
 }
 
 .navbar-collapse {
@@ -196,12 +161,6 @@ pre code {
     text-decoration: none; /* Remove underline from links */
     border-bottom: 1px solid gainsboro;
 }
-
-.zebra a:nth-child(odd)
-{
-    background-color: gainsboro;
-}
-
 
 .vertical-menu a:hover {
     background-color: #DCDCDC; /* Dark grey background on mouse-over */
