@@ -15,7 +15,7 @@ body {
  font-weight: 300;
  margin: 0;
  padding: 0;
- background-color: #F0F0F0;
+ background-color: #F5F5F5;
  /*background-image: url("../images/circles-light.png"); */
 }
 
@@ -60,6 +60,10 @@ p {
     margin: 5px 0;
 }
 
+li {
+  padding-top: 10px;
+}
+
 pre code {
   white-space: pre;
   overflow-x: auto;
@@ -79,12 +83,12 @@ pre code {
 
 .section-buttons {
   font: 20px "Georgia";
-  font-weight: bold !important;
-  font-style: italic !important;
+  font-weight: bold;
+  font-style: italic;
   padding: 15px 25px;
-  color: black;
   background: linear-gradient(white, silver);
   border-color: black;
+  color: black;
 }
 
 .container-fluid {
@@ -93,7 +97,7 @@ pre code {
 
 .navbar {
     margin-bottom: 0;
-    background: linear-gradient(white, #D3D3D3);
+    background: linear-gradient(white, #F5F5F5);
     z-index: 9999;
     border: 0;
     font-family: var(--header-font-style);

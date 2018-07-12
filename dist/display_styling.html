@@ -28,7 +28,7 @@
             <div class="navbar-collapse collapse">
                 <ul id="nav-main" class="nav navbar-nav navbar-left">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about_me.html">Author</a></li>
+                    <li><a href="author.html">Author</a></li>
                     <li><a href="javascript.html">JavaScript</a></li>
                     <li><a href="display_styling.html">Display</a></li>
                     <li><a href="devops.html">DevOps</a></li>
@@ -54,7 +54,9 @@
                     Contents
                     <a href="#css_box_model">CSS Box Model</a>
                     <a href="#lessjs">Less.js</a>
+                    <a href="#bem">Block Element Modifier (BEM)</a>
                     <a href="#postcss">PostCSS</a>
+                    <a href="#user_interface_interaction">User Interface And Interaction Design</a>
                     <a href="#website_accessibilty">Website Accessibilty</a>
                     <a href="#cross_browser_testing">Cross Browser Testing</a>
                 </div>
@@ -468,6 +470,85 @@ ul, ol { color: #333; text-transform: uppercase; }
                 </div>
 
 
+
+
+
+
+
+
+
+
+                <div id="bem">
+                    <h1>Block Element Modifier (BEM)</h1>
+                    <p>
+                      The Block, Element, Modifier methodology also known as BEM is a popular methodology for naming classes in HTML and CSS.
+                      In CSS everything is in the same, global scope which can cause problems and make CSS hard to maintain.
+                      <br><br>
+                      With BEM, instead of having random classes throughout the CSS file, you start organising your styles in <b>Blocks</b>.
+                      You can think of these blocks as objects or modules and the way encapsulation is achieved is by using <b>--</b> or <b>__</b> prefixes in the naming conventions.
+                      <br><br>
+                      In BEM, the <b>B</b> represents a <b>Block</b> of design e.g. container, form, sidebar. The <b>E</b> stands for <b>Elements</b> that are tied to its block e.g. header, title,
+                      form input. The <b>M</b> stands for <b>Modifier</b> which changes the styles or behaviour of the block or element.
+                      <br><br>
+                      Below is an example of using BEM style for writing CSS:
+                    </p>
+                    <pre>
+/* Block component, the parent */
+
+.sidebar{
+  /*styles in here */
+}
+
+/* Element, child items. Denoted by two underscores following the name of the block */
+
+.sidebar__title{
+  /*styles in here */
+}
+
+.sidebar__text{
+  /*styles in here */
+}
+
+/* Modifier that changes the style of the block. Denoted by two hyphens following the name of the block */
+
+.sidebar--left{
+  /*styles in here */
+}
+
+.sidebar--right{
+  /*styles in here */
+}
+
+.sidebar--big{
+  /*styles in here */
+}
+
+.sidebar__text--red{
+  /*styles in here */
+}
+                    </pre>
+                    <p>
+                      The following HTML uses the above CSS.
+                    </p>
+                    <pre>
+                      <xmp>
+<div class="sidebar sidebar--big sidebar--right">
+    <h2 class="sidebar__title sidebar__text--red">Big Red Sidebar</h2>
+    <p class="sidebar__text--red">Red Text here</p>
+</div>
+                      </xmp>
+                    </pre>
+                    <h2>Resources</h2>
+                    <a href="https://medium.com/@ZeeCoder/a-practical-introduction-to-the-bem-css-methodology-eeef578bac8c">A practical introduction to the BEM CSS methodology</a><br>
+                    <a href="https://medium.com/@abdelfattah/quick-start-with-bem-methodology-adad430f95d5">Quick start with BEM methodology</a><br>
+                    <a href="https://medium.com/@shuvohabib/learn-css-bem-methodology-by-two-complete-free-template-c0f531f49cdb">Learn CSS; BEM Methodology</a>
+
+                    <footer class="container-fluid text-center">
+                        <a href="#DisplayStylingHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                    </footer>
+                </div>
+
+
                 <div id="postcss">
                     <h1>PostCSS</h1>
                     <p>
@@ -549,6 +630,118 @@ gulp.task('default', ['serve']);
                         <a href="#DisplayStylingHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
                     </footer>
                 </div>
+
+
+
+                <div id="user_interface_interaction">
+                    <h1>User Interface And Interaction Design</h1>
+                    <p>
+                        The goal of user interface design is to make the user's interaction as simple, pleasurable and efficient as possible.
+                    </p>
+
+                    <h2>Interface Elements</h2>
+                    <p>
+                      When designing your interface, try to be consistent and predictable in your choice of interface elements, users have become
+                      familiar with interface elements acting in a certain way.
+                    </p>
+                    <h3>Input Controls Include:</h3>
+                    <ul>
+                      <li>
+                        Checkboxes: usually best to presented in a vertical list. If the list is too long that scrolling is required or if
+                        comparison is required between items then it would be best to consider having more than one column.
+                      </li>
+                      <li>
+                        Radio Buttons: allows users to select one item at a time.
+                      </li>
+                      <li>
+                        Dropdown Lists: lets users to select one item at a time like radio buttons but allows you to save space. It is worth considering adding text
+                        to the first field like 'Select one' so users recognises the necessary action.
+                      </li>
+                      <li>
+                        List boxes: like checkboxes it allows users to select multiple items but are more compact and can support a longer list of options.
+                      </li>
+                      <li>
+                        Buttons: indicates an action upon touch and is typically labeled using text, an icon, or both.
+                      </li>
+                      <li>
+                        Text fields: allow users to enter a single line or multiple lines of text.
+                      </li>
+                      <li>
+                        Date Picker: allows users to select a date and/or time.  By using the picker, the information is consistently formatted and input into the system.
+                      </li>
+                    </ul>
+                    <h3>Navigational Components include</h3>
+                    <ul>
+                      <li>
+                        Search Field: typically are single-line text boxes and are often accompanied by a search button.
+                      </li>
+                      <li>
+                        Breadcrumbs: allow users to identify their current location within the system by providing a clickable trail of proceeding pages to navigate by.
+                      </li>
+                      <li>
+                        Pagination: divides content up between pages, and allows users to skip between pages or go in order through the content.
+                      </li>
+                      <li>
+                        Icons: simplified image serving as an intuitive symbol that is used to help users to navigate the system, typically hyperlinked.
+                      </li>
+                    </ul>
+
+                    <h2>Designing an Interface</h2>
+                    <ul>
+                      <li>
+                        Keep the interface simple as possible. Avoid unnecessary elements and use clear language on labels and messaging.
+                      </li>
+                      <li>
+                        Use common UI elements so users feel more comfortable and are able to get things done more efficiently.
+                      </li>
+                      <li>
+                        Consistency: create patterns in language, layout and design throughout the site.
+                        Once a user learns how to do something, they should be able to transfer that skill to other parts of the site.
+                      </li>
+                      <li>
+                        Page layout: consider the spatial relationships between items on the page and structure the page based on importance.
+                        Careful placement of items can help draw attention to the most important pieces of information and can aid scanning and readability.
+                      </li>
+                      <li>
+                        Colour and texture:  You can direct attention towards items using color, light, contrast, and texture and use it to your advantage.
+                      </li>
+                      <li>
+                        Use typography to create hierarchy and clarity: Different sizes, fonts, and arrangement of the text to help increase 'scanability' and readability.
+                      </li>
+                      <li>
+                        System communication: Keep users informed of location, actions, changes in state, or errors. Use UI elements to communicate status and,
+                        if necessary, next steps can reduce frustration for your user.
+                      </li>
+                      <li>
+                        Defaults: set defaults where possible to reduce burden on the user. This becomes particularly important when it comes to form design
+                        where you might have an opportunity to have some fields pre-chosen or filled out.
+                      </li>
+                    </ul>
+
+                    <h2>Resources</h2>
+                    <a href="https://www.usability.gov/what-and-why/user-interface-design.html">User Interface Design</a><br>
+                    <a href="http://www.uxbooth.com/articles/complete-beginners-guide-to-interaction-design/">Complete Beginner’s Guide to Interaction Design</a><br>
+                    <a href="http://boxesandarrows.com/introducing-interaction-design/">Introducing Interaction Design</a>
+                    <footer class="container-fluid text-center">
+                        <a href="#DisplayStylingHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                    </footer>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

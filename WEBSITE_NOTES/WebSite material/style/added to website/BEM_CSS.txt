@@ -1,0 +1,205 @@
+BEM
+
+One of the most annoying problems in CSS is, that everything is in the same, global scope.
+
+With BEM, you use blocks. Just think of them as objects or modules.
+
+Instead of having random classes all around the place, you start organising your styles in these so-called blocks.
+
+
+The Block, Element, Modifier methodology also known as BEM is a popular methodology for naming classes in HTML and CSS.
+
+
+
+Encapsulation
+
+The way BEM achieves encapsulation is that it just prefixes everything.
+So using my previous example, I can use “image” in the context of the “avatar” block, and use it for other blocks at the same time, simply by prefixing it.
+
+
+<pre>
+
+// Code in Less
+
+.avatar { // The "block"
+	// style
+
+	&__image { // an element
+		// style 
+	}
+
+	&--big { // a modifier
+		// style
+	}
+
+}
+
+
+
+
+<!-- avatar block -->
+<div class="avatar">
+	<img class="avatar__image" src="">
+</div>
+
+
+<!-- A big avatar somewhere else -->
+<div class="avatar avatar--big">
+	<img class="avatar__image" src="">
+</div>
+
+<!-- A media block which has an image element too -->
+<div class="media">
+	<img class="media__image" src="">
+	<p class="media__description"></p>
+</div>
+
+</pre>
+
+
+See how free you are in naming your elements? You can use as many “title”, “description”, “image” and similar generic classes as you want!
+
+
+
+
+
+
+
+
+
+
+
+
+Block
+
+
+
+‘block’ could represent a site navigation, header, footer, or any other block of design.
+
+
+
+Examples?—?panel, container, form
+
+
+
+
+
+
+Element
+
+
+
+The E in ‘BEM’ stands for Elements.
+
+Overall blocks of design rarely live in isolation.
+
+
+A part of a block that has no standalone meaning and is semantically tied to its block.
+
+Examples?—?panel header, container title, form input
+
+and to use element you should use this syntax blockName__elementName
+
+
+
+
+
+
+Modifier
+
+A flag on a block or element. Use them to change styles or behavior.
+
+Examples?—?highlighted , disabled
+
+and to use modifier you should use this syntax blockName--modifierName or elementName--modifierName
+
+
+
+
+
+
+
+
+Here’s an example of what a CSS developer writing in the BEM style will prefer to write:
+
+/* Block component */ 
+
+.sidebar{} 
+
+/* Element that depends upon the block */ 
+
+.sidebar__title{} 
+
+/* Modifier that changes the style of the block */
+
+.sidebar-left{} .sidebar-right{}
+
+
+
+In this CSS methodology a block is a top-level component, for example a button: .sidebar { }. This block is actually a parent. Child items, or elements, can be placed inside and these are denoted by two underscores following the name of the block like .sidebar__title { } or .sidebar__desc. And modifiers can manipulate the block so that we can theme or style that particular component. This is done by putting two hyphens to the name of the block just like sidebar--right.
+
+The markup will look like this:
+
+<div class="sidebar sidebar--big sidebar--small" href="#">
+   <h2 class="sidebar__title">Big Sidebar</h2>
+</div>
+
+
+
+CSS:
+
+.form { }
+.form--theme-xmas { }
+.form--simple { }
+.form__input { }
+.form__submit { }
+.form__submit--disabled { }
+
+
+
+HTML:
+
+<pre>
+
+
+
+<form class="form form--theme-xmas form--simple">
+  <input class="form__input" type="text" />
+  <input
+    class="form__submit form__submit--disabled"
+    type="submit" />
+</form>
+
+</pre>
+
+
+
+
+
+
+RESOURCES:
+
+
+
+
+
+https://medium.com/@shuvohabib/learn-css-bem-methodology-by-two-complete-free-template-c0f531f49cdb
+
+http://getbem.com/naming/
+
+
+
+
+
+USED:
+
+https://medium.com/@ZeeCoder/a-practical-introduction-to-the-bem-css-methodology-eeef578bac8c
+https://medium.com/@abdelfattah/quick-start-with-bem-methodology-adad430f95d5
+
+
+
+
+
+
+
+

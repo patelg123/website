@@ -1,0 +1,37 @@
+User Interface Design (UI)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Solid understanding of user interface / user interaction design
+
+
+
+https://www.interaction-design.org/literature/topics/ui-design
+
+User interface design:
+https://www.usability.gov/what-and-why/user-interface-design.html
+
+User interaction design:
+https://www.usability.gov/what-and-why/interaction-design.html
+
+UX and UI design - tips
+
+
+https://uxplanet.org/10-small-design-mistakes-we-still-make-1cd5f60bc708
+https://www.interaction-design.org/literature/article/what-is-the-difference-between-interaction-design-and-ux-design
