@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Front End Tech - JavaScript ES6 Topics</title>
+    <title>Front End Tech - JavaScript</title>
 
     <!-- Bootstrap  CDN files -->
     <link rel="stylesheet" href="vendor/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -348,90 +348,63 @@ console.log(c === e); // false
 
                 <div id="javascript_closures">
 
-                    <h1>Closures</h1>
+                    <h1>JavaScript Closures</h1>
                     <p>
-                        A closure is a function that has access to the parent scope, even after the parent scope has been closed. A closure is not only the function, but also the environment in which the function was created.
-                        <br />Imagine if we had the following function:
+                        A JavaScript closure is a self-invoking function that makes it possible for a function to have "private" variables even after the parent function has closed.
+                    </p>
+                    <h2>A counter example to explain JavaScript closures</h2>
+                    <p>
+                        Say you wanted to count the number of times a user clicked on a button on a webpage and you are triggering a function on the <b>onclick</b>
+                        event of the button to update the count variable.
+                    </p>
+                    <xmp>
+<button onclick="updateClickCount()">click me</button>
+                    </xmp>
+                    <p>
+                        You could use a <b>global variable</b> and an <b>updateClickCount()</b> function to increase the <b>counter</b>.
+                        However this could cause issues as any script on the page can change the counter, without calling <b>updateClickCount()</b>.
                     </p>
                     <pre>
-function speak() {
-    return function logIt() {
-        var words = 'hi';
-        console.log(words);
-    }
+var counter = 0;
+
+function updateClickCount() {
+  ++counter;
+  // do something with counter
+}
+                    </pre>
+                    <p>
+                        If you declared the variable inside the function (i.e. make it a variable local to the function) to avoid this,
+                        it would mean that the counter variable is set to 1 everytime the button was clicked as local variables are created
+                        when the function is invoked, and deleted when the function is finished.
+                    </p>
+                    <pre>
+function updateClickCount() {
+    var counter = 0;
+    ++counter;
+    // do something with counter
 }
 
-
-var sayHello = speak();
-
                     </pre>
                     <p>
-                        If we take a look at what sayHello variable is referencing we get the following:
-                    </p>
-
-                    <pre>
-console.log(sayHello);
-
-// Returns:
-//  function logIt() {
-    //	var words = 'hi';
-    //    	console.log(words);
-    //  }
-
-                    </pre>
-
-                    <p>
-                        If we invoke the function <b>sayHello</b> we get <b>hi</b> returned as expected:
-                    </p>
-
-                    <pre>
-sayHello();
-// returns hi
-
-                    </pre>
-                    <p>Imagine if we change the function to the following:</p>
-
-
-                    <pre>
-function speak() {
-    var words = 'hi';
-    return function logIt() {
-        console.log(words);
-    }
-}
-
-
-var sayHello = speak();
-
-                    </pre>
-
-                    <p>
-                        If we take a look at what sayHello variable is referencing we get the following:
-                    </p>
-
-                    <pre>
-console.log(sayHello);
-
-// Returns:
-//  function logIt() {
-    //    console.log(words);
-    //  }
-
-                    </pre>
-
-                    <p>
-                        Notice that there is no <b>words</b> variable. However, if we invoke the function <b>sayHello</b> we still get <b>hi</b> returned:
+                        Using a closure (self-invoking function) will enable us to solve this issue.
                     </p>
                     <pre>
-sayHello();
-// returns hi
-                    </pre>
+var updateClickCount=(function(){
+   var counter=0;
 
+   return function(){
+    ++counter;
+    // do something with counter
+   }
+})();
+
+                    </pre>
                     <p>
-                        sayHello() is a closure object that consists of the logIt() function and the environment variables that existed when the closure was created, including the message variable.
-                        <br /><br />
-                        The inner function has three <b>scope chains</b>. The first chain allows the inner function to access its own variables.
-                        The second allows it to access the variables and parameters of the outer function. And the third allows it to access the global variables.
+                        The self-invoking function only runs once. It sets the counter to 0, and returns a function expression.
+                        <br><br>
+                        This way <b>updateClickCount</b> becomes a function. The "wonderful" part is that it can access the counter in the parent scope.
+                        This is called a JavaScript closure. It makes it possible for a function to have "private" variables.
+                        The counter is protected by the scope of the anonymous function, and can only be changed using the <b>updateClickCount</b> function.
                     </p>
 
                     <footer class="container-fluid text-center">
