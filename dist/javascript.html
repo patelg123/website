@@ -379,7 +379,7 @@ function updateClickCount() {
                     </p>
                     <pre>
 function updateClickCount() {
-    var counter = 0;
+    let counter = 0;
     ++counter;
     // do something with counter
 }
@@ -390,7 +390,7 @@ function updateClickCount() {
                     </p>
                     <pre>
 var updateClickCount=(function(){
-   var counter=0;
+   let counter=0;
 
    return function(){
     ++counter;
@@ -490,7 +490,7 @@ bindTest(3,4);
                 <div id="javascript_callbacks">
                     <h1>Callbacks And Higher-Order Functions</h1>
                     <p> A <b>callback</b> function is a function that is passed to another function <b>(higher-order function)</b> as an argument and can be executed or returned
-                        later by the higher-order function. When a callback function is passed as an argument, only the function definition is passed. The function the function is not executed.
+                        later by the higher-order function. When a callback function is passed as an argument, only the function definition is passed. The function is not executed.
                     </p>
                     <p>
                         When we pass a callback function as an argument to another function, the callback is executed at some point inside the containing function’s body just as if the callback were defined
@@ -673,7 +673,7 @@ T.get('search/tweets', params, function(err, data, response) {
                         global namespace can become easily polluted.
                         <br /><br />
                         Functions are the only thing in JavaScript that create a new scope; thus anything not declared within a
-                        function is apart of the global namespace.
+                        function is a part of the global namespace.
                         <br /><br />
                         Thus every function we declare in JavaScript is available globally and therefore its name cannot be used again.
                         Often this leads to a polluted namespace where names and code can be difficult to find and reuse.
@@ -905,7 +905,7 @@ funcName(2);
 
                     </pre>
 
-                    <p>The paramter list for a function with no parameters shouldbe written with a pair of parenthesis:</p>
+                    <p>The paramter list for a function with no parameters should be written with a pair of parenthesis:</p>
 
                     <pre>
 () => { statements };
@@ -1383,7 +1383,7 @@ function readFilePromisified(filename) {
     });
 }
 
-readFilePromisified() is used like this:
+// readFilePromisified() is used like this:
 
 readFilePromisified(process.argv[2])
 .then(text => {
