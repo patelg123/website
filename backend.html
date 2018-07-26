@@ -138,7 +138,7 @@
                     There's something called a <b>Libuv</b> library which handles this work effectively with help from the OS kernel.
                     When the background workers are done doing their work, they emit events to NodeJs callbacks registered on that event.
                     <br><br>
-                    For example, if Node.js has to read a file saved on the serbver, while the file system is reading the file,
+                    For example, if Node.js has to read a file saved on the server, while the file system is reading the file,
                     Node.js uses the idle time to handle other requests. When the file system is done, it tells Node to come and take the resource and send it to the browser.
                     <br><br>
                     Node.js makes use of <b>callbacks</b> which are basically functions passed into other functions as arguments and are called when certain conditions occur.
