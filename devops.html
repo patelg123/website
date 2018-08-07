@@ -15,7 +15,7 @@
 
 </head>
 <body id="DevOpsHome" data-spy="scroll" data-target=".navbar" data-offset="60">
-    <nav id="navbar-main" class="navbar navbar-default" role="navigation">
+    <nav id="navbar-main" class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
@@ -47,6 +47,7 @@
         DevOps
     </div>
 
+
     <div id="devops" class="container-fluid text-center">
         <div class="row content">
             <div class="col-sm-2">
@@ -63,48 +64,48 @@
                 </div>
             </div>
 
-            <div class="col-sm-8 text-left">
-				<div id="devops_yarn">
-					<h1>Yarn</h1>
-					<p>
-						Yarn is a package management tool developed by Facebook.
-						<br><br>
-						Advantages of Yarn include:
-						<ul>
-							<li>
-								It takes packages from both NpmJS or Bower registries.
-								<br><br>
-							</li>
-							<li>
-								<b>Security:</b><br> Yarn uses checksums to verify the integrity of every installed package before its code is executed.
-								<br><br>
-							</li>
-							<li>
-								<b>Offline Mode:</b><br>
-								If you've installed a package before, you can install it again without any internet connection. Packages installed using Yarn with yarn add packagename are stored
-								on your disk so that during the next install, this package will be used instead of sending a HTTP request to download the package again from the registry.
-								<br><br>
-							</li>
-							<li>
-								<b>Parallel Installation</b><br>
-								Whenever npm or Yarn needs to install a package, it carries out a series of tasks. In npm, these tasks are executed per package and sequentially, meaning it will
-								wait for a package to be fully installed before moving on to the next. Yarn executes these tasks in parallel, increasing performance.
-								<br><br>
-							</li>
-							<li>
-								<b>Lockfiles</b><br>
-								The same dependencies will be installed the same exact way across every machine regardless of install order.
-								Lockfiles lock the installed dependencies to a specific version, and ensure that every install results in the exact same file structure in node_modules across all machines.
-								<br>
-								After every install, upgrade or removal, yarn updates a yarn.lock file which keeps track of the exact package version installed in node_modules directory.
-								This lockfile should be added to version control.
-								<br><br>
-							</li>
-						</ul>
-					</p>
+          <div class="col-sm-8 text-left">
+    				<div id="devops_yarn">
+    					<h1>Yarn</h1>
+    					<p>
+    						Yarn is a package management tool developed by Facebook.
+    						<br><br>
+    						Advantages of Yarn include:
+    						<ul>
+    							<li>
+    								It takes packages from both NpmJS or Bower registries.
+    								<br><br>
+    							</li>
+    							<li>
+    								<b>Security:</b><br> Yarn uses checksums to verify the integrity of every installed package before its code is executed.
+    								<br><br>
+    							</li>
+    							<li>
+    								<b>Offline Mode:</b><br>
+    								If you've installed a package before, you can install it again without any internet connection. Packages installed using Yarn with yarn add packagename are stored
+    								on your disk so that during the next install, this package will be used instead of sending a HTTP request to download the package again from the registry.
+    								<br><br>
+    							</li>
+    							<li>
+    								<b>Parallel Installation</b><br>
+    								Whenever npm or Yarn needs to install a package, it carries out a series of tasks. In npm, these tasks are executed per package and sequentially, meaning it will
+    								wait for a package to be fully installed before moving on to the next. Yarn executes these tasks in parallel, increasing performance.
+    								<br><br>
+    							</li>
+    							<li>
+    								<b>Lockfiles</b><br>
+    								The same dependencies will be installed the same exact way across every machine regardless of install order.
+    								Lockfiles lock the installed dependencies to a specific version, and ensure that every install results in the exact same file structure in node_modules across all machines.
+    								<br>
+    								After every install, upgrade or removal, yarn updates a yarn.lock file which keeps track of the exact package version installed in node_modules directory.
+    								This lockfile should be added to version control.
+    								<br><br>
+    							</li>
+    						</ul>
+    					</p>
 
-					<h2>npm vs yarn commands</h2>
-					<pre>
+    					<h2>npm vs yarn commands</h2>
+    					<pre>
 #Starting a new project
 npm init === yarn init
 
@@ -137,31 +138,31 @@ npm list --depth === yarn list --depth=0
 #Install packages globally
 npm install -g [package] === yarn global addb [package]
 
-					</pre>
+  					</pre>
 
-					<footer class="container-fluid text-center">
-						<a href="#DevOpsHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
-					</footer>
+  					<footer class="container-fluid text-center">
+  						<a href="#DevOpsHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+  					</footer>
 
-				</div>
+  				</div>
 
 
 
-				<div id="devops_gulp">
-					<h1>Gulp</h1>
-					<p>
-						Gulp is a streaming build system which allows it to pipe and pass around data being manipulated or used by its plugins. The Gulp API contains 4 top level
-						Functions:
-						<br><br>
-						<b>gulp.task: </b>defines your tasks.<br>
-						<b>gulp.src: </b>points to the files that are to be used. It uses  <b>.pipe</b> for chaining output into other plugins<br>
-						<b>gulp.dest: </b>points to the output folder we want to write files to.<br>
-						<b>gulp.watch: </b>tells Gulp to watch for changes to any of the defined files and re-runs the task specified.<br><br>
+  				<div id="devops_gulp">
+  					<h1>Gulp</h1>
+  					<p>
+  						Gulp is a streaming build system which allows it to pipe and pass around data being manipulated or used by its plugins. The Gulp API contains 4 top level
+  						Functions:
+  						<br><br>
+  						<b>gulp.task: </b>defines your tasks.<br>
+  						<b>gulp.src: </b>points to the files that are to be used. It uses  <b>.pipe</b> for chaining output into other plugins<br>
+  						<b>gulp.dest: </b>points to the output folder we want to write files to.<br>
+  						<b>gulp.watch: </b>tells Gulp to watch for changes to any of the defined files and re-runs the task specified.<br><br>
 
-						<b>Gulp Plumber</b> is a global listener to a tak and displays meaningful error messages. With tasks that have multiple pipes, we only need to call plumber once.
-						Below is an example of a Gulp file:
-					</p>
-					<pre>
+  						<b>Gulp Plumber</b> is a global listener to a tak and displays meaningful error messages. With tasks that have multiple pipes, we only need to call plumber once.
+  						Below is an example of a Gulp file:
+  					</p>
+  					<pre>
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
@@ -520,20 +521,20 @@ git push
 						This technique is recommended for building production-ready Docker images.
 					</p>
 
-					<h2>Resources</h2>
-					<a href="https://medium.freecodecamp.org/a-beginner-friendly-introduction-to-containers-vms-and-docker-79a9e3e119b">A Beginner-Friendly Introduction to Containers, VMs and Docker</a>
-					<br>
-					<a href="https://medium.freecodecamp.org/docker-development-workflow-a-guide-with-flask-and-postgres-db1a1843044a">Docker Development WorkFlow — a guide with Flask and Postgres</a>
-					<br>
-					<a href="https://hackernoon.com/an-introduction-to-docker-through-story-8ae5594d7446">An Introduction to Docker Through Story</a>
-					<br>
-					<a href="https://aws.amazon.com/docker/">What is Docker?</a>
-					<br>
-					<a href="https://blog.cloud66.com/how-to-get-code-into-a-docker-container/">How to Get Code into a Docker Container</a>
+  					<h2>Resources</h2>
+  					<a href="https://medium.freecodecamp.org/a-beginner-friendly-introduction-to-containers-vms-and-docker-79a9e3e119b">A Beginner-Friendly Introduction to Containers, VMs and Docker</a>
+  					<br>
+  					<a href="https://medium.freecodecamp.org/docker-development-workflow-a-guide-with-flask-and-postgres-db1a1843044a">Docker Development WorkFlow — a guide with Flask and Postgres</a>
+  					<br>
+  					<a href="https://hackernoon.com/an-introduction-to-docker-through-story-8ae5594d7446">An Introduction to Docker Through Story</a>
+  					<br>
+  					<a href="https://aws.amazon.com/docker/">What is Docker?</a>
+  					<br>
+  					<a href="https://blog.cloud66.com/how-to-get-code-into-a-docker-container/">How to Get Code into a Docker Container</a>
 
-					<footer class="container-fluid text-center">
-						<a href="#DevOpsHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
-					</footer>
+  					<footer class="container-fluid text-center">
+  						<a href="#DevOpsHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+  					</footer>
 		   		</div>
 
 

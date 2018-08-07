@@ -14,7 +14,7 @@
 
 </head>
 <body id="BackEndHome" data-spy="scroll" data-target=".navbar" data-offset="60">
-    <nav id="navbar-main" class="navbar navbar-default" role="navigation">
+    <nav id="navbar-main" class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
@@ -58,128 +58,127 @@
             </div>
 
             <div class="col-sm-8 text-left">
-                <div id="javascript_objects_prototypes">
-				    </div>
 
-            <div id="redux">
-                <h1>Redux</h1>
-                <p>
-                    Redux is a tool for managing application state and is a very common tool used in React applications.
-                    State is a collection of application data, like the current logged in user’s name.
-                    The state for an application might change based on things such as user actions or a response from an API.
-                    An application will read the state to determine what sort of User Interface it should show.
-                    <br><br>
-                    React does have local component state but as a React application grows and becomes more complex, like when functions
-                    that change application state are scattered through several React components, it may be a good idea to start to use Redux.
-                </p>
 
-                <p>
-                    React has ‘unidirectional data flow’ which means components send state downwards as props.
-                    <br>
-                    <img src="images/react_unidirectional_flow.gif" alt="React Unidirectional Flow" />
-                    <br>
-                    As a React application grows more complex, some components may need to share state but they don't share a parent-child relationship.
-                    To get around this issue, you can use a technique called 'Lifting state' which means the state (and functions that change this state) are
-                    lifted to the closet ancestor (Container Component). The child component can trigger state changes in their parent components, which will update all other components in the tree.
-                    <br>
-                    <img src="images/lifting_state_simple.gif" alt="Simple Lifting State" />
-                </p>
-                <p>
-                    However, as the application starts to get more complex, the the way state is being updated and dispersed across our application is may become more complex
-                    and the application state flow may start looking like the below:
-                    <br>
-                    <img src="images/complex_application_state_flow.gif" alt="Complex State Application State Flow" />
-                    <br>
-                    When developing your application it may be worth considering Redux if:
-                    <ul>
-                        <li>State doesn’t always flow in a linear, unidirectional way and you find that the functions that changed state are spread across multiple components</li>
-                        <li>You are passing the same props through multiple levels of components</li>
-                        <li>Many unrelated components update state in the same way.</li>
-                        <li>The UI can vary significantly based on application state.</li>
-                        <li>It is becoming harder to trace state changes when debugging an application.</li>
-                        <li>State is updated in many different ways.</li>
-                    </ul>
-                </p>
-                <h2>How Redux works</h2>
-                <p>
-                    Redux allows you to maintain the application state as a single global store, rather than in local component state.
-                    Not all React applications need to use Redux and simple React applications won't benefit from it at all.
-                </p>
-                <p>
-                    Redux has the following structure:
+                <div id="redux">
+                    <h1>Redux</h1>
+                    <p>
+                        Redux is a tool for managing application state and is a very common tool used in React applications.
+                        State is a collection of application data, like the current logged in user’s name.
+                        The state for an application might change based on things such as user actions or a response from an API.
+                        An application will read the state to determine what sort of User Interface it should show.
+                        <br><br>
+                        React does have local component state but as a React application grows and becomes more complex, like when functions
+                        that change application state are scattered through several React components, it may be a good idea to start to use Redux.
+                    </p>
 
-                    <ul>
-                        <li><b>Actions:</b> Static information about the event that initiates a state change. </li>
-                        <li>
-                            <b>Reducers:</b> A pure function that describes how each action updates the store. When an action is dispatched it is sent to the reducer.
-                            A key point to remember is that the reducer will always return a new application state. It will never directly mutate the store.
-                        </li>
-                        <li><b>Store:</b> The application state stored as objects. React components can subscribe to the store and whenever the store is updated, it will update the components.</li>
-                    </ul>
-                    <img src="images/complex_application_state_flow_with_redux.gif" alt="Complex State Application State Flow With Redux" />
+                    <p>
+                        React has ‘unidirectional data flow’ which means components send state downwards as props.
+                        <br>
+                        <img src="images/react_unidirectional_flow.gif" alt="React Unidirectional Flow" />
+                        <br>
+                        As a React application grows more complex, some components may need to share state but they don't share a parent-child relationship.
+                        To get around this issue, you can use a technique called 'Lifting state' which means the state (and functions that change this state) are
+                        lifted to the closet ancestor (Container Component). The child component can trigger state changes in their parent components, which will update all other components in the tree.
+                        <br>
+                        <img src="images/lifting_state_simple.gif" alt="Simple Lifting State" />
+                    </p>
+                    <p>
+                        However, as the application starts to get more complex, the the way state is being updated and dispersed across our application is may become more complex
+                        and the application state flow may start looking like the below:
+                        <br>
+                        <img src="images/complex_application_state_flow.gif" alt="Complex State Application State Flow" />
+                        <br>
+                        When developing your application it may be worth considering Redux if:
+                        <ul>
+                            <li>State doesn’t always flow in a linear, unidirectional way and you find that the functions that changed state are spread across multiple components</li>
+                            <li>You are passing the same props through multiple levels of components</li>
+                            <li>Many unrelated components update state in the same way.</li>
+                            <li>The UI can vary significantly based on application state.</li>
+                            <li>It is becoming harder to trace state changes when debugging an application.</li>
+                            <li>State is updated in many different ways.</li>
+                        </ul>
+                    </p>
+                    <h2>How Redux works</h2>
+                    <p>
+                        Redux allows you to maintain the application state as a single global store, rather than in local component state.
+                        Not all React applications need to use Redux and simple React applications won't benefit from it at all.
+                    </p>
+                    <p>
+                        Redux has the following structure:
 
-                </p>
-                <h2>Resources</h2>
-                    <a href="https://medium.com/dailyjs/when-do-i-know-im-ready-for-redux-f34da253c85f">When do I know I’m ready for Redux?</a>
+                        <ul>
+                            <li><b>Actions:</b> Static information about the event that initiates a state change. </li>
+                            <li>
+                                <b>Reducers:</b> A pure function that describes how each action updates the store. When an action is dispatched it is sent to the reducer.
+                                A key point to remember is that the reducer will always return a new application state. It will never directly mutate the store.
+                            </li>
+                            <li><b>Store:</b> The application state stored as objects. React components can subscribe to the store and whenever the store is updated, it will update the components.</li>
+                        </ul>
+                        <img src="images/complex_application_state_flow_with_redux.gif" alt="Complex State Application State Flow With Redux" />
 
+                    </p>
+                    <h2>Resources</h2>
+                        <a href="https://medium.com/dailyjs/when-do-i-know-im-ready-for-redux-f34da253c85f">When do I know I’m ready for Redux?</a>
+
+                        <footer class="container-fluid text-center">
+                            <a href="#BackEndHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                        </footer>
+
+                </div>
+
+                <div id="nodejs">
+                    <h1>Node.js</h1>
+                    <p>
+                        a platform built on Chrome's JavaScript runtime called V8.
+                        Its greatest advantage over other JS engines is the compiling of JS code to native machine code before executing it.
+                        <br><br>
+                        Node.js uses a single threaded <b>event loop</b>. It takes all requests and then delegates most of the work to other system workers.
+                        There's something called a <b>Libuv</b> library which handles this work effectively with help from the OS kernel.
+                        When the background workers are done doing their work, they emit events to NodeJs callbacks registered on that event.
+                        <br><br>
+                        For example, if Node.js has to read a file saved on the server, while the file system is reading the file,
+                        Node.js uses the idle time to handle other requests. When the file system is done, it tells Node to come and take the resource and send it to the browser.
+                        <br><br>
+                        Node.js makes use of <b>callbacks</b> which are basically functions passed into other functions as arguments and are called when certain conditions occur.
+                        Even though NodeJS is a single threaded system, it is usually faster than multi-threaded systems.
+                        However NodeJS doesn't excel at operations that consume CPU. CPU intensive operations overload the main thread, which is the only thread in Node.js.
+                        Node.js is suited more for I/O tasks, like a web server.
+                    </p>
                     <footer class="container-fluid text-center">
                         <a href="#BackEndHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
                     </footer>
+                </div>
 
+
+                <div id="express">
+                    <h1>Express</h1>
+
+                    <h2>Introduction</h2>
+                    <p>
+                        Connect is a module that delivers a set of wrappers around the Node.js low-level APIs.
+                        The Connect module uses a modular component called <b>middleware</b> which allows you to
+                        simply register your application logic to predefined HTTP requests.
+                        Connect middleware are basically a bunch of callback functions, which get executed when a HTTP request occurs.
+                        The middleware can then perform some logic, return a response, or call the next registered middleware.
+
+                        Express is a web framework that uses Connect's middleware architecture.
+                    </p>
+
+                    <h2>Routing in Express</h2>
+                    <p>
+                        Routing means assigning functions to respond to users requests.
+                        Routing in Express follows this basic format:
+                        <br><br>
+                        app.VERB(‘path’, callback…);
+                        <br>
+                        Where VERB is any of the get, post, put, delete verbs.
+                      </p>
+                      <footer class="container-fluid text-center">
+                          <a href="#BackEndHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                      </footer>
+                </div>
             </div>
-
-            <div id="nodejs">
-                <h1>Node.js</h1>
-                <p>
-                    a platform built on Chrome's JavaScript runtime called V8.
-                    Its greatest advantage over other JS engines is the compiling of JS code to native machine code before executing it.
-                    <br><br>
-                    Node.js uses a single threaded <b>event loop</b>. It takes all requests and then delegates most of the work to other system workers.
-                    There's something called a <b>Libuv</b> library which handles this work effectively with help from the OS kernel.
-                    When the background workers are done doing their work, they emit events to NodeJs callbacks registered on that event.
-                    <br><br>
-                    For example, if Node.js has to read a file saved on the server, while the file system is reading the file,
-                    Node.js uses the idle time to handle other requests. When the file system is done, it tells Node to come and take the resource and send it to the browser.
-                    <br><br>
-                    Node.js makes use of <b>callbacks</b> which are basically functions passed into other functions as arguments and are called when certain conditions occur.
-                    Even though NodeJS is a single threaded system, it is usually faster than multi-threaded systems.
-                    However NodeJS doesn't excel at operations that consume CPU. CPU intensive operations overload the main thread, which is the only thread in Node.js.
-                    Node.js is suited more for I/O tasks, like a web server.
-                </p>
-                <footer class="container-fluid text-center">
-                    <a href="#BackEndHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
-                </footer>
-            </div>
-
-
-            <div id="express">
-                <h1>Express</h1>
-
-                <h2>Introduction</h2>
-                <p>
-                    Connect is a module that delivers a set of wrappers around the Node.js low-level APIs.
-                    The Connect module uses a modular component called <b>middleware</b> which allows you to
-                    simply register your application logic to predefined HTTP requests.
-                    Connect middleware are basically a bunch of callback functions, which get executed when a HTTP request occurs.
-                    The middleware can then perform some logic, return a response, or call the next registered middleware.
-
-                    Express is a web framework that uses Connect's middleware architecture.
-                </p>
-
-                <h2>Routing in Express</h2>
-                <p>
-                    Routing means assigning functions to respond to users requests.
-                    Routing in Express follows this basic format:
-                    <br><br>
-                    app.VERB(‘path’, callback…);
-                    <br>
-                    Where VERB is any of the get, post, put, delete verbs.
-                  </p>
-                  <footer class="container-fluid text-center">
-                      <a href="#BackEndHome" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
-                  </footer>
-            </div>
-
             <div class="col-sm-2">
 
             </div>
