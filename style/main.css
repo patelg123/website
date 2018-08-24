@@ -65,6 +65,12 @@ li {
   padding-top: 10px;
 }
 
+.small-text {
+  font-size: 10px !important;
+  font-weight: bold;
+}
+
+
 pre code {
   white-space: pre;
   overflow-x: auto;
