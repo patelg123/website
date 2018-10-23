@@ -1,3 +1,2 @@
-# website
+This Website is available on http://frontendtech.co.uk
 
-....hopefully the start of something great....
