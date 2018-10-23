@@ -59,14 +59,20 @@ https://codeburst.io/how-i-built-an-interactive-30-day-bitcoin-price-graph-with-
 
 https://hackernoon.com/getting-started-with-react-16-5ebd823d6990
 
-https://www.undefinednull.com/2015/05/03/react-tdd-example-unit-testing-and-building-a-react-component-with-jest-gulp-and-react-test-utils/
+
 
 https://codeburst.io/how-to-connect-your-react-app-to-a-rest-api-6c648fb4b0f2?source=emailShare-91bfcdd30742-1513204759
 
 https://medium.freecodecamp.org/how-to-make-create-react-app-work-with-a-node-backend-api-7c5c48acb1b0?source=emailShare-91bfcdd30742-1513854508
 
+
+
+
+
 TESTING:
 
+
+https://raygun.com/blog/javascript-unit-testing-frameworks/
 
 ** This is good: https://javascriptplayground.com/introduction-to-react-tests-enzyme/
 
@@ -75,6 +81,50 @@ https://medium.com/@skidding/testing-react-components-30516bc6a1b3
 https://medium.com/netscape/testing-a-react-redux-app-using-jest-and-enzyme-b349324803a9
 
 https://medium.com/wehkamp-techblog/unit-testing-your-react-application-with-jest-and-enzyme-81c5545cee45
+
+
+https://javascriptplayground.com/introduction-to-react-tests-enzyme/
+
+https://reactjs.org/tutorial/tutorial.html
+Use this to write tests: https://camjackson.net/post/9-things-every-reactjs-beginner-should-know#use-shallow-rendering
+
+
+https://www.undefinednull.com/2015/05/03/react-tdd-example-unit-testing-and-building-a-react-component-with-jest-gulp-and-react-test-utils/
+
+https://medium.com/@NAPOLEON039/a-guide-to-writing-awesome-unit-tests-for-the-first-time-6eecb6e016ea
+
+https://hackernoon.com/testing-react-components-with-jest-and-enzyme-41d592c174f
+
+https://medium.com/netscape/testing-a-react-redux-app-using-jest-and-enzyme-b349324803a9
+
+
+
+
+https://medium.com/wehkamp-techblog/unit-testing-your-react-application-with-jest-and-enzyme-81c5545cee45
+
+
+https://medium.com/@rickhanlonii/understanding-jest-mocks-f0046c68e53c
+
+https://hackernoon.com/api-testing-with-jest-d1ab74005c0a
+
+
+https://medium.com/@netxm/testing-redux-reducers-with-jest-6653abbfe3e1
+
+
+
+
+https://medium.com/@stipsan/testing-with-jest-15-awesome-tips-and-tricks-42150ec4c262
+
+
+
+
+https://medium.com/backticks-tildes/testing-your-react-component-with-jest-and-enzyme-276eef45bea0
+
+
+
+https://hackernoon.com/implementing-basic-component-tests-using-jest-and-enzyme-d1d8788d627a
+
+
 
 
 
